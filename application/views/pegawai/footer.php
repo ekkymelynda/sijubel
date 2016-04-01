@@ -1,4 +1,4 @@
-  <!-- Footer -->
+<!-- Footer -->
   <footer class="site-footer">
     <span class="site-footer-legal">© 2015 Sistem Informasi Jual Beli Toko Djondol Pelangi</span>
     <div class="site-footer-right">
@@ -54,3 +54,5 @@
 </body>
 
 </html>
+
+<!-- End Footer -->

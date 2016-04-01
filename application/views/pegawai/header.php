@@ -1,3 +1,5 @@
+<!-- Header -->
+
 <!DOCTYPE html>
 <html class="no-js before-run" lang="en">
 <head>
@@ -7,7 +9,7 @@
   <meta name="description" content="bootstrap admin template">
   <meta name="author" content="">
 
-  <title>Buat Pembeli | Sistem Informasi Jual Beli Toko Djondol Pelangi</title>
+  <title>Sistem Informasi Jual Beli Toko Djondol Pelangi</title>
 
   <link rel="apple-touch-icon" href="<?php  echo base_url(); ?>assets/images/apple-touch-icon.png">
   <link rel="shortcut icon" href="<?php  echo base_url(); ?>assets/images/favicon.ico">
@@ -153,25 +155,25 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="../uikit/buttons.html" data-slug="uikit-buttons">
+                  <a class="animsition-link" href="<?php  echo base_url(); ?>Pegawai/pembeli_buat" data-slug="uikit-buttons">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/colors.html" data-slug="uikit-colors">
+                  <a class="animsition-link" href="<?php  echo base_url(); ?>Pegawai/pembeli_lihat" data-slug="uikit-colors">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/dropdowns.html" data-slug="uikit-dropdowns">
+                  <a class="animsition-link" href="<?php  echo base_url(); ?>Pegawai/pembeli_ubah" data-slug="uikit-dropdowns">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/list.html" data-slug="uikit-list">
+                  <a class="animsition-link" href="<?php  echo base_url(); ?>Pegawai/pembeli_hapus" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>
@@ -230,3 +232,5 @@
       </div>
     </div>
   </div>
+
+<!-- End Header -->
