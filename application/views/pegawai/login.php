@@ -68,7 +68,7 @@
       <form method="post" action="../pembeli/buat.php">
         <div class="form-group">
           <label class="sr-only" for="inputName">ID Pegawai</label>
-          <input type="text" class="form-control" id="inputName" placeholder="ID">
+          <input type="text" class="form-control" id="inputName" placeholder="ID Pegawai">
         </div>
         <div class="form-group">
           <label class="sr-only" for="inputPassword">Password</label>
