@@ -7,30 +7,30 @@
   <meta name="description" content="bootstrap admin template">
   <meta name="author" content="">
 
-  <title>Login | Sistem Informasi Jual Beli Toko Djondol Pelangi</title>
+  <title>Sistem Informasi Jual Beli Toko Djondol Pelangi</title>
 
-  <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
-  <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php echo base_url(); ?>assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../assets/css/bootstrap-extend.min.css">
-  <link rel="stylesheet" href="../../assets/css/site.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/site.min.css">
 
-  <link rel="stylesheet" href="../../assets/vendor/animsition/animsition.css">
-  <link rel="stylesheet" href="../../assets/vendor/asscrollable/asScrollable.css">
-  <link rel="stylesheet" href="../../assets/vendor/switchery/switchery.css">
-  <link rel="stylesheet" href="../../assets/vendor/intro-js/introjs.css">
-  <link rel="stylesheet" href="../../assets/vendor/slidepanel/slidePanel.css">
-  <link rel="stylesheet" href="../../assets/vendor/flag-icon-css/flag-icon.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/intro-js/introjs.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/flag-icon-css/flag-icon.css">
 
 
   <!-- Page -->
-  <link rel="stylesheet" href="../../assets/css/pages/login.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/pages/login.css">
 
   <!-- Fonts -->
-  <link rel="stylesheet" href="../../assets/fonts/web-icons/web-icons.min.css">
-  <link rel="stylesheet" href="../../assets/fonts/brand-icons/brand-icons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fonts/web-icons/web-icons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fonts/brand-icons/brand-icons.min.css">
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
 
@@ -44,8 +44,8 @@
     <![endif]-->
 
   <!-- Scripts -->
-  <script src="../../assets/vendor/modernizr/modernizr.js"></script>
-  <script src="../../assets/vendor/breakpoints/breakpoints.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/modernizr/modernizr.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/breakpoints/breakpoints.js"></script>
   <script>
     Breakpoints();
   </script>
@@ -61,7 +61,7 @@
   data-animsition-out="fade-out">>
     <div class="page-content vertical-align-middle">
       <div class="brand">
-        <img class="brand-img" src="../../assets/images/logo.png" alt="...">
+        <img class="brand-img" src="<?php echo base_url(); ?>assets/images/logo.png" alt="...">
         <h2 class="brand-text">Sijubel</h2>
       </div>
       <p>Sign into your pages account</p>
@@ -97,38 +97,38 @@
 
 
   <!-- Core  -->
-  <script src="../../assets/vendor/jquery/jquery.js"></script>
-  <script src="../../assets/vendor/bootstrap/bootstrap.js"></script>
-  <script src="../../assets/vendor/animsition/jquery.animsition.js"></script>
-  <script src="../../assets/vendor/asscroll/jquery-asScroll.js"></script>
-  <script src="../../assets/vendor/mousewheel/jquery.mousewheel.js"></script>
-  <script src="../../assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
-  <script src="../../assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/bootstrap.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/animsition/jquery.animsition.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/asscroll/jquery-asScroll.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/mousewheel/jquery.mousewheel.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
 
   <!-- Plugins -->
-  <script src="../../assets/vendor/switchery/switchery.min.js"></script>
-  <script src="../../assets/vendor/intro-js/intro.js"></script>
-  <script src="../../assets/vendor/screenfull/screenfull.js"></script>
-  <script src="../../assets/vendor/slidepanel/jquery-slidePanel.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/switchery/switchery.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/intro-js/intro.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/screenfull/screenfull.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/slidepanel/jquery-slidePanel.js"></script>
 
-  <script src="../../assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
 
   <!-- Scripts -->
-  <script src="../../assets/js/core.js"></script>
-  <script src="../../assets/js/site.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/core.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/site.js"></script>
 
-  <script src="../../assets/js/sections/menu.js"></script>
-  <script src="../../assets/js/sections/menubar.js"></script>
-  <script src="../../assets/js/sections/sidebar.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/sections/menu.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/sections/menubar.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/sections/sidebar.js"></script>
 
-  <script src="../../assets/js/configs/config-colors.js"></script>
-  <script src="../../assets/js/configs/config-tour.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/configs/config-colors.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/configs/config-tour.js"></script>
 
-  <script src="../../assets/js/components/asscrollable.js"></script>
-  <script src="../../assets/js/components/animsition.js"></script>
-  <script src="../../assets/js/components/slidepanel.js"></script>
-  <script src="../../assets/js/components/switchery.js"></script>
-  <script src="../../assets/js/components/jquery-placeholder.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/components/asscrollable.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/components/animsition.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/components/slidepanel.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/components/switchery.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/components/jquery-placeholder.js"></script>
 
   <script>
     (function(document, window, $) {
