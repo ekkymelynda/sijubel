@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Pegawai extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,8 +18,23 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function buat()
+	public function pembeli_buat()
 	{
-		$this->load->view('buat');
+		$this->load->view('pegawai/header')->view('pegawai/pembeli/buat')->view('pegawai/footer');
+	}
+
+	public function pembeli_lihat()
+	{
+		$this->load->view('pegawai/header')->view('pegawai/pembeli/lihat')->view('pegawai/footer');
+	}
+
+	public function pembeli_ubah()
+	{
+		$this->load->view('pegawai/header')->view('pegawai/pembeli/ubah')->view('pegawai/footer');
+	}
+
+	public function pembeli_hapus()
+	{
+		$this->load->view('pegawai/header')->view('pegawai/pembeli/hapus')->view('pegawai/footer');
 	}
 }
