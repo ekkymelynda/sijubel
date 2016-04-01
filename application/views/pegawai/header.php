@@ -31,6 +31,9 @@
   <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/vendor/datatables-fixedheader/dataTables.fixedHeader.css">
   <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/vendor/datatables-responsive/dataTables.responsive.css">
 
+  <link rel="stylesheet" href="../../assets/vendor/jquery-wizard/jquery-wizard.css">
+  <link rel="stylesheet" href="../../assets/vendor/formvalidation/formValidation.css">
+
   <!-- Fonts -->
   <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/fonts/web-icons/web-icons.min.css">
   <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/fonts/brand-icons/brand-icons.min.css">
