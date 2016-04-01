@@ -18,6 +18,13 @@ class Pegawai extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function login()
+	{
+		$this->load->view('pegawai/login');
+	}
+
+
 	public function pembeli_buat()
 	{
 		$this->load->view('pegawai/header')->view('pegawai/pembeli/buat')->view('pegawai/footer');
