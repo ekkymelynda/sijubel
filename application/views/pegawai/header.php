@@ -26,6 +26,10 @@
   <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/vendor/slidepanel/slidePanel.css">
   <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/vendor/flag-icon-css/flag-icon.css">
 
+  <!-- Plugin -->
+  <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/vendor/datatables-bootstrap/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/vendor/datatables-fixedheader/dataTables.fixedHeader.css">
+  <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/vendor/datatables-responsive/dataTables.responsive.css">
 
   <!-- Fonts -->
   <link rel="stylesheet" href="<?php  echo base_url(); ?>assets/fonts/web-icons/web-icons.min.css">
@@ -114,10 +118,11 @@
           </li>
         </ul>
         <!-- End Navbar Toolbar -->
+
         <!-- Navbar Toolbar Right -->
         <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
           <li role="presentation">
-            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+            <a href="<?php echo base_url(); ?>Pegawai/login" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
           </li>    
         </ul>
         <!-- End Navbar Toolbar Right -->
@@ -141,96 +146,5 @@
     </div>
 
   </nav>
-  <div class="site-menubar">
-    <div class="site-menubar-body">
-      <div>
-        <div>
-          <ul class="site-menu">
-            <li class="site-menu-category">PEGAWAI</li>
-            <li class="site-menu-item has-sub active open">
-              <a href="javascript:void(0)" data-slug="uikit">
-                <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
-                <span class="site-menu-title">Pembeli</span>
-                <span class="site-menu-arrow"></span>
-              </a>
-              <ul class="site-menu-sub">
-                <li class="site-menu-item active">
-                  <a class="animsition-link" href="<?php  echo base_url(); ?>Pegawai/pembeli_buat" data-slug="uikit-buttons">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Buat</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php  echo base_url(); ?>Pegawai/pembeli_lihat" data-slug="uikit-colors">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Lihat</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php  echo base_url(); ?>Pegawai/pembeli_ubah" data-slug="uikit-dropdowns">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Ubah</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php  echo base_url(); ?>Pegawai/pembeli_hapus" data-slug="uikit-list">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Hapus</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="site-menu-item has-sub">
-              <a href="javascript:void(0)" data-slug="advanced">
-                <i class="site-menu-icon wb-hammer" aria-hidden="true"></i>
-                <span class="site-menu-title">Transaksi Pejualan</span>
-                <span class="site-menu-arrow"></span>
-              </a>
-              <ul class="site-menu-sub">
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/animation.html" data-slug="advanced-animation">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Buat</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/lightbox.html" data-slug="advanced-lightbox">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Lihat</span>
-                  </a>
-                </li>
-                <li class="site-menu-item hidden-xs">
-                  <a href="javascript:void(0)" data-slug="advanced-tour">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Ubah</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/treeview.html" data-slug="advanced-treeview">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Hapus</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="site-menu-item has-sub">
-              <a href="javascript:void(0)" data-slug="structure">
-                <i class="site-menu-icon wb-plugin" aria-hidden="true"></i>
-                <span class="site-menu-title">Barang</span>
-                <span class="site-menu-arrow"></span>
-              </a>
-              <ul class="site-menu-sub">
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="../structure/alerts.html" data-slug="structure-alerts">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Lihat</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  
 <!-- End Header -->
