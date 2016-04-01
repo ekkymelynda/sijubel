@@ -37,4 +37,31 @@ class Pegawai extends CI_Controller {
 	{
 		$this->load->view('pegawai/header')->view('pegawai/pembeli/hapus')->view('pegawai/footer');
 	}
+
+
+	public function penjualan_buat()
+	{
+		$this->load->view('pegawai/header')->view('pegawai/penjualan/buat')->view('pegawai/footer');
+	}
+
+	public function penjualan_lihat()
+	{
+		$this->load->view('pegawai/header')->view('pegawai/penjualan/lihat')->view('pegawai/footer');
+	}
+
+	public function penjualan_ubah()
+	{
+		$this->load->view('pegawai/header')->view('pegawai/penjualan/ubah')->view('pegawai/footer');
+	}
+
+	public function penjualan_hapus()
+	{
+		$this->load->view('pegawai/header')->view('pegawai/penjualan/hapus')->view('pegawai/footer');
+	}
+	
+
+	public function barang_lihat()
+	{
+		$this->load->view('pegawai/header')->view('pegawai/barang/lihat')->view('pegawai/footer');
+	}
 }
