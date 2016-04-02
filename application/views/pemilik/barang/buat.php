@@ -78,14 +78,14 @@
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
-                <li class="site-menu-item hidden-xs">
-                  <a href="javascript:void(0)" data-slug="advanced-tour" href="">
+                <li class="site-menu-item">
+                  <a href="javascript:void(0)" data-slug="advanced-tour" href="<?php echo base_url(); ?>Pemilik/supplier_ubah">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/treeview.html" data-slug="advanced-treeview">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/supplier_hapus" data-slug="advanced-treeview">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>
@@ -100,25 +100,25 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/animation.html" data-slug="advanced-animation">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/pembelian_buat" data-slug="advanced-animation">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/lightbox.html" data-slug="advanced-lightbox">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/pembelian_lihat" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
-                <li class="site-menu-item hidden-xs">
-                  <a href="javascript:void(0)" data-slug="advanced-tour">
+                <li class="site-menu-item">
+                  <a href="javascript:void(0)" data-slug="advanced-tour" href="<?php echo base_url(); ?>Pemilik/pembelian_ubah">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/treeview.html" data-slug="advanced-treeview">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/pembelian_hapus" data-slug="advanced-treeview">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>
@@ -133,25 +133,25 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="../uikit/buttons.html" data-slug="uikit-buttons">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_buat" data-slug="uikit-buttons">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/colors.html" data-slug="uikit-colors">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_lihat" data-slug="uikit-colors">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/dropdowns.html" data-slug="uikit-dropdowns">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_ubah" data-slug="uikit-dropdowns">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/list.html" data-slug="uikit-list">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_hapus" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>
@@ -189,12 +189,12 @@
                         placeholder="A0000" autocomplete="off" />
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="inputBasicFirstName">Nama barang</label>
+                        <label class="control-label" for="inputBasicFirstName">Nama Barang</label>
                         <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
                         placeholder="Pensil" autocomplete="off" />
                     </div>
                       <div class="form-group">
-                        <label class="control-label" for="inputBasicFirstName">Jenis barang</label>
+                        <label class="control-label" for="inputBasicFirstName">Jenis Barang</label>
                         <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
                         placeholder="ATK" autocomplete="off" />
                     </div>
