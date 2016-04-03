@@ -166,43 +166,43 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_buat" data-slug="uikit-buttons">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/laporan_pembelian_perbulan" data-slug="uikit-buttons">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Pembelian Perbulan</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_lihat" data-slug="uikit-colors">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/laporan_pembelian_perhari" data-slug="uikit-colors">
                     <i class="site-menu-icon" aria-hidden="true"></i>
                     <span class="site-menu-title">Pembelian Perhari</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_ubah" data-slug="uikit-dropdowns">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/laporan_penjualan_perbulan" data-slug="uikit-dropdowns">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Penjualan Perbulan</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_hapus" data-slug="uikit-list">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/laporan_penjualan_perhari" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Penjualan Perhari</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_hapus" data-slug="uikit-list">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/ketersediaan_barang" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ketersediaan barang</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_hapus" data-slug="uikit-list">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/keuntungan_perbulan" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Total Keuntungan Perbulan</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_hapus" data-slug="uikit-list">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/keuntungan_perhari" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Total Keuntungan Perhari</span>
                   </a>
