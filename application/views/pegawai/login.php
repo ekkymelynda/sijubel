@@ -57,7 +57,7 @@
 
 
   <!-- Page -->
-  <div class="page animsition vertical-align text-center" data-animsition-in="fade-in"
+  <div class="page vertical-align text-center" data-animsition-in="fade-in"
   data-animsition-out="fade-out">>
     <div class="page-content vertical-align-middle">
       <div class="brand">
