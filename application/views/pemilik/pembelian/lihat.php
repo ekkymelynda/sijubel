@@ -1,5 +1,4 @@
-
-  </nav>
+  <!-- Menu -->
   <div class="site-menubar">
     <div class="site-menubar-body">
       <div>
@@ -214,6 +213,7 @@
       </div>
     </div>
   </div>
+  <!-- End Menu -->
 
   <!-- Page -->
   <div class="page animsition">

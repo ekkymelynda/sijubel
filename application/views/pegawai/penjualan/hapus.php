@@ -1,5 +1,4 @@
-<!-- Menu -->
-  </nav>
+  <!-- Menu -->
   <div class="site-menubar">
     <div class="site-menubar-body">
       <div>
@@ -97,8 +96,8 @@
     <div class="page-header">
       <h1 class="page-title">Hapus Data Transaksi Penjualan</h1>
       <ol class="breadcrumb">
-        <li><a href="../index.html">Transaksi Penjualan</a></li>
-        <li class="active">Hapus</li>
+        <li>Transaksi Penjualan</li>
+        <li>Hapus</li>
       </ol>
     </div>
     <div class="page-content">

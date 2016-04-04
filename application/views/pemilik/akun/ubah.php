@@ -1,4 +1,4 @@
-<!-- Menu -->
+  <!-- Menu -->
   </nav>
   <div class="site-menubar">
     <div class="site-menubar-body">
@@ -215,13 +215,15 @@
       </div>
     </div>
   </div>
+  <!-- End Menu -->
+
   <!-- Page -->
   <div class="page animsition">
     <div class="page-header">
       <h1 class="page-title">Ubah Akun Admin</h1>
       <ol class="breadcrumb">
-        <li><a href="../index.html">Akun Admin</a></li>
-        <li><a href="javascript:void(0)">Ubah</a></li>
+        <li>Akun Admin</li>
+        <li>Ubah</li>
       </ol>
     </div>
     <div class="page-content">

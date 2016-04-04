@@ -1,5 +1,4 @@
-<!-- Menu -->
-  </nav>
+  <!-- Menu -->
   <div class="site-menubar">
     <div class="site-menubar-body">
       <div>
@@ -91,14 +90,15 @@
       </div>
     </div>
   </div>
+  <!-- End Menu -->
     
   <!-- Page -->
   <div class="page animsition">
     <div class="page-header">
       <h1 class="page-title">Ubah Data Transaksi Penjualan</h1>
       <ol class="breadcrumb">
-        <li><a href="../index.html">Transaksi Penjualan</a></li>
-        <li><a href="javascript:void(0)">Ubah</a></li>
+        <li>Transaksi Penjualan</li>
+        <li>Ubah</li>
       </ol>
     </div>
     <div class="page-content container-fluid">
