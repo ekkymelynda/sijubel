@@ -1,3 +1,4 @@
+<!-- Menu -->
   </nav>
   <div class="site-menubar">
     <div class="site-menubar-body">
@@ -13,25 +14,25 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/buttons.html" data-slug="uikit-buttons">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/pembeli_buat" data-slug="uikit-buttons">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/colors.html" data-slug="uikit-colors">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/pembeli_lihat" data-slug="uikit-colors">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/dropdowns.html" data-slug="uikit-dropdowns">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/pembeli_ubah" data-slug="uikit-dropdowns">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/list.html" data-slug="uikit-list">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/pembeli_hapus" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>
@@ -46,25 +47,25 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item ">
-                  <a class="animsition-link" href="../advanced/animation.html" data-slug="advanced-animation">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_buat" data-slug="advanced-animation">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
                   </a>
                 </li>
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="../advanced/lightbox.html" data-slug="advanced-lightbox">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_lihat" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
-                <li class="site-menu-item hidden-xs">
-                  <a href="javascript:void(0)" data-slug="advanced-tour">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/treeview.html" data-slug="advanced-treeview">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_hapus" data-slug="advanced-treeview">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>
@@ -79,7 +80,7 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../structure/alerts.html" data-slug="structure-alerts">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/barang_lihat" data-slug="structure-alerts">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
@@ -92,7 +93,7 @@
   </div>
 
   <!-- Page -->
-  <div class="page">
+  <div class="page animsition">
     <div class="page-header">
       <h1 class="page-title">Lihat Data Transaksi Penjualan</h1>
       <ol class="breadcrumb">
@@ -148,169 +149,3 @@
     </div>
   </div>
   <!-- End Page -->
-
-  <!-- Core  -->
-  <script src="../../assets/vendor/jquery/jquery.js"></script>
-  <script src="../../assets/vendor/bootstrap/bootstrap.js"></script>
-  <script src="../../assets/vendor/animsition/jquery.animsition.js"></script>
-  <script src="../../assets/vendor/asscroll/jquery-asScroll.js"></script>
-  <script src="../../assets/vendor/mousewheel/jquery.mousewheel.js"></script>
-  <script src="../../assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
-  <script src="../../assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
-
-  <!-- Plugins -->
-  <script src="../../assets/vendor/switchery/switchery.min.js"></script>
-  <script src="../../assets/vendor/intro-js/intro.js"></script>
-  <script src="../../assets/vendor/screenfull/screenfull.js"></script>
-  <script src="../../assets/vendor/slidepanel/jquery-slidePanel.js"></script>
-
-  <script src="../../assets/vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="../../assets/vendor/datatables-fixedheader/dataTables.fixedHeader.js"></script>
-  <script src="../../assets/vendor/datatables-bootstrap/dataTables.bootstrap.js"></script>
-  <script src="../../assets/vendor/datatables-responsive/dataTables.responsive.js"></script>
-  <script src="../../assets/vendor/datatables-tabletools/dataTables.tableTools.js"></script>
-
-  <!-- Scripts -->
-  <script src="../../assets/js/core.js"></script>
-  <script src="../../assets/js/site.js"></script>
-
-  <script src="../../assets/js/sections/menu.js"></script>
-  <script src="../../assets/js/sections/menubar.js"></script>
-  <script src="../../assets/js/sections/sidebar.js"></script>
-
-  <script src="../../assets/js/configs/config-colors.js"></script>
-  <script src="../../assets/js/configs/config-tour.js"></script>
-
-  <script src="../../assets/js/components/asscrollable.js"></script>
-  <script src="../../assets/js/components/animsition.js"></script>
-  <script src="../../assets/js/components/slidepanel.js"></script>
-  <script src="../../assets/js/components/switchery.js"></script>
-  <script src="../../assets/js/components/datatables.js"></script>
-
-  <script>
-    (function(document, window, $) {
-      'use strict';
-
-      var Site = window.Site;
-
-      $(document).ready(function($) {
-        Site.run();
-      });
-
-      // Fixed Header Example
-      // --------------------
-      (function() {
-        // initialize datatable
-        var table = $('#exampleFixedHeader').DataTable({
-          responsive: true,
-          "bPaginate": false,
-          "sDom": "t" // just show table, no other controls
-        });
-
-        // initialize FixedHeader
-        var offsetTop = 0;
-        if ($('.site-navbar').length > 0) {
-          offsetTop = $('.site-navbar').eq(0).innerHeight();
-        }
-        var fixedHeader = new FixedHeader(table, {
-          offsetTop: offsetTop
-        });
-
-        // redraw fixedHeaders as necessary
-        $(window).resize(function() {
-          fixedHeader._fnUpdateClones(true);
-          fixedHeader._fnUpdatePositions();
-        });
-      })();
-
-      // Individual column searching
-      // ---------------------------
-      (function() {
-        $(document).ready(function() {
-          var defaults = $.components.getDefaults("dataTable");
-
-          var options = $.extend(true, {}, defaults, {
-            initComplete: function() {
-              this.api().columns().every(function() {
-                var column = this;
-                var select = $(
-                    '<select class="form-control width-full"><option value=""></option></select>'
-                  )
-                  .appendTo($(column.footer()).empty())
-                  .on('change', function() {
-                    var val = $.fn.dataTable.util.escapeRegex(
-                      $(this).val()
-                    );
-
-                    column
-                      .search(val ? '^' + val + '$' : '',
-                        true, false)
-                      .draw();
-                  });
-
-                column.data().unique().sort().each(function(
-                  d, j) {
-                  select.append('<option value="' + d +
-                    '">' + d + '</option>')
-                });
-              });
-            }
-          });
-
-          $('#exampleTableSearch').DataTable(options);
-        });
-      })();
-
-      // Table Tools
-      // -----------
-      (function() {
-        $(document).ready(function() {
-          var defaults = $.components.getDefaults("dataTable");
-
-          var options = $.extend(true, {}, defaults, {
-            "aoColumnDefs": [{
-              'bSortable': false,
-              'aTargets': [-1]
-            }],
-            "iDisplayLength": 5,
-            "aLengthMenu": [
-              [5, 10, 25, 50, -1],
-              [5, 10, 25, 50, "All"]
-            ],
-            "sDom": '<"dt-panelmenu clearfix"Tfr>t<"dt-panelfooter clearfix"ip>',
-            "oTableTools": {
-              "sSwfPath": "../../assets/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf"
-            }
-          });
-
-          $('#exampleTableTools').dataTable(options);
-        });
-      })();
-
-      // Table Add Row
-      // -------------
-
-      (function() {
-        $(document).ready(function() {
-          var defaults = $.components.getDefaults("dataTable");
-
-          var t = $('#exampleTableAdd').DataTable(defaults);
-
-          $('#exampleTableAddBtn').on('click', function() {
-            t.row.add([
-              'Adam Doe',
-              'New Row',
-              'New Row',
-              '30',
-              '2015/10/15',
-              '$20000'
-            ]).draw();
-          });
-        });
-      })();
-    })(document, window, jQuery);
-  </script>
-
-</body>
-
-</html>

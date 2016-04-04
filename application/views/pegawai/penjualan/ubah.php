@@ -1,4 +1,6 @@
-    <div class="site-menubar">
+<!-- Menu -->
+  </nav>
+  <div class="site-menubar">
     <div class="site-menubar-body">
       <div>
         <div>
@@ -12,25 +14,25 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/buttons.html" data-slug="uikit-buttons">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/pembeli_buat" data-slug="uikit-buttons">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/colors.html" data-slug="uikit-colors">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/pembeli_lihat" data-slug="uikit-colors">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/dropdowns.html" data-slug="uikit-dropdowns">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/pembeli_ubah" data-slug="uikit-dropdowns">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../uikit/list.html" data-slug="uikit-list">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/pembeli_hapus" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>
@@ -40,30 +42,30 @@
             <li class="site-menu-item has-sub active open">
               <a href="javascript:void(0)" data-slug="advanced">
                 <i class="site-menu-icon wb-hammer" aria-hidden="true"></i>
-                <span class="site-menu-title">Transaksi Pejualan</span>
+                <span class="site-menu-title">Transaksi Penjualan</span>
                 <span class="site-menu-arrow"></span>
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item ">
-                  <a class="animsition-link" href="../advanced/animation.html" data-slug="advanced-animation">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_buat" data-slug="advanced-animation">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/lightbox.html" data-slug="advanced-lightbox">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_lihat" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
                 <li class="site-menu-item active">
-                  <a href="javascript:void(0)" data-slug="advanced-tour">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../advanced/treeview.html" data-slug="advanced-treeview">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_hapus" data-slug="advanced-treeview">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>
@@ -78,7 +80,7 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="../structure/alerts.html" data-slug="structure-alerts">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/barang_lihat" data-slug="structure-alerts">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Lihat</span>
                   </a>
@@ -91,7 +93,7 @@
   </div>
     
   <!-- Page -->
-  <div class="page">
+  <div class="page animsition">
     <div class="page-header">
       <h1 class="page-title">Ubah Data Transaksi Penjualan</h1>
       <ol class="breadcrumb">
@@ -179,7 +181,7 @@
                 </div>
                 <div class="wizard-pane" id="exampleGetting" role="tabpanel">
                   <div class="text-center margin-vertical-20">
-                    <h4>Total Penjualan : </h4> 
+                    <h4>Total Penjualan : </h4> <!--  diisi hasil jumlah total penjualan -->
                   </div>
                     <form id="exampleBillingForm">
                     <div class="form-group">
@@ -188,7 +190,7 @@
                     </div>
                     </form>
                     <div class="text-center margin-vertical-20">
-                    <h4>Total Kembalian : </h4> 
+                    <h4>Total Kembalian : </h4> <!-- diisi hasil Bayar Transaksi - total pembelian -->
                   </div>
                 </div>
               </div>

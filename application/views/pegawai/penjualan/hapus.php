@@ -1,5 +1,6 @@
 <!-- Menu -->
-<div class="site-menubar">
+  </nav>
+  <div class="site-menubar">
     <div class="site-menubar-body">
       <div>
         <div>
@@ -45,7 +46,7 @@
                 <span class="site-menu-arrow"></span>
               </a>
               <ul class="site-menu-sub">
-                <li class="site-menu-item ">
+                <li class="site-menu-item">
                   <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_buat" data-slug="advanced-animation">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
@@ -57,8 +58,8 @@
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
-                <li class="site-menu-item hidden-xs">
-                  <a href="javascript:void(0)" href="<?php echo base_url(); ?>Pegawai/penjualan_ubah" data-slug="advanced-tour">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pegawai/penjualan_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
@@ -90,10 +91,9 @@
       </div>
     </div>
   </div>
-  <!-- End Menu -->
-  
-<!-- Page -->
-  <div class="page">
+
+  <!-- Page -->
+  <div class="page animsition">
     <div class="page-header">
       <h1 class="page-title">Hapus Data Transaksi Penjualan</h1>
       <ol class="breadcrumb">
@@ -164,51 +164,4 @@
   </div>
   <!-- End Page -->
 
-  <!-- Core  -->
-  <script src="../../assets/vendor/jquery/jquery.js"></script>
-  <script src="../../assets/vendor/bootstrap/bootstrap.js"></script>
-  <script src="../../assets/vendor/animsition/jquery.animsition.js"></script>
-  <script src="../../assets/vendor/asscroll/jquery-asScroll.js"></script>
-  <script src="../../assets/vendor/mousewheel/jquery.mousewheel.js"></script>
-  <script src="../../assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
-  <script src="../../assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
-
-  <!-- Plugins -->
-  <script src="../../assets/vendor/switchery/switchery.min.js"></script>
-  <script src="../../assets/vendor/intro-js/intro.js"></script>
-  <script src="../../assets/vendor/screenfull/screenfull.js"></script>
-  <script src="../../assets/vendor/slidepanel/jquery-slidePanel.js"></script>
-
-  <script src="../../assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-
-  <!-- Scripts -->
-  <script src="../../assets/js/core.js"></script>
-  <script src="../../assets/js/site.js"></script>
-
-  <script src="../../assets/js/sections/menu.js"></script>
-  <script src="../../assets/js/sections/menubar.js"></script>
-  <script src="../../assets/js/sections/sidebar.js"></script>
-
-  <script src="../../assets/js/configs/config-colors.js"></script>
-  <script src="../../assets/js/configs/config-tour.js"></script>
-
-  <script src="../../assets/js/components/asscrollable.js"></script>
-  <script src="../../assets/js/components/animsition.js"></script>
-  <script src="../../assets/js/components/slidepanel.js"></script>
-  <script src="../../assets/js/components/switchery.js"></script>
-  <script src="../../assets/js/components/jquery-placeholder.js"></script>
-
-  <script>
-    (function(document, window, $) {
-      'use strict';
-
-      var Site = window.Site;
-      $(document).ready(function() {
-        Site.run();
-      });
-    })(document, window, jQuery);
-  </script>
-
-</body>
-
-</html>
+ 
