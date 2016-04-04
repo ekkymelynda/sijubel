@@ -303,7 +303,7 @@
                 </div>
                 <div class="wizard-pane" id="exampleGetting" role="tabpanel">
                   <div class="text-center margin-vertical-20">
-                    <h4>Total Pembelian : </h4> <!-- <?php diisi hasil jumlah total pembelian ?> -->
+                    <h4>Total Pembelian : </h4> <!-- diisi hasil jumlah total pembelian -->
                   </div>
                     <form id="exampleBillingForm">
                     <div class="form-group">
@@ -312,7 +312,7 @@
                     </div>
                     </form>
                     <div class="text-center margin-vertical-20">
-                    <h4>Total Kembalian : </h4> <!-- <?php diisi hasil Bayar Transaksi - total pembelian ?> -->
+                    <h4>Total Kembalian : </h4> <!-- diisi hasil Bayar Transaksi - total pembelian -->
                   </div>
                 </div>
               </div>
