@@ -160,7 +160,7 @@
                 </li>
               </ul>
             </li>
-                        <li class="site-menu-item has-sub active open">
+            <li class="site-menu-item has-sub">
               <a href="javascript:void(0)" data-slug="structure">
                 <i class="site-menu-icon wb-folder" aria-hidden="true"></i>
                 <span class="site-menu-title">Laporan</span>
@@ -185,7 +185,7 @@
                     <span class="site-menu-title">Penjualan Perbulan</span>
                   </a>
                 </li>
-                <li class="site-menu-item active">
+                <li class="site-menu-item">
                   <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/laporan_penjualan_perhari" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Penjualan Perhari</span>
