@@ -61,7 +61,7 @@
             </li>
               <li class="site-menu-item has-sub">
               <a href="javascript:void(0)" data-slug="advanced">
-                <i class="site-menu-icon wb-calendar" aria-hidden="true"></i>
+                <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
                 <span class="site-menu-title">Supplier</span>
                 <span class="site-menu-arrow"></span>
               </a>
@@ -79,7 +79,7 @@
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a href="javascript:void(0)" data-slug="advanced-tour" href="<?php echo base_url(); ?>Pemilik/supplier_ubah">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/supplier_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
@@ -112,46 +112,13 @@
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a href="javascript:void(0)" data-slug="advanced-tour" href="<?php echo base_url(); ?>Pemilik/pembelian_ubah">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/pembelian_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
                   <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/pembelian_hapus" data-slug="advanced-treeview">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Hapus</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="site-menu-item has-sub">
-              <a href="javascript:void(0)" data-slug="structure">
-                <i class="site-menu-icon wb-plugin" aria-hidden="true"></i>
-                <span class="site-menu-title">Barang</span>
-                <span class="site-menu-arrow"></span>
-              </a>
-              <ul class="site-menu-sub">
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_buat" data-slug="uikit-buttons">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Buat</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_lihat" data-slug="uikit-colors">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Lihat</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_ubah" data-slug="uikit-dropdowns">
-                    <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Ubah</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_hapus" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Hapus</span>
                   </a>

@@ -61,7 +61,7 @@
             </li>
               <li class="site-menu-item has-sub active open">
               <a href="javascript:void(0)" data-slug="advanced">
-                <i class="site-menu-icon wb-calendar" aria-hidden="true"></i>
+                <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
                 <span class="site-menu-title">Supplier</span>
                 <span class="site-menu-arrow"></span>
               </a>
@@ -79,7 +79,7 @@
                   </a>
                 </li>
                 <li class="site-menu-item active">
-                  <a href="javascript:void(0)" data-slug="advanced-tour" href="<?php echo base_url(); ?>Pemilik/supplier_ubah">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/supplier_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
@@ -112,7 +112,7 @@
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a href="javascript:void(0)" data-slug="advanced-tour" href="<?php echo base_url(); ?>Pemilik/pembelian_ubah">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/pembelian_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>

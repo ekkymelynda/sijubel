@@ -65,7 +65,7 @@
         <h2 class="brand-text">Sijubel</h2>
       </div>
       <p>Sign into your pages account</p>
-      <form method="post" action="../pembeli/buat.php">
+      <form method="post" action="<?php echo base_url(); ?>Pemilik/akun_lihat">
         <div class="form-group">
           <label class="sr-only" for="inputName">ID</label>
           <input type="text" class="form-control" id="inputName" placeholder="ID Pemilik">
@@ -88,7 +88,7 @@
 
       <footer class="page-copyright">
         <p>WEBSITE oleh Kelompok C08</p>
-        <p>© 2015. Sistem Informasi Jual Beli Toko Djondol Pelangi.</p>
+        <p>© 2016. Sistem Informasi Jual Beli Toko Djondol Pelangi.</p>
         
       </footer>
     </div>

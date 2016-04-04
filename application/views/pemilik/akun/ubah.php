@@ -126,7 +126,6 @@
                 </li>
               </ul>
             </li>
-
             <li class="site-menu-item has-sub">
               <a href="javascript:void(0)" data-slug="structure">
                 <i class="site-menu-icon wb-plugin" aria-hidden="true"></i>

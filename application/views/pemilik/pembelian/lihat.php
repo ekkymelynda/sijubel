@@ -78,8 +78,8 @@
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
-                <li class="site-menu-item hidden-xs">
-                  <a href="javascript:void(0)" href="<?php echo base_url(); ?>Pemilik/supplier_ubah" data-slug="advanced-tour">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/supplier_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
@@ -111,8 +111,8 @@
                     <span class="site-menu-title">Lihat</span>
                   </a>
                 </li>
-                <li class="site-menu-item hidden-xs">
-                  <a href="javascript:void(0)" href="<?php echo base_url(); ?>Pemilik/pembelian_ubah" data-slug="advanced-tour">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/pembelian_ubah" data-slug="advanced-lightbox">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Ubah</span>
                   </a>
