@@ -32,21 +32,16 @@ class barang extends CI_Controller {
     
     public function insert_barang()
         {
-                    $id_brg=$this->input->post('id_brg');
-                    $nama_brg= $this->input->post('nama_brg');
-                    $jenis_brg= $this->input->post('jenis_brg');
-                    $harga_beli= $this->input->post('harga_beli');
-                    $harga_jual= $this->input->post('harga_jual');
-                    $status_brg= $this->input->post('status_brg');
+            redirect(base_url()."barang/barang_lihat_pemilik"); 
+                    
 
             		//masuk ke file model
-                    $this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);
-                    
-                    $this->load->view('pemilik/header')->view('pemilik/barang/buat')->view('pemilik/footer');          
+                    //$this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);
+                    //$this->load->view('pemilik/header')->view('pemilik/barang/buat')->view('pemilik/footer');          
             
 		            
     		//setelah insert masuk ke halaman ini:
-            redirect(base_url()."pemilik/barang_lihat"); 
+            redirect(base_url()."barang/barang_lihat_pemilik"); 
         }
 
         public function barang_lihat_pegawai()
@@ -69,10 +64,7 @@ class barang extends CI_Controller {
     public function delete_barang()
         {
             
-        }
-
-
-    
+        }  
     
 }
 ?>
