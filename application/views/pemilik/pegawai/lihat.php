@@ -249,7 +249,7 @@
               <tr>
                  <td><?php echo $row->ID_PGW;?></td>
                  <td><?php echo $row->NAMA_PGW;?></td>
-                 <td><?php echo $row->PSWD_BRG;?></td>
+                 <td><?php echo $row->PSWD_PGW;?></td>
                  <td><?php echo $row->ALAMAT_PGW;?></td>
                  <td><?php echo $row->NOTLP_PGW;?></td>
                  <td class="text-nowrap">
