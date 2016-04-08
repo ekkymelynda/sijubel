@@ -216,7 +216,7 @@
   <!-- End Menu -->
 
   <!-- Page -->
-  <div class="page animsition">
+  <div class="page">
     <div class="page-header">
       <h1 class="page-title">Buat Data Barang</h1>
       <ol class="breadcrumb">
