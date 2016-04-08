@@ -27,13 +27,11 @@ class pembeli extends CI_Controller {
     
     public function barang_buat()
 	{
-		$this->load->view('pegawai/header')->view('pegawai/barang/buat')->view('pegawai/footer');
+		$this->load->view('pemilik/header')->view('pemilik/barang/buat')->view('pemilik/footer');
 	}
     
     public function insert_barang()
         {
-            //if(!empty($_POST['id_pmb']))
-              //  {
                     $id_brg=$this->input->post('id_brg');
                     $nama_brg= $this->input->post('nama_brg');
                     $jenis_brg= $this->input->post('jenis_brg');
@@ -43,25 +41,29 @@ class pembeli extends CI_Controller {
             		//masuk ke file model
                     $this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);
 
-		            //$this->load->view('pegawai/header')->view('pegawai/pembeli/buat')->view('pegawai/footer');          
-            
-                //}
+		            
     		//setelah insert masuk ke halaman ini:
-            redirect(base_url()."pegawai/barang_lihat"); 
+            redirect(base_url()."pemilik/barang_lihat"); 
         }
 
-        public function barang_lihat()
+        public function barang_lihat_pegawai()
 	{
 		$data['h'] = $this->barang_model->lihat_barang();
 		$this->load->view('pegawai/header')->view('pegawai/barang/lihat', $data)->view('pegawai/footer');
 	}
 
-    public function update_pembeli()
+     public function barang_lihat_pemilik()
+    {
+        $data['h'] = $this->barang_model->lihat_barang();
+        $this->load->view('pemilik/header')->view('pemilik/barang/lihat')->view('pemilik/footer');
+    }
+
+    public function update_barang()
         {
             
         }
 
-    public function delete_pembeli()
+    public function delete_barang()
         {
             
         }

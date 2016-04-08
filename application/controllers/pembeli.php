@@ -46,7 +46,7 @@ class pembeli extends CI_Controller {
             
                 //}
     		//setelah insert masuk ke halaman ini:
-            redirect(base_url()."pegawai/pembeli_lihat"); 
+            redirect(base_url()."pembeli/pembeli_lihat"); 
         }
 
         public function pembeli_lihat()
