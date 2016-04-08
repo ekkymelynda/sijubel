@@ -6,15 +6,15 @@ class barang_model extends CI_Model
         parent::__construct();
         $this->load->database('default','true');
     }
-	
+    
     function inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg)
     {
         $data = array(
             'id_brg' => $id_brg,
             'nama_brg' => $nama_brg,
             'jenis_brg' => $jenis_brg,
-            'harga_beli'=> $harga_beli,
-            'harga_jual'=> $harga_jual,
+            'harga_beli' => $harga_beli,
+            'harga_jual' => $harga_jual,
             'status_brg'=> $status_brg
             );
         $this->db->insert('barang', $data);
@@ -28,7 +28,7 @@ class barang_model extends CI_Model
         return $query;
     }
 
-    function update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg)
+    function update_barang($id_pmb,$nama_pmb,$alamat_pmb,$notlp_pmb)
     {
 
     }

@@ -233,7 +233,7 @@
               <div class="example-wrap">
                 <h4 class="example-title">Buat Data Barang</h4>
                 <div class="example">
-                  <form autocomplete="off" href="<?php echo base_url(); ?>barang/insert_barang" method="post">
+                  <form autocomplete="off" href="<?php echo base_url(); ?>barang/insert_barang" method="POST">
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
                         <input type="text" class="form-control" id="inputBasicFirstName" name="id_brg"

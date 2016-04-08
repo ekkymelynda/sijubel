@@ -233,34 +233,34 @@
               <div class="example-wrap">
                 <h4 class="example-title">Buat Data Pegawai</h4>
                 <div class="example">
-                  <form autocomplete="off" action="<?php echo base_url(); ?>Pemilik/pegawai_lihat" method="POST">
+                  <form autocomplete="off" action="<?php echo base_url(); ?>pegawai/insert_pegawai" method="post">
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
-                        <input type="text" class="form-control" id="id_pgw" name="inputFirstName"
+                        <input type="text" class="form-control" id="id_pgw" name="id_pgw"
                         placeholder="A0000" autocomplete="off" />
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Nama</label>
-                        <input type="text" class="form-control" id="nama_pgw" name="inputFirstName"
+                        <input type="text" class="form-control" id="nama_pgw" name="nama_pgw"
                         placeholder="Ekky Melynda" autocomplete="off" />
                     </div>
                       <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Password</label>
-                        <input type="password" class="form-control" id="pswd_pgw" name="inputFirstName"
+                        <input type="password" class="form-control" id="pswd_pgw" name="pswd_pgw"
                         placeholder="*****" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Alamat</label>
-                      <input type="text" class="form-control" id="alamat_pgw" name="inputEmail"
+                      <input type="text" class="form-control" id="alamat_pgw" name="alamat_pgw"
                       placeholder="Kampus ITS Sukolilo, Surabaya" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Telp</label>
-                      <input type="text" class="form-control" id="notlp_pgw" name="inputPassword"
+                      <input type="text" class="form-control" id="notlp_pgw" name="notlp_pgw"
                       placeholder="081234567890" autocomplete="off" />
                     </div>
                     <div class="form-group">
-                      <button type="button" class="btn btn-primary">Buat</button>
+                      <button type="submit" class="btn btn-primary">Buat</button>
                     </div>
                   </form>
                 </div>

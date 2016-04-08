@@ -245,21 +245,23 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($h->result() as $row){?>
               <tr>
-                <td>A0000</td>
-                <td>Ekky Melynda</td>
-                <td>*****</td>
-                <td>Kampus ITS Sukolilo, Surabaya</td>
-                <td>081234567890</td>
-                <td class="text-nowrap">
+                 <td><?php echo $row->ID_PGW;?></td>
+                 <td><?php echo $row->NAMA_PGW;?></td>
+                 <td><?php echo $row->PSWD_BRG;?></td>
+                 <td><?php echo $row->ALAMAT_PGW;?></td>
+                 <td><?php echo $row->NOTLP_PGW;?></td>
+                 <td class="text-nowrap">
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Ubah">
-                    <a href="update-kamar.php"><i class="icon wb-wrench" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>Pegawai/pembeli_ubah"><i class="icon wb-wrench" aria-hidden="true"></i></a>
                   </button>
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Hapus">
-                    <a href="delete-kamar.php"><i class="icon wb-close" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>Pegawai/pembeli_hapus"><i class="icon wb-close" aria-hidden="true"></i></a>
                   </button>
                 </td>
-              </tr>
+            </tr>
+        <?php }?>
               
             </tbody>
           </table>
