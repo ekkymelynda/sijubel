@@ -121,23 +121,31 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!--<tr>
                 <td>A0000</td>
                 <td>Ekky Melynda</td>
                 <td>Kampus ITS Sukolilo, Surabaya</td>
-                <td>081234567890</td>
-                <td class="text-nowrap">
+                <td>081234567890</td> -->
+
+             <?php foreach ($h->result() as $row){?>
+              <tr>
+                 <td><?php echo $row->ID_PMB;?></td>
+                 <td><?php echo $row->NAMA_PMB;?></td>
+                 <td><?php echo $row->ALAMAT_PMB;?></td>
+                 <td><?php echo $row->NOTLP_PMB;?></td>
+                 <td class="text-nowrap">
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Ubah">
-                    <a href=""><i class="icon wb-wrench" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>Pegawai/pembeli_ubah"><i class="icon wb-wrench" aria-hidden="true"></i></a>
                   </button>
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Hapus">
-                    <a href=""><i class="icon wb-close" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>Pegawai/pembeli_hapus"><i class="icon wb-close" aria-hidden="true"></i></a>
                   </button>
                 </td>
-              </tr>
-              
+            </tr>
+        <?php }?>
             </tbody>
           </table>
+          
         </div>
       </div>
       <!-- End Panel Basic -->
