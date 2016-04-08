@@ -31,16 +31,6 @@ class Pegawai extends CI_Controller {
 		$this->load->view('pegawai/header')->view('pegawai/pembeli/buat')->view('pegawai/footer');
 	}
 
-	public function buat_pembeli()
-	{
-		$ID_PMB = $_POST['login_user'];
-		$NAMA_PMB = $_POST['namadepan'];
-		$ALAMAT_PMB = $_POST['namabelakang'];
-		$NOTLP_PMB = $_POST['alamat'];			
-	}
-
-	/**/
-
 	public function pembeli_lihat()
 	{
 		$this->load->view('pegawai/header')->view('pegawai/pembeli/lihat')->view('pegawai/footer');
