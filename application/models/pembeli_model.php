@@ -21,7 +21,7 @@ class pembeli_model extends CI_Model
     
     function lihat_pembeli()
     {
-        $query = $this->db->get('Pembeli');
+        $query = $this->db->get('pembeli');
         //return $query->result_array();
         return $query;
     }

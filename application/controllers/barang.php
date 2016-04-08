@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pembeli extends CI_Controller {
+class barang extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -38,9 +38,12 @@ class pembeli extends CI_Controller {
                     $harga_beli= $this->input->post('harga_beli');
                     $harga_jual= $this->input->post('harga_jual');
                     $status_brg= $this->input->post('status_brg');
+
             		//masuk ke file model
                     $this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);
-
+                    
+                    $this->load->view('pemilik/header')->view('pemilik/barang/buat')->view('pemilik/footer');          
+            
 		            
     		//setelah insert masuk ke halaman ini:
             redirect(base_url()."pemilik/barang_lihat"); 

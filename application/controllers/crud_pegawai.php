@@ -18,30 +18,52 @@ class crud_pegawai extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+     
 
-	public function __construct()
+    function __construct() {
+        parent::__construct();
+        $this->load->model('pegawai_model');
+       }
+    
+    public function pegawai_buat()
 	{
-		parent::__construct();
-		$this->load->model('');
-		$this->load->library('');
-		$this->load->model('pegawai_model');
+		$this->load->view('pemilik/header')->view('pemilik/pegawai/buat')->view('pemilik/footer');
 	}
+    
+    public function insert_pegawai()
+        {
+                    $id_pgw=$this->input->post('id_pgw');
+                    $pswd_pgw= $this->input->post('pswd_pgw');
+                    $nama_pgw= $this->input->post('nama_pgw');
+                    $alamat_pgw= $this->input->post('alamat_pgw');
+                    $notlp_pgw= $this->input->post('notlp_pgw');
+            		//masuk ke file model
+                    $this->pegawai_model->inpegawai($id_pgw, $pswd_pgw, $nama_pgw, $alamat_pgw, $notlp_pgw);
 
-	public function index()
-	{
-		$this->load->view('');
-	}
+		            
+    		//setelah insert masuk ke halaman ini:
+            redirect(base_url()."pemilik/pegawai_lihat"); 
+        }
 
-	public function create()
-	{
-		$id_pgw = $_POST['id_pgw'];
-		$pswd_pgw = $_POST['pswd_pgw'];
-		$nama_pgw = $_POST['nama_pgw'];
-		$alamat_pgw = $_POST['alamat_pgw'];
-		$notlp_pgw = $_POST['notlp_pgw'];
-		$this->pegawai_model->buat_pegawai($buat_pegawai, $pswd_pgw, $nama_pgw, $alamat_pgw, $notlp_pgw);
-		redirect('');
-	}
+        
+     public function pegawai_lihat_pemilik()
+    {
+        $data['h'] = $this->pegawai_model->lihat_pegawai();
+        $this->load->view('pemilik/header')->view('pemilik/pegawai/lihat')->view('pemilik/footer');
+    }
+
+    public function update_pegawai()
+        {
+            
+        }
+
+    public function delete_pegawai()
+        {
+            
+        }
 
 
+    
+    
 }
+?>
