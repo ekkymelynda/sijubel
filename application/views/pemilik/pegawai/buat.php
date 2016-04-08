@@ -125,6 +125,39 @@
                 </li>
               </ul>
             </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)" data-slug="structure">
+                <i class="site-menu-icon wb-plugin" aria-hidden="true"></i>
+                <span class="site-menu-title">Barang</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_buat" data-slug="uikit-buttons">
+                    <i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">Buat</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_lihat" data-slug="uikit-colors">
+                    <i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">Lihat</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_ubah" data-slug="uikit-dropdowns">
+                    <i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">Ubah</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>Pemilik/barang_hapus" data-slug="uikit-list">
+                    <i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">Hapus</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
               <li class="site-menu-item has-sub">
               <a href="javascript:void(0)" data-slug="structure">
                 <i class="site-menu-icon wb-folder" aria-hidden="true"></i>
@@ -200,7 +233,7 @@
               <div class="example-wrap">
                 <h4 class="example-title">Buat Data Pegawai</h4>
                 <div class="example">
-                  <form autocomplete="off" action="crud_pegawai/create" method="POST">
+                  <form autocomplete="off" action="<?php echo base_url(); ?>Pemilik/pegawai_lihat" method="POST">
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
                         <input type="text" class="form-control" id="id_pgw" name="inputFirstName"
