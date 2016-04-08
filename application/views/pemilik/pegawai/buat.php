@@ -200,30 +200,30 @@
               <div class="example-wrap">
                 <h4 class="example-title">Buat Data Pegawai</h4>
                 <div class="example">
-                  <form autocomplete="off">
+                  <form autocomplete="off" action="crud_pegawai/create" method="POST">
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
-                        <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
+                        <input type="text" class="form-control" id="id_pgw" name="inputFirstName"
                         placeholder="A0000" autocomplete="off" />
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Nama</label>
-                        <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
+                        <input type="text" class="form-control" id="nama_pgw" name="inputFirstName"
                         placeholder="Ekky Melynda" autocomplete="off" />
                     </div>
                       <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Password</label>
-                        <input type="password" class="form-control" id="inputBasicFirstName" name="inputFirstName"
+                        <input type="password" class="form-control" id="pswd_pgw" name="inputFirstName"
                         placeholder="*****" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Alamat</label>
-                      <input type="text" class="form-control" id="inputBasicEmail" name="inputEmail"
+                      <input type="text" class="form-control" id="alamat_pgw" name="inputEmail"
                       placeholder="Kampus ITS Sukolilo, Surabaya" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Telp</label>
-                      <input type="text" class="form-control" id="inputBasicPassword" name="inputPassword"
+                      <input type="text" class="form-control" id="notlp_pgw" name="inputPassword"
                       placeholder="081234567890" autocomplete="off" />
                     </div>
                     <div class="form-group">
