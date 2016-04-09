@@ -42,9 +42,7 @@ class pembeli extends CI_Controller {
             		//masuk ke file model
                     $this->pembeli_model->inpembeli($id_pmb,$nama_pmb,$alamat_pmb,$notlp_pmb);
 
-		            $this->load->view('pegawai/header')->view('pegawai/pembeli/buat')->view('pegawai/footer');          
-            
-                //}
+		        //}
     		//setelah insert masuk ke halaman ini:
             redirect(base_url()."pembeli/pembeli_lihat"); 
         }
@@ -55,10 +53,22 @@ class pembeli extends CI_Controller {
 		$this->load->view('pegawai/header')->view('pegawai/pembeli/lihat',$data)->view('pegawai/footer');
 	}
 
+    public function form_update_pembeli($id_pmb)
+        {
+            $data['h'] = $this->pembeli_model->form_update_pembeli($id_pmb);
+            $this->load->view('pegawai/header')->view('pegawai/pembeli/ubah',$data)->view('pegawai/footer');
+        }
+
     public function update_pembeli($id_pmb)
         {
-            $data['h'] = $this->pembeli_model->update_pembeli($id_pmb);
-            $this->load->view('pegawai/header')->view('pegawai/pembeli/ubah',$data)->view('pegawai/footer');
+            $nama_pmb= $this->input->post('nama_pmb');
+            $alamat_pmb= $this->input->post('alamat_pmb');
+            $notlp_pmb= $this->input->post('notlp_pmb');
+
+            //masuk ke model
+            $this->pembeli_model->update_pembeli($id_pmb,$nama_pmb,$alamat_pmb,$notlp_pmb);
+
+            redirect(base_url()."pembeli/pembeli_lihat");
         }
 
     public function delete_pembeli()

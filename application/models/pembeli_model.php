@@ -26,9 +26,24 @@ class pembeli_model extends CI_Model
         return $query;
     }
 
+    function form_update_pembeli($id_pmb)
+    {
+        $this->db->where("id_pmb",$id_pmb);
+        $query = $this->db->get('pembeli');
+        return $query;
+
+    }
+
     function update_pembeli($id_pmb,$nama_pmb,$alamat_pmb,$notlp_pmb)
     {
+        $data = array(
+            'nama_pmb' => $nama_pmb,
+            'alamat_pmb' => $alamat_pmb,
+            'notlp_pmb'=> $notlp_pmb
+            );
 
+        $this->db->where("id_pmb",$id_pmb);
+        $this->db->update('pembeli', $data);
     }
 
     function delete_pembeli($id)
