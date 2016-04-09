@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class supplier extends CI_Controller {
+class pembeli extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,34 +22,38 @@ class supplier extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('supplier_model');
+        $this->load->model('barang_model');
        }
     
-    public function supplier_buat()
+    public function barang_buat()
 	{
-		$this->load->view('pemilik/header')->view('pemilik/supplier/buat')->view('pemilik/footer');
+		$this->load->view('pegawai/header')->view('pegawai/barang/buat')->view('pegawai/footer');
 	}
     
-    public function insert_supplier()
+    public function insert_barang()
         {
             //if(!empty($_POST['id_pmb']))
               //  {
-                    $id_spl=$this->input->post('id_spl');
-                    $nama_spl= $this->input->post('nama_spl');
-                    $perusahaan_spl= $this->input->post('perusahaan_spl');
-                    $notlp_spl= $this->input->post('notlp_spl');
+                    $id_brg=$this->input->post('id_brg');
+                    $nama_brg= $this->input->post('nama_brg');
+                    $jenis_brg= $this->input->post('jenis_brg');
+                    $harga_beli= $this->input->post('harga_beli');
+                    $harga_jual= $this->input->post('harga_jual');
+                    $status_brg= $this->input->post('status_brg');
             		//masuk ke file model
-                    $this->supplier_model->insupplier($id_spl,$nama_spl,$perusahaan_spl,$notlp_spl);       
-                    
+                    $this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);
+
+		            //$this->load->view('pegawai/header')->view('pegawai/pembeli/buat')->view('pegawai/footer');          
+            
                 //}
     		//setelah insert masuk ke halaman ini:
-            redirect(base_url()."supplier/supplier_lihat"); 
+            redirect(base_url()."pegawai/barang_lihat"); 
         }
 
-        public function supplier_lihat()
+        public function barang_lihat()
 	{
-		$data['h'] = $this->supplier_model->lihat_supplier();
-		$this->load->view('pemilik/header')->view('pemilik/supplier/lihat',$data)->view('pemilik/footer');
+		$data['h'] = $this->barang_model->lihat_barang();
+		$this->load->view('pegawai/header')->view('pegawai/barang/lihat', $data)->view('pegawai/footer');
 	}
 
     public function update_pembeli()
