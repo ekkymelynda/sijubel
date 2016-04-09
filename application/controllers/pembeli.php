@@ -55,9 +55,10 @@ class pembeli extends CI_Controller {
 		$this->load->view('pegawai/header')->view('pegawai/pembeli/lihat',$data)->view('pegawai/footer');
 	}
 
-    public function update_pembeli()
+    public function update_pembeli($id_pmb)
         {
-            
+            $data['h'] = $this->pembeli_model->update_pembeli($id_pmb);
+            $this->load->view('pegawai/header')->view('pegawai/pembeli/ubah',$data)->view('pegawai/footer');
         }
 
     public function delete_pembeli()
