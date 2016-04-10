@@ -70,7 +70,17 @@ class supplier extends CI_Controller {
             redirect(base_url()."supplier/supplier_lihat");
         }
 
-    
+    public function halaman_delete_supplier($id_spl)
+        {
+            $data['h'] = $this->supplier_model->form_update_supplier($id_spl);
+            $this->load->view('pegawai/header')->view('pegawai/supplier/hapus',$data)->view('pegawai/footer');
+        }
+
+    public function delete_supplier($id_spl)
+        {
+            $this->supplier_model->delete_supplier($id_spl);
+            redirect(base_url()."supplier/supplier_lihat");
+        }
     
 }
 ?>

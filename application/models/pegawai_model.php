@@ -47,5 +47,11 @@ class pegawai_model extends CI_Model
         $this->db->where("id_pgw",$id_pgw);
         $this->db->update('pegawai', $data);
     }
+
+     function delete_pegawai($id_pgw)
+    {
+        $this->db->where("id_pgw",$id_pgw);
+        $this->db->delete('pegawai');
+    }
 }
 ?>    

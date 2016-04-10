@@ -49,5 +49,11 @@ class barang_model extends CI_Model
         $this->db->where("id_brg",$id_brg);
         $this->db->update('barang', $data);
     }
+
+    function delete_barang($id_brg)
+    {
+        $this->db->where("id_brg",$id_brg);
+        $this->db->delete('barang');
+    }
 }
 ?>

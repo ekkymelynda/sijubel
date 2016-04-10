@@ -73,6 +73,18 @@ class barang extends CI_Controller {
         $this->barang_model->update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);
 
         redirect(base_url()."barang/barang_lihat");
-    }    
+    }
+
+    public function halaman_delete_barang($id_brg)
+        {
+            $data['h'] = $this->barang_model->form_update_barang($id_brg);
+            $this->load->view('pemilik/header')->view('pemilik/barang/hapus',$data)->view('pemilik/footer');
+        }
+
+    public function delete_barang($id_brg)
+        {
+            $this->barang_model->delete_barang($id_brg);
+            redirect(base_url()."barang/barang_lihat");
+        }
 }
 ?>

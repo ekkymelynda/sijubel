@@ -71,6 +71,18 @@ class pegawai extends CI_Controller {
 
         redirect(base_url()."pegawai/pegawai_lihat");
     }
+
+    public function halaman_delete_pegawai($id_pgw)
+        {
+            $data['h'] = $this->pegawai_model->form_update_pegawai($id_pgw);
+            $this->load->view('pemilik/header')->view('pemilik/pegawai/hapus',$data)->view('pemilik/footer');
+        }
+
+    public function delete_pegawai($id_pgw)
+        {
+            $this->pegawai_model->delete_pegawai($id_pgw);
+            redirect(base_url()."pegawai/pegawai_lihat");
+        }
     
 }
 ?>
