@@ -71,9 +71,16 @@ class pembeli extends CI_Controller {
             redirect(base_url()."pembeli/pembeli_lihat");
         }
 
-    public function delete_pembeli()
+    public function halaman_delete_pembeli($id_pmb)
         {
-            
+            $data['h'] = $this->pembeli_model->form_update_pembeli($id_pmb);
+            $this->load->view('pegawai/header')->view('pegawai/pembeli/hapus',$data)->view('pegawai/footer');
+        }
+
+    public function delete_pembeli($id_pmb)
+        {
+            $this->pembeli_model->delete_pembeli($id_pmb);
+            redirect(base_url()."pembeli/pembeli_lihat");
         }
 
 
