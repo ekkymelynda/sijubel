@@ -46,9 +46,10 @@ class pembeli_model extends CI_Model
         $this->db->update('pembeli', $data);
     }
 
-    function delete_pembeli($id)
+    function delete_pembeli($id_pmb)
     {
-        
+        $this->db->where("id_pmb",$id_pmb);
+        $this->db->delete('pembeli');
     }
 }
     ?>
