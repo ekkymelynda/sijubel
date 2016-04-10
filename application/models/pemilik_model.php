@@ -6,7 +6,7 @@ class pemilik_model extends CI_Model
         parent::__construct();
         $this->load->database('default','true');
     }
-    
+	 
     function lihat_pemilik()
     {
         $query = $this->db->get('pemilik');
@@ -22,12 +22,12 @@ class pemilik_model extends CI_Model
 
     }
 
-    function update_pemilik($id_pml,$pswd_pml,$nama_pml,$alamat_pml,$notlp_pml)
+    function update_pemilik($id_pml,$nama_pml,$pswd_pml,$alamat_pml,$notlp_pml)
     {
         $data = array(
-            'id_pml' => $id_pml,
-            'pswd_pml' => $pswd_pml,
+           'id_pml' => $id_pml,
             'nama_pml' => $nama_pml,
+            'pswd_pml' => $pswd_pml,
             'alamat_pml'=> $alamat_pml,
             'notlp_pml'=> $notlp_pml
             );
@@ -36,4 +36,4 @@ class pemilik_model extends CI_Model
         $this->db->update('pemilik', $data);
     }
 }
-?>    
+    ?>
