@@ -2,7 +2,8 @@
 
 class barang_model extends CI_Model
 {
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
         $this->load->database('default','true');
     }
@@ -28,14 +29,26 @@ class barang_model extends CI_Model
         return $query;
     }
 
-    function update_barang($id_pmb,$nama_pmb,$alamat_pmb,$notlp_pmb)
+    function form_update_barang($id_brg)
     {
-
+        $this->db->where("id_brg",$id_brg);
+        $query = $this->db->get('barang');
+        return $query;
     }
 
-    function delete_barang($id)
+    function update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg)
     {
-        
+        $data = array(
+            'id_brg' => $id_brg,
+            'nama_brg' => $nama_brg,
+            'jenis_brg' => $jenis_brg,
+            'harga_beli' => $harga_beli,
+            'harga_jual' => $harga_jual,
+            'status_brg'=> $status_brg
+            );
+
+        $this->db->where("id_brg",$id_brg);
+        $this->db->update('barang', $data);
     }
 }
-    ?>
+?>

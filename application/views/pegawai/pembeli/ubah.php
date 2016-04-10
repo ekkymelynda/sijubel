@@ -121,17 +121,17 @@
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Nama</label>
                         <input type="text" class="form-control" id="inputBasicFirstName" name="nama_pmb"
-                        placeholder="<?php echo $row->NAMA_PMB;?>" autocomplete="off" />
+                        value="<?php echo $row->NAMA_PMB;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Alamat</label>
                       <input type="text" class="form-control" id="inputBasicEmail" name="alamat_pmb"
-                      placeholder="<?php echo $row->ALAMAT_PMB;?>" autocomplete="off" />
+                      value="<?php echo $row->ALAMAT_PMB;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Telp</label>
                       <input type="text" class="form-control" id="inputBasicPassword" name="notlp_pmb"
-                      placeholder="<?php echo $row->NOTLP_PMB; }?> " autocomplete="off" />
+                      value="<?php echo $row->NOTLP_PMB; }?> " autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary">Ubah</button>

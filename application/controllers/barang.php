@@ -20,10 +20,11 @@ class barang extends CI_Controller {
      */
      
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
         $this->load->model('barang_model');
-       }
+    }
     
     public function barang_buat()
     {
@@ -31,41 +32,48 @@ class barang extends CI_Controller {
     }
     
     public function insert_barang()
-        {
-            //if(!empty($_POST['id_pmb']))
-              //  {
-                    $id_brg=$this->input->post('id_brg');
-                    $nama_brg= $this->input->post('nama_brg');
-                    $jenis_brg= $this->input->post('jenis_brg');
-                    $harga_beli= $this->input->post('harga_beli');
-                    $harga_jual= $this->input->post('harga_jual');
-                    $status_brg= $this->input->post('status_brg');
-                    //masuk ke file model
-                    $this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);       
+    {
+        //if(!empty($_POST['id_pmb']))
+        //{
+            $id_brg=$this->input->post('id_brg');
+            $nama_brg= $this->input->post('nama_brg');
+            $jenis_brg= $this->input->post('jenis_brg');
+            $harga_beli= $this->input->post('harga_beli');
+            $harga_jual= $this->input->post('harga_jual');
+            $status_brg= $this->input->post('status_brg');
+            //masuk ke file model
+            $this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);       
                     
-                //}
+        //}
             //setelah insert masuk ke halaman ini:
             redirect(base_url()."barang/barang_lihat"); 
         }
 
-        public function barang_lihat()
+    public function barang_lihat()
     {
         $data['h'] = $this->barang_model->lihat_barang();
         $this->load->view('pemilik/header')->view('pemilik/barang/lihat',$data)->view('pemilik/footer');
     }
 
-    public function update_barang()
-        {
-            
-        }
+    public function form_update_barang($id_brg)
+    {
+        $data['h'] = $this->barang_model->form_update_barang($id_brg);
+        $this->load->view('pemilik/header')->view('pemilik/barang/ubah',$data)->view('pemilik/footer');
+    }
 
-    public function delete_barang()
-        {
-            
-        }
+    public function update_barang($id_brg)
+    {
+        $id_brg=$this->input->post('id_brg');
+        $nama_brg= $this->input->post('nama_brg');
+        $jenis_brg= $this->input->post('jenis_brg');
+        $harga_beli= $this->input->post('harga_beli');
+        $harga_jual= $this->input->post('harga_jual');
+        $status_brg= $this->input->post('status_brg');
 
+        //masuk ke model
+        $this->barang_model->update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);
 
-    
-    
+        redirect(base_url()."barang/barang_lihat");
+    }    
 }
 ?>

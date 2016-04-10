@@ -256,7 +256,7 @@
                  <td><?php echo $row->STATUS_BRG;?></td>
                  <td class="text-nowrap">
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Ubah">
-                    <a href="<?php echo base_url(); ?>Pegawai/pembeli_ubah"><i class="icon wb-wrench" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>barang/form_update_barang/<?php echo $row->ID_BRG;?>"><i class="icon wb-wrench" aria-hidden="true"></i></a>
                   </button>
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Hapus">
                     <a href="<?php echo base_url(); ?>Pegawai/pembeli_hapus"><i class="icon wb-close" aria-hidden="true"></i></a>

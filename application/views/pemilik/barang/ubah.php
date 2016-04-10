@@ -233,39 +233,45 @@
               <div class="example-wrap">
                 <h4 class="example-title">Ubah Data Barang</h4>
                 <div class="example">
-                  <form autocomplete="off">
-                    <div class="form-group">
+                  <?php foreach ($h->result() as $row){?>
+                  <form class="form-group" action="<?php echo base_url();?>barang/update_barang/<?php echo $row->ID_BRG;?>" method="post">
+                    <!--<div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
                         <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
                         placeholder="A0000" autocomplete="off" />
-                    </div>
+                    </div>-->
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Nama Barang</label>
-                        <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
-                        placeholder="Pensil" autocomplete="off" />
+                        <input type="text" class="form-control" id="inputBasicFirstName" name="nama_brg"
+                        value="<?php echo $row->NAMA_BRG;?>" autocomplete="off" />
                     </div>
                       <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Jenis Barang</label>
-                        <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
-                        placeholder="ATK" autocomplete="off" />
+                        <input type="text" class="form-control" id="inputBasicFirstName" name="jenis_brg"
+                        value="<?php echo $row->JENIS_BRG;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Harga Jual Barang</label>
-                      <input type="money" class="form-control" id="inputBasicEmail" name="inputEmail"
-                      placeholder="3000" autocomplete="off" />
+                      <input type="money" class="form-control" id="inputBasicEmail" name="harga_jual"
+                      value="<?php echo $row->HARGA_JUAL;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Harga Beli Barang</label>
-                      <input type="money" class="form-control" id="inputBasicEmail" name="inputEmail"
-                      placeholder="2000" autocomplete="off" />
+                      <input type="money" class="form-control" id="inputBasicEmail" name="harga_beli"
+                      value="<?php echo $row->HARGA_BELI;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
-                      <label class="control-label" for="inputBasicPassword">Status</label>
-                      <input type="text" class="form-control" id="inputBasicPassword" name="inputPassword"
-                      placeholder="tersedia" autocomplete="off" />
+                      <label class="control-label">Status</label>
+                      <div>
+                          <select class="form-control" name="status_brg" required="on">
+                              <option value="<?php echo $row->STATUS_BRG; }?>"></option>
+                              <option value="Tersedia">Tersedia</option>
+                              <option value="Terjual">Terjual</option>
+                            </select>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <button type="button" class="btn btn-primary">Ubah</button>
+                      <button type="submit" class="btn btn-primary">Ubah</button>
                     </div>
                   </form>
                 </div>
