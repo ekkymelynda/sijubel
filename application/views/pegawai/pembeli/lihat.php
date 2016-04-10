@@ -138,7 +138,7 @@
                     <a href="<?php echo base_url(); ?>pembeli/form_update_pembeli/<?php echo $row->ID_PMB;?>"><i class="icon wb-wrench" aria-hidden="true"></i></a>
                   </button>
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Hapus">
-                    <a href="<?php echo base_url(); ?>Pegawai/pembeli_hapus"><i class="icon wb-close" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>pembeli/halaman_delete_pembeli/<?php echo $row->ID_PMB;?>"><i class="icon wb-close" aria-hidden="true"></i></a>
                   </button>    
                 </td>
             </tr>
