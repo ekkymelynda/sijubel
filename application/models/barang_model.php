@@ -39,7 +39,6 @@ class barang_model extends CI_Model
     function update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg)
     {
         $data = array(
-            'id_brg' => $id_brg,
             'nama_brg' => $nama_brg,
             'jenis_brg' => $jenis_brg,
             'harga_beli' => $harga_beli,

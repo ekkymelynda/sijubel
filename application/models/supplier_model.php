@@ -37,7 +37,6 @@ class supplier_model extends CI_Model
     function update_supplier($id_spl,$nama_spl,$perusahaan_spl,$notlp_spl)
     {
         $data = array(
-           'id_spl' => $id_spl,
             'nama_spl' => $nama_spl,
             'perusahaan_spl' => $perusahaan_spl,
             'notlp_spl'=> $notlp_spl

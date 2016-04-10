@@ -25,7 +25,6 @@ class pemilik_model extends CI_Model
     function update_pemilik($id_pml,$nama_pml,$pswd_pml,$alamat_pml,$notlp_pml)
     {
         $data = array(
-           'id_pml' => $id_pml,
             'nama_pml' => $nama_pml,
             'pswd_pml' => $pswd_pml,
             'alamat_pml'=> $alamat_pml,

@@ -38,7 +38,6 @@ class pegawai_model extends CI_Model
     function update_pegawai($id_pgw, $pswd_pgw, $nama_pgw, $alamat_pgw, $notlp_pgw)
     {
         $data = array(
-            'id_pgw' => $id_pgw,
             'pswd_pgw' => $pswd_pgw,
             'nama_pgw' => $nama_pgw,
             'alamat_pgw'=> $alamat_pgw,

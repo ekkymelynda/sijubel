@@ -39,7 +39,6 @@ class pemilik extends CI_Controller {
 
     public function update_pemilik($id_pml)
         {
-            $id_pml=$this->input->post('id_pml');
             $nama_pml= $this->input->post('nama_pml');
             $pswd_pml= $this->input->post('pswd_pml');
             $alamat_pml= $this->input->post('alamat_pml');
