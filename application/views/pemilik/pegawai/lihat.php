@@ -254,7 +254,7 @@
                  <td><?php echo $row->NOTLP_PGW;?></td>
                  <td class="text-nowrap">
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Ubah">
-                    <a href="<?php echo base_url(); ?>Pegawai/pembeli_ubah"><i class="icon wb-wrench" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>pegawai/form_update_pegawai/<?php echo $row->ID_PGW;?>"><i class="icon wb-wrench" aria-hidden="true"></i></a>
                   </button>
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Hapus">
                     <a href="<?php echo base_url(); ?>Pegawai/pembeli_hapus"><i class="icon wb-close" aria-hidden="true"></i></a>

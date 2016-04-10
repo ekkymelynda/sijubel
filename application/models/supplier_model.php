@@ -26,14 +26,25 @@ class supplier_model extends CI_Model
         return $query;
     }
 
-    function update_supplier($id_pmb,$nama_pmb,$alamat_pmb,$notlp_pmb)
+    function form_update_supplier($id_spl)
     {
+        $this->db->where("id_spl",$id_spl);
+        $query = $this->db->get('supplier');
+        return $query;
 
     }
 
-    function delete_supplier($id)
+    function update_supplier($id_spl,$nama_spl,$perusahaan_spl,$notlp_spl)
     {
-        
+        $data = array(
+           'id_spl' => $id_spl,
+            'nama_spl' => $nama_spl,
+            'perusahaan_spl' => $perusahaan_spl,
+            'notlp_spl'=> $notlp_spl
+            );
+
+        $this->db->where("id_spl",$id_spl);
+        $this->db->update('supplier', $data);
     }
 }
     ?>

@@ -31,21 +31,21 @@ class pegawai extends CI_Controller {
 	}
     
     public function insert_pegawai()
-        {
-            //if(!empty($_POST['id_pmb']))
-              //  {
-                    $id_pgw=$this->input->post('id_pgw');
-                    $pswd_pgw= $this->input->post('pswd_pgw');
-                    $nama_pgw= $this->input->post('nama_pgw');
-                    $alamat_pgw= $this->input->post('alamat_pgw');
-                    $notlp_pgw= $this->input->post('notlp_pgw');
-            		//masuk ke file model
-                    $this->pegawai_model->inpegawai($id_pgw,$pswd_pgw,$nama_pgw,$alamat_pgw,$notlp_pgw);       
+    {
+        //if(!empty($_POST['id_pmb']))
+        //{
+            $id_pgw=$this->input->post('id_pgw');
+            $pswd_pgw= $this->input->post('pswd_pgw');
+            $nama_pgw= $this->input->post('nama_pgw');
+            $alamat_pgw= $this->input->post('alamat_pgw');
+            $notlp_pgw= $this->input->post('notlp_pgw');
+            //masuk ke file model
+            $this->pegawai_model->inpegawai($id_pgw,$pswd_pgw,$nama_pgw,$alamat_pgw,$notlp_pgw);       
                     
-                //}
+            //}
     		//setelah insert masuk ke halaman ini:
             redirect(base_url()."pegawai/pegawai_lihat"); 
-        }
+    }
 
         public function pegawai_lihat()
 	{
@@ -53,18 +53,25 @@ class pegawai extends CI_Controller {
 		$this->load->view('pemilik/header')->view('pemilik/pegawai/lihat',$data)->view('pemilik/footer');
 	}
 
-    public function update_pembeli()
-        {
-            
-        }
+    public function form_update_pegawai($id_pgw)
+    {
+        $data['h'] = $this->pegawai_model->form_update_pegawai($id_pgw);
+        $this->load->view('pemilik/header')->view('pemilik/pegawai/ubah',$data)->view('pemilik/footer');
+    }
 
-    public function delete_pembeli()
-        {
-            
-        }
+    public function update_pegawai($id_pgw)
+    {
+        $id_pgw=$this->input->post('id_pgw');
+        $pswd_pgw= $this->input->post('pswd_pgw');
+        $nama_pgw= $this->input->post('nama_pgw');
+        $alamat_pgw= $this->input->post('alamat_pgw');
+        $notlp_pgw= $this->input->post('notlp_pgw');
 
+        //masuk ke model
+        $this->pegawai_model->update_pegawai($id_pgw,$pswd_pgw,$nama_pgw,$alamat_pgw,$notlp_pgw);
 
-    
+        redirect(base_url()."pegawai/pegawai_lihat");
+    }
     
 }
 ?>

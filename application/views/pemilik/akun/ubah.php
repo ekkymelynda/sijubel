@@ -234,34 +234,36 @@
               <div class="example-wrap">
                 <h4 class="example-title">Ubah Akun Admin</h4>
                 <div class="example">
-                  <form autocomplete="off">
-                    <div class="form-group">
+                  <?php foreach ($h->result() as $row){?>
+                  <form class="form-group" action="<?php echo base_url();?>pemilik/update_pemilik/<?php echo $row->ID_PML;?>" method="post">
+                    <!--<div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
-                        <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
-                        placeholder="A0000" autocomplete="off" />
-                    </div>
+                        <input type="text" class="form-control" id="inputBasicFirstName" name="id_pml"
+                        value="<?php echo $row->ID_PML;?>" autocomplete="off" />
+                    </div>-->
+
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Nama</label>
-                        <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
-                        placeholder="Ekky Melynda" autocomplete="off" />
+                        <input type="text" class="form-control" id="inputBasicFirstName" name="nama_pml"
+                        value="<?php echo $row->NAMA_PML;?>" autocomplete="off" />
                     </div>
                       <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Password</label>
-                        <input type="password" class="form-control" id="inputBasicFirstName" name="inputFirstName"
-                        placeholder="*****" autocomplete="off" />
+                        <input type="password" class="form-control" id="inputBasicFirstName" name="pswd_pml"
+                        value="<?php echo $row->PSWD_PML;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Alamat</label>
-                      <input type="text" class="form-control" id="inputBasicEmail" name="inputEmail"
-                      placeholder="Kampus ITS Sukolilo, Surabaya" autocomplete="off" />
+                      <input type="text" class="form-control" id="inputBasicEmail" name="alamat_pml"
+                      value="<?php echo $row->ALAMAT_PML;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Telp</label>
-                      <input type="text" class="form-control" id="inputBasicPassword" name="inputPassword"
-                      placeholder="081234567890" autocomplete="off" />
+                      <input type="text" class="form-control" id="inputBasicPassword" name="notlp_pml"
+                      value="<?php echo $row->NOTLP_PML; }?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
-                      <button type="button" class="btn btn-primary">Ubah</button>
+                      <button type="submit" class="btn btn-primary">Ubah</button>
                     </div>
                   </form>
                 </div>

@@ -27,14 +27,26 @@ class pegawai_model extends CI_Model
         return $query;
     }
 
-    function update_pegawai($id_pmb,$nama_pmb,$alamat_pmb,$notlp_pmb)
+    function form_update_pegawai($id_pgw)
     {
+        $this->db->where("id_pgw",$id_pgw);
+        $query = $this->db->get('pegawai');
+        return $query;
 
     }
 
-    function delete_pegawai($id)
+    function update_pegawai($id_pgw, $pswd_pgw, $nama_pgw, $alamat_pgw, $notlp_pgw)
     {
-        
+        $data = array(
+            'id_pgw' => $id_pgw,
+            'pswd_pgw' => $pswd_pgw,
+            'nama_pgw' => $nama_pgw,
+            'alamat_pgw'=> $alamat_pgw,
+            'notlp_pgw'=> $notlp_pgw
+            );
+
+        $this->db->where("id_pgw",$id_pgw);
+        $this->db->update('pegawai', $data);
     }
 }
 ?>    

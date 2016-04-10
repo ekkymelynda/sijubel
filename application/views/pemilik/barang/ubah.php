@@ -261,14 +261,9 @@
                       value="<?php echo $row->HARGA_BELI;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
-                      <label class="control-label">Status</label>
-                      <div>
-                          <select class="form-control" name="status_brg" required="on">
-                              <option value="<?php echo $row->STATUS_BRG; }?>"></option>
-                              <option value="Tersedia">Tersedia</option>
-                              <option value="Terjual">Terjual</option>
-                            </select>
-                      </div>
+                      <label class="control-label" for="inputBasicPassword">Status</label>
+                      <input type="text" class="form-control" id="inputBasicPassword" name="status_brg"
+                      value="<?php echo $row->STATUS_BRG; }?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary">Ubah</button>

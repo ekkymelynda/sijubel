@@ -233,34 +233,36 @@
               <div class="example-wrap">
                 <h4 class="example-title">Ubah Data Pegawai</h4>
                 <div class="example">
-                  <form autocomplete="off">
-                    <div class="form-group">
+                  <?php foreach ($h->result() as $row){?>
+                  <form class="form-group" action="<?php echo base_url();?>pegawai/update_pegawai/<?php echo $row->ID_PGW;?>" method="post">
+                    
+                    <!--<div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
-                        <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
-                        placeholder="A0000" autocomplete="off" />
-                    </div>
+                        <input type="text" class="form-control" id="inputBasicFirstName" name="id_pgw"
+                        value="<?php echo $row->ID_PGW;?>" autocomplete="off" />
+                    </div>-->
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Nama</label>
-                        <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName"
-                        placeholder="Ekky Melynda" autocomplete="off" />
+                        <input type="text" class="form-control" id="inputBasicFirstName" name="nama_pgw"
+                        value="<?php echo $row->NAMA_PGW;?>" autocomplete="off" />
                     </div>
                       <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Password</label>
-                        <input type="password" class="form-control" id="inputBasicFirstName" name="inputFirstName"
-                        placeholder="*****" autocomplete="off" />
+                        <input type="password" class="form-control" id="inputBasicFirstName" name="pswd_pgw"
+                        value="<?php echo $row->PSWD_PGW;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Alamat</label>
-                      <input type="text" class="form-control" id="inputBasicEmail" name="inputEmail"
-                      placeholder="Kampus ITS Sukolilo, Surabaya" autocomplete="off" />
+                      <input type="text" class="form-control" id="inputBasicEmail" name="alamat_pgw"
+                      value="<?php echo $row->ALAMAT_PGW;?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Telp</label>
-                      <input type="text" class="form-control" id="inputBasicPassword" name="inputPassword"
-                      placeholder="081234567890" autocomplete="off" />
+                      <input type="text" class="form-control" id="inputBasicPassword" name="notlp_pgw"
+                      value="<?php echo $row->NOTLP_PGW; }?>" autocomplete="off" />
                     </div>
                     <div class="form-group">
-                      <button type="button" class="btn btn-primary">Ubah</button>
+                      <button type="submit" class="btn btn-primary">Ubah</button>
                     </div>
                   </form>
                 </div>

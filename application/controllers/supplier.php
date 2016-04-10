@@ -52,16 +52,24 @@ class supplier extends CI_Controller {
         $this->load->view('pemilik/header')->view('pemilik/supplier/lihat',$data)->view('pemilik/footer');
     }
 
-    public function update_pembeli()
+     public function form_update_supplier($id_spl)
         {
-            
+            $data['h'] = $this->supplier_model->form_update_supplier($id_spl);
+            $this->load->view('pemilik/header')->view('pemilik/supplier/ubah',$data)->view('pemilik/footer');
         }
 
-    public function delete_pembeli()
+    public function update_supplier($id_spl)
         {
-            
-        }
+            $id_spl=$this->input->post('id_spl');
+            $nama_spl= $this->input->post('nama_spl');
+            $perusahaan_spl= $this->input->post('perusahaan_spl');
+            $notlp_spl= $this->input->post('notlp_spl');
 
+            //masuk ke model
+            $this->supplier_model->update_supplier($id_spl,$nama_spl,$perusahaan_spl,$notlp_spl);
+
+            redirect(base_url()."supplier/supplier_lihat");
+        }
 
     
     
