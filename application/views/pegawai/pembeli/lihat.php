@@ -139,7 +139,7 @@
                   </button>
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Hapus">
                     <a href="<?php echo base_url(); ?>Pegawai/pembeli_hapus"><i class="icon wb-close" aria-hidden="true"></i></a>
-                  </button>
+                  </button>    
                 </td>
             </tr>
         <?php }?>

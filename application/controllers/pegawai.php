@@ -61,7 +61,6 @@ class pegawai extends CI_Controller {
 
     public function update_pegawai($id_pgw)
     {
-        $id_pgw=$this->input->post('id_pgw');
         $pswd_pgw= $this->input->post('pswd_pgw');
         $nama_pgw= $this->input->post('nama_pgw');
         $alamat_pgw= $this->input->post('alamat_pgw');

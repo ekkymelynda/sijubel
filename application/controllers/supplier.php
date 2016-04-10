@@ -60,7 +60,6 @@ class supplier extends CI_Controller {
 
     public function update_supplier($id_spl)
         {
-            $id_spl=$this->input->post('id_spl');
             $nama_spl= $this->input->post('nama_spl');
             $perusahaan_spl= $this->input->post('perusahaan_spl');
             $notlp_spl= $this->input->post('notlp_spl');

@@ -63,7 +63,6 @@ class barang extends CI_Controller {
 
     public function update_barang($id_brg)
     {
-        $id_brg=$this->input->post('id_brg');
         $nama_brg= $this->input->post('nama_brg');
         $jenis_brg= $this->input->post('jenis_brg');
         $harga_beli= $this->input->post('harga_beli');
