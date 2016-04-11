@@ -65,14 +65,14 @@
         <h2 class="brand-text">Sijubel</h2>
       </div>
       <p>Sign into your pages account</p>
-      <form method="post" action="<?php echo base_url(); ?>barang/barang_lihat_pegawai">
+      <form method="post" action="<?php echo base_url(); ?>login/pegawai_login">
         <div class="form-group">
           <label class="sr-only" for="inputName">ID</label>
-          <input type="text" class="form-control" id="inputName" placeholder="ID Pegawai">
+          <input type="text" class="form-control" id="inputName" name="id_pgw" placeholder="ID Pegawai">
         </div>
         <div class="form-group">
           <label class="sr-only" for="inputPassword">Password</label>
-          <input type="password" class="form-control" id="inputPassword" name="password"
+          <input type="password" class="form-control" id="inputPassword" name="pswd_pgw"
           placeholder="Password">
         </div>
         <div class="form-group clearfix">
