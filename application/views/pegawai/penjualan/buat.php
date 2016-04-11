@@ -1,5 +1,5 @@
   <!-- Page -->
-  <div class="page">
+  <div class="page anim">
     <div class="page-header">
       <h1 class="page-title">Buat Data Transaksi Penjualan</h1>
       <ol class="breadcrumb">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="wizard-pane" id="exampleGetting" role="tabpanel">
                   <div class="text-center margin-vertical-20">
-                    <h4>Total Penjualan : </h4> 
+                    <h4>Total Penjualan : </h4>
                   </div>
                     <form id="exampleBillingForm">
                     <div class="form-group">
@@ -113,3 +113,5 @@
     </div>
   </div>
   <!-- End Page -->
+
+  
