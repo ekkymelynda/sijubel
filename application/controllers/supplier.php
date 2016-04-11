@@ -73,7 +73,7 @@ class supplier extends CI_Controller {
     public function halaman_delete_supplier($id_spl)
         {
             $data['h'] = $this->supplier_model->form_update_supplier($id_spl);
-            $this->load->view('pegawai/header')->view('pegawai/supplier/hapus',$data)->view('pegawai/footer');
+            $this->load->view('pemilik/header')->view('pemilik/supplier/hapus',$data)->view('pemilik/footer');
         }
 
     public function delete_supplier($id_spl)

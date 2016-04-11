@@ -111,7 +111,6 @@
                 <h4 class="example-title">Hapus Data Pembeli</h4>
                 <div class="example">
                   <?php foreach ($h->result() as $row){?>
-                 <form autocomplete="off">
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
                         <br>
@@ -136,20 +135,14 @@
                     <div class="form-group">
                       <label>Apakah Anda yakin ingin menghapus data tersebut?</label>
                       <br>
-                    <thead>
-                      <tr>
-                        <td> 
-                          <form method="post" class="form-group" action="<?php echo base_url(); ?>pembeli/delete_pembeli/<?php echo $row->ID_PMB; }?>">
-                            <button type="submit" class="btn btn-danger">Ya</button>
-                          </form>
-                        </td>
-                        <td>
-                          <form method="get" action="<?php echo base_url(); ?>pembeli/pembeli_lihat">
-                            <button type="submit" class="btn btn-success">Tidak</button>
-                          </form>
-                        </td>
-                      </tr>
-                    </thead>
+                    </div>
+                    <div class="form-group">
+                      <form method="post" class="form-group" action="<?php echo base_url(); ?>pembeli/delete_pembeli/<?php echo $row->ID_PMB; }?>">
+                        <button type="submit" class="btn btn-danger">Ya</button>
+                      </form>
+                      <form method="get" action="<?php echo base_url(); ?>pembeli/pembeli_lihat">
+                        <button type="submit" class="btn btn-success">Tidak</button>
+                      </form>
                     </div>
                 </div>
               </div>

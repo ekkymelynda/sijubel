@@ -233,39 +233,44 @@
               <div class="example-wrap">
                 <h4 class="example-title">Hapus Data Pegawai</h4>
                 <div class="example">
-                  <form autocomplete="off">
+                  <?php foreach ($h->result() as $row){?>
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
                         <br>
-                        <label>A0000</label>
+                        <label><?php echo $row->ID_PGW;?></label>
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Nama</label>
                         <br>
-                        <label>Ekky Melynda</label>
+                        <label><?php echo $row->NAMA_PGW;?></label>
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Password</label>
                       <br>
-                      <label>*****</label>
+                      <label><?php echo $row->PSWD_PGW;?></label>
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Alamat</label>
                       <br>
-                      <label>Kampus ITS Sukolilo, Surabaya</label>
+                      <label><?php echo $row->ALAMAT_PGW;?></label>
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Telp</label>
                       <br>
-                      <label>081234567890</label>
+                      <label><?php echo $row->NOTLP_PGW;?></label>
                     </div>
                     <div class="form-group">
                       <label>Apakah Anda yakin ingin menghapus data tersebut?</label>
                       <br>
-                      <button type="button" class="btn btn-danger">Ya</button>
-                      <button type="button" class="btn btn-success">Tidak</button>
                     </div>
-                  </form>
+                    <div class="form-group">
+                      <form method="post" class="form-group" action="<?php echo base_url(); ?>pegawai/delete_pegawai/<?php echo $row->ID_PGW; }?>">
+                        <button type="submit" class="btn btn-danger">Ya</button>
+                      </form>
+                      <form method="get" action="<?php echo base_url(); ?>pegawai/pegawai_lihat">
+                        <button type="submit" class="btn btn-success">Tidak</button>
+                      </form>
+                    </div>
                 </div>
               </div>
               <!-- End Example Basic Form -->

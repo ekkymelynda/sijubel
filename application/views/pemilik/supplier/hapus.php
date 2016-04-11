@@ -233,34 +233,35 @@
               <div class="example-wrap">
                 <h4 class="example-title">Hapus Data Supplier</h4>
                 <div class="example">
-                  <form autocomplete="off">
+                  <?php foreach ($h->result() as $row){?>
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID</label>
                         <br>
-                        <label>A0000</label>
+                        <label><?php echo $row->ID_SPL;?></label>
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Nama</label>
                         <br>
-                        <label>Ekky Melynda</label>
+                        <label><?php echo $row->NAMA_SPL;?></label>
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Perusahaan</label>
                       <br>
-                      <label>PT. Maju Jaya Makmur</label>
+                      <label><?php echo $row->PERUSAHAAN_SPL;?></label>
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Telp</label>
                       <br>
-                      <label>081234567890</label>
+                      <label><?php echo $row->NOTLP_SPL;?></label>
                     </div>
                     <div class="form-group">
-                      <label>Apakah Anda yakin ingin menghapus data tersebut?</label>
-                      <br>
-                      <button type="button" class="btn btn-danger">Ya</button>
-                      <button type="button" class="btn btn-success">Tidak</button>
+                      <form method="post" class="form-group" action="<?php echo base_url(); ?>supplier/delete_supplier/<?php echo $row->ID_SPL; }?>">
+                        <button type="submit" class="btn btn-danger">Ya</button>
+                      </form>
+                      <form method="get" action="<?php echo base_url(); ?>supplier/supplier_lihat">
+                        <button type="submit" class="btn btn-success">Tidak</button>
+                      </form>
                     </div>
-                  </form>
                 </div>
               </div>
               <!-- End Example Basic Form -->
