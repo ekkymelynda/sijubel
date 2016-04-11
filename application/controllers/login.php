@@ -43,8 +43,26 @@ class login extends CI_Controller {
         $id_pgw=$this->input->post('id_pgw');
         $pswd_pgw=$this->input->post('pswd_pgw');
 
-        $cek = $this->login_model->loginbetul($id_pgw,$pswd_pgw);
-        echo "$cek";
+        //masuk ke file model
+        $this->login_model->loginpegawai($id_pgw, $pswd_pgw);       
+                    
+        //}
+        //setelah insert masuk ke halaman ini:
+        redirect(base_url()."barang/barang_lihat_pegawai");
+        
+    }
+
+    public function pemilik_login()
+    {
+        $id_pml=$this->input->post('id_pml');
+        $pswd_pml=$this->input->post('pswd_pml');
+
+        //masuk ke file model
+        $this->login_model->loginpemilik($id_pml, $pswd_pml);       
+                    
+        //}
+        //setelah insert masuk ke halaman ini:
+        redirect(base_url()."barang/barang_lihat");
         
     }
 
