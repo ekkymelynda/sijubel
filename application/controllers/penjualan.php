@@ -30,6 +30,12 @@ class penjualan extends CI_Controller {
 		$data['h'] = $this->penjualan_model->lihat_penjualan();
 		$this->load->view('pegawai/header')->view('pegawai/penjualan/lihat',$data)->view('pegawai/footer');
 	}
+
+	 public function transaksi_penjualan_buat()
+    {
+         //$this->load->view('pegawai/header')->view('pegawai/penjualan/buat')->view('pegawai/footer');
+        $this->load->view('pegawai/penjualan/buat1');
+    }
     
 }
 ?>
