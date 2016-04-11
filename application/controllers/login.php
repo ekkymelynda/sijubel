@@ -24,6 +24,7 @@ class login extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('login_model');
+        $this->load->library('session');
     }
       
 
@@ -43,12 +44,15 @@ class login extends CI_Controller {
         $id_pgw=$this->input->post('id_pgw');
         $pswd_pgw=$this->input->post('pswd_pgw');
 
-        //masuk ke file model
-        $this->login_model->loginpegawai($id_pgw, $pswd_pgw);       
-                    
-        //}
-        //setelah insert masuk ke halaman ini:
-        redirect(base_url()."barang/barang_lihat_pegawai");
+        if($id_pgw == 'id_pgw' && $pswd_pgw == 'pswd_pgw')
+        {
+            $this->session->set_userdata('id_pgw', $id_pgw);
+            redirect(base_url()."barang/barang_lihat_pegawai");
+        }  
+        else
+        {
+             $this->load->view('pegawai/login');
+        }
         
     }
 
@@ -57,12 +61,15 @@ class login extends CI_Controller {
         $id_pml=$this->input->post('id_pml');
         $pswd_pml=$this->input->post('pswd_pml');
 
-        //masuk ke file model
-        $this->login_model->loginpemilik($id_pml, $pswd_pml);       
-                    
-        //}
-        //setelah insert masuk ke halaman ini:
-        redirect(base_url()."barang/barang_lihat");
+        if($id_pml == 'id_pml' && $id_pml == 'id_pml')
+        {
+            $this->session->set_userdata('id_pml', $id_pml);
+            redirect(base_url()."barang/barang_lihat");
+        }  
+        else
+        {
+             $this->load->view('pemilik/login');
+        }
         
     }
 
