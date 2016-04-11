@@ -55,6 +55,12 @@ class barang extends CI_Controller {
         $this->load->view('pemilik/header')->view('pemilik/barang/lihat',$data)->view('pemilik/footer');
     }
 
+    public function barang_lihat_pegawai()
+    {
+        $data['h'] = $this->barang_model->lihat_barang();
+        $this->load->view('pegawai/header')->view('pegawai/barang/lihat',$data)->view('pegawai/footer');
+    }
+
     public function form_update_barang($id_brg)
     {
         $data['h'] = $this->barang_model->form_update_barang($id_brg);
