@@ -44,7 +44,7 @@
                     <a href=""><i class="icon wb-wrench" aria-hidden="true"></i></a>
                   </button>
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Hapus">
-                    <a href=""><i class="icon wb-close" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>pembelian/halaman_delete_pembelian/<?php echo $row->ID_TPE;?>"><i class="icon wb-close" aria-hidden="true"></i></a>
                   </button>
                 </td>
             </tr>

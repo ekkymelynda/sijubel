@@ -30,6 +30,24 @@ class pembelian extends CI_Controller {
 		$data['h'] = $this->pembelian_model->lihat_pembelian();
 		$this->load->view('pemilik/header')->view('pemilik/pembelian/lihat',$data)->view('pemilik/footer');
 	}
+
+	public function form_update_pembelian($id_tpe)
+        {
+            $data['h'] = $this->pembelian_model->form_update_pembelian($id_tpe);
+            $this->load->view('pemilik/header')->view('pemilik/pembelian/ubah',$data)->view('pemilik/footer');
+        }
+
+    public function halaman_delete_pembelian($id_tpe)
+        {
+            $data['h'] = $this->pembelian_model->form_update_pembelian($id_tpe);
+            $this->load->view('pemilik/header')->view('pemilik/pembelian/hapus',$data)->view('pemilik/footer');
+        }
+
+    public function delete_pembelian($id_tpe)
+        {
+            $this->pembelian_model->delete_pembelian($id_tpe);
+            redirect(base_url()."pembelian/pembelian_lihat");
+        }
     
 }
 ?>

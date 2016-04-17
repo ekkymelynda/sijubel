@@ -14,6 +14,19 @@ class penjualan_model extends CI_Model
         return $query;
     }
 
+    function form_update_penjualan($id_tpu)
+    {
+        $this->db->where("id_tpu",$id_tpu);
+        $query = $this->db->get('transaksi_penjualan');
+        return $query;
+    }
+
+    function delete_penjualan($id_tpu)
+    {
+        $this->db->where("id_tpu",$id_tpu);
+        $this->db->delete('transaksi_penjualan');
+    }
+
     
 }
 ?>    

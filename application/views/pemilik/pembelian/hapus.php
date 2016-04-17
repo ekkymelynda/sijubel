@@ -16,47 +16,51 @@
               <div class="example-wrap">
                 <h4 class="example-title">Hapus Data Transaksi Pembelian</h4>
                 <div class="example">
-                  <form autocomplete="off">
+                  <?php foreach ($h->result() as $row){?>
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID Transaksi Pembelian</label>
                         <br>
-                        <label>A0000</label>
+                        <label><?php echo $row->ID_TPE;?></label>
                     </div>
                      <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID Supplier</label>
                         <br>
-                        <label>B0000</label>
+                        <label><?php echo $row->ID_SPL;?></label>
                     </div>
                    <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">ID Pemilik</label>
                         <br>
-                        <label>C0000</label>
+                        <label><?php echo $row->ID_PML;?></label>
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="inputBasicFirstName">Tanggal Transaksi Pembelian</label>
                         <br>
-                        <label>27 Maret 2016</label>
+                        <label><?php echo $row->TGL_TPE;?></label>
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicEmail">Total Transaksi Pembelian</label>
                       <br>
-                      <label>25000</label>
+                      <label><?php echo $row->TOTAL_TPE;?></label>
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Bayar Transaksi Pembelian</label>
                       <br>
-                      <label>30000</label>
+                      <label><?php echo $row->BAYAR_TPE;?></label>
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Kembalian Transaksi Pembelian</label>
                       <br>
-                      <label>5000</label>
+                      <label><?php echo $row->KEMBALIAN_TPE;?></label>
                     </div>
                     <div class="form-group">
                       <label>Apakah Anda yakin ingin menghapus data tersebut?</label>
                       <br>
-                      <button type="button" class="btn btn-danger">Ya</button>
-                      <button type="button" class="btn btn-success">Tidak</button>
+                      <form method="post" class="form-group" action="<?php echo base_url(); ?>pembelian/delete_pembelian/<?php echo $row->ID_TPE; }?>">
+                        <button type="submit" class="btn btn-danger">Ya</button>
+                      </form>
+                      <form method="get" action="<?php echo base_url(); ?>pembelian/pembelian_lihat">
+                        <button type="submit" class="btn btn-success">Tidak</button>
+                      </form>
                     </div>
                   </form>
                 </div>

@@ -36,6 +36,24 @@ class penjualan extends CI_Controller {
          //$this->load->view('pegawai/header')->view('pegawai/penjualan/buat')->view('pegawai/footer');
         $this->load->view('pegawai/penjualan/buat1');
     }
+
+    public function form_update_penjualan($id_tpu)
+        {
+            $data['h'] = $this->penjualan_model->form_update_pembeli($id_tpu);
+            $this->load->view('pegawai/header')->view('pegawai/penjualan/ubah',$data)->view('pegawai/footer');
+        }
+
+    public function halaman_delete_penjualan($id_tpu)
+        {
+            $data['h'] = $this->penjualan_model->form_update_penjualan($id_tpu);
+            $this->load->view('pegawai/header')->view('pegawai/penjualan/hapus',$data)->view('pegawai/footer');
+        }
+
+    public function delete_penjualan($id_tpu)
+        {
+            $this->penjualan_model->delete_penjualan($id_tpu);
+            redirect(base_url()."penjualan/penjualan_lihat");
+        }
     
 }
 ?>
