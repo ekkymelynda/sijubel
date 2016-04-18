@@ -24,6 +24,7 @@ class login extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('login_model');
+        $this->load->model('barang_model');
         $this->load->library('session');
     }
       
@@ -56,24 +57,22 @@ class login extends CI_Controller {
 
         $id_pgw=$_POST['id_pgw'];
         $pswd_pgw=$_POST['pswd_pgw'];
-
-        echo "$id_pgw";
         
         $cek = $this->login_model->loginpegawai($id_pgw,$pswd_pgw);
-        echo "$cek";
+        
         if (!empty($cek)) 
         {
-            $user = $cek[0]->id_pgw;
+            $user = $cek;
 
             $session_data = $this->session->userdata('masuk');//nama session
             $session_data['user'] = $user;
             $this->session->set_userdata("masuk", $session_data);
-            $this->load->view('pegawai/barang/lihat');
+            $data['h'] = $this->barang_model->lihat_barang();
+            $this->load->view('pegawai/header')->view('pegawai/barang/lihat',$data)->view('pegawai/footer');
         }   
         else
         {
             $this->load->view('pegawai/login');
-            //print_r($cek);
         }
 
     }
@@ -93,22 +92,24 @@ class login extends CI_Controller {
              $this->load->view('pemilik/login');
         }*/
 
-        $username=$_POST['login_user'];
-        $pass=$_POST['login_pass'];
+        $id_pml=$_POST['id_pml'];
+        $pswd_pml=$_POST['pswd_pml'];
         
-        $cek = $this->modelkodok->loginbetul($username,$pass);
+        $cek = $this->login_model->loginpemilik($id_pml,$pswd_pml);
+        
         if (!empty($cek)) 
         {
-            $user = $cek[0]->username;
+            $user = $cek;
+
             $session_data = $this->session->userdata('masuk');//nama session
             $session_data['user'] = $user;
             $this->session->set_userdata("masuk", $session_data);
-            $this->load->view('main');
+            $data['h'] = $this->barang_model->lihat_barang();
+            $this->load->view('pemilik/header')->view('pemilik/barang/lihat',$data)->view('pemilik/footer');
         }   
         else
         {
-            $this->load->view('home');
-            //print_r($cek);
+            $this->load->view('pemilik/login');
         }   
         
     }

@@ -24,6 +24,10 @@ class login_model extends CI_Model
         /*$query=$this->db->query("SELECT COUNT(id_pml) FROM pegawai WHERE id_pml='$id_pml' AND pswd_pml='$pswd_pml'; ");
         
         return $query->result();*/
+
+         $query=$this->db->query("SELECT * FROM `pemilik` WHERE id_pml='$id_pml' and pswd_pml='$pswd_pml'");
+        //$query=$this->db->query("CALL sp_login('$username','$pass')");
+        return $query->result();
     }
 }
 ?>
