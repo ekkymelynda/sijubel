@@ -36,18 +36,18 @@
                   <div class="col-sm-9">
                       <select class="form-control" name="jenis" required="on">
                           <option value="">Pilih salah satu</option>
-                          <option value="Januari">Januari</option>
-                          <option value="Februari">Februari</option>
-                          <option value="Maret">Maret</option>
-                          <option value="April">April</option>
-                          <option value="Mei">Mei</option>
-                          <option value="Juni">Juni</option>
-                          <option value="Juli">Juli</option>
-                          <option value="Agustus">Agustus</option>
-                          <option value="September">September</option>
-                          <option value="Oktober">Oktober</option>
-                          <option value="Nopember">Nopember</option>
-                          <option value="Desember">Desember</option>
+                          <option value="1">Januari</option>
+                          <option value="2">Februari</option>
+                          <option value="3">Maret</option>
+                          <option value="4">April</option>
+                          <option value="5">Mei</option>
+                          <option value="6">Juni</option>
+                          <option value="7">Juli</option>
+                          <option value="8">Agustus</option>
+                          <option value="9">September</option>
+                          <option value="10">Oktober</option>
+                          <option value="11">Nopember</option>
+                          <option value="12">Desember</option>
                         </select>
                   </div>
                 </div>
