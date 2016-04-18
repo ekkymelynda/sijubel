@@ -41,7 +41,7 @@ class login extends CI_Controller {
 
     public function pegawai_login()
     {
-        $id_pgw=$this->input->post('id_pgw');
+        /*$id_pgw=$this->input->post('id_pgw');
         $pswd_pgw=$this->input->post('pswd_pgw');
 
         if($id_pgw == 'id_pgw' && $pswd_pgw == 'pswd_pgw')
@@ -52,13 +52,35 @@ class login extends CI_Controller {
         else
         {
              $this->load->view('pegawai/login');
-        }
+        }*/
+
+        $id_pgw=$_POST['id_pgw'];
+        $pswd_pgw=$_POST['pswd_pgw'];
+
+        echo "$id_pgw";
         
+        $cek = $this->login_model->loginpegawai($id_pgw,$pswd_pgw);
+        echo "$cek";
+        if (!empty($cek)) 
+        {
+            $user = $cek[0]->id_pgw;
+
+            $session_data = $this->session->userdata('masuk');//nama session
+            $session_data['user'] = $user;
+            $this->session->set_userdata("masuk", $session_data);
+            $this->load->view('pegawai/barang/lihat');
+        }   
+        else
+        {
+            $this->load->view('pegawai/login');
+            //print_r($cek);
+        }
+
     }
 
     public function pemilik_login()
     {
-        $id_pml=$this->input->post('id_pml');
+        /*$id_pml=$this->input->post('id_pml');
         $pswd_pml=$this->input->post('pswd_pml');
 
         if($id_pml == 'id_pml' && $id_pml == 'id_pml')
@@ -69,7 +91,25 @@ class login extends CI_Controller {
         else
         {
              $this->load->view('pemilik/login');
-        }
+        }*/
+
+        $username=$_POST['login_user'];
+        $pass=$_POST['login_pass'];
+        
+        $cek = $this->modelkodok->loginbetul($username,$pass);
+        if (!empty($cek)) 
+        {
+            $user = $cek[0]->username;
+            $session_data = $this->session->userdata('masuk');//nama session
+            $session_data['user'] = $user;
+            $this->session->set_userdata("masuk", $session_data);
+            $this->load->view('main');
+        }   
+        else
+        {
+            $this->load->view('home');
+            //print_r($cek);
+        }   
         
     }
 
