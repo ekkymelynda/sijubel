@@ -33,4 +33,3 @@ SELECT nama_brg FROM barang;
 SELECT nama_brg, jenis_brg, COUNT(nama_brg) AS jumlah FROM barang WHERE nama_brg IN (SELECT nama_brg FROM barang);
 
 SELECT FROM transaksi_penjualan jual, transaksi_pembelian beli WHERE 
-
