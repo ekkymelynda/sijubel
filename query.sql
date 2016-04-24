@@ -26,10 +26,8 @@ SELECT * FROM transaksi_pembelian WHERE MONTH(tgl_tpe) = '4' AND YEAR(tgl_tpe) =
 
 SELECT SUM(total_tpe) FROM transaksi_pembelian WHERE MONTH(tgl_tpe) = '4' AND YEAR(tgl_tpe) = '2016';
 
-SELECT COUNT(nama_brg) FROM barang WHERE nama_brg = 'Pensil 2B';
+SELECT `NAMA_BRG`,`JENIS_BRG`,`JUMLAH_BRG`  FROM barang;
 
-SELECT nama_brg FROM barang;
+SELECT `HARGA_JUAL` - `HARGA_BELI` AS keuntungan FROM barang;
 
-SELECT nama_brg, jenis_brg, COUNT(nama_brg) AS jumlah FROM barang WHERE nama_brg IN (SELECT nama_brg FROM barang);
-
-SELECT FROM transaksi_penjualan jual, transaksi_pembelian beli WHERE 
+SELECT FROM `transaksi_penjualan`, `membeli`, `barang` WHERE 
