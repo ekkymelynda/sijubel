@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html class="no-js before-run" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="no-js before-run" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <!-- <link rel="stylesheet" type="text/css" href="<?php  echo base_url(); ?>assets/css/default.css"> -->
+  <script type="text/javascript" src="<?php  echo base_url(); ?>assets/js/script.js"></script> 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -267,14 +270,30 @@
                       required="required">
                     </div>
                       <div class="form-group">
-                      <label class="control-label" for="inputPassword">Id Pegawai</label>
-                      <input type="text" class="form-control" id="inputPassword" name="IDPegawai"
+                        <label class="control-label" for="inputPassword">Id Pegawai</label>
+                        <input type="text" class="form-control" id="inputPassword" name="IDPegawai"
                       required="required">
                     </div>
                   </form>
                 </div>
+
                 <div class="wizard-pane" id="exampleBilling" role="tabpanel">
-                  <form id="exampleBillingForm">
+                  <input class="btn btn-primary" type="button" value="tambah barang" onClick="addRow('dataTable')" /> 
+                  <input class="btn btn-primary" type="button" value="hapus barang" onClick="deleteRow('dataTable')"  /> 
+                  <br><label class="control-label" for="inputCardNumber">Id Barang</label>
+                  <table id="dataTable" >
+                  <tbody>
+                    <tr>
+            <td><input type="checkbox" class="icheckbox-primary" id="inputChecked" required="required" name="chk[]" checked="checked" data-plugin="iCheck" data-checkbox-class="icheckbox_flat-blue"/>
+            </td>
+            <td class="form-group">
+              <input type="text" class="form-control" id="inputCardNumber" name="IdBarang" placeholder="Card number">
+             </td>
+           </tr>
+         </tbody>
+       </table>
+
+                  <!-- <form id="exampleBillingForm">
                     <div class="form-group">
                       <label class="control-label" for="inputCardNumber">Id Barang</label>
                       <input type="text" class="form-control" id="inputCardNumber" name="IdBarang" placeholder="Card number">
@@ -283,12 +302,13 @@
                       <label class="control-label" for="inputCVV">Nama Barang</label>
                       <input type="text" class="form-control" id="inputCVV" name="cvv" placeholder="NamaBarang">
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">                
                       <label class="control-label" for="inputCVV">Harga Jual Barang</label>
                       <input type="text" class="form-control" id="inputCVV" name="HargaJualBarang" placeholder="CVV">
                     </div>
-                  </form>
+                  </form> -->
                 </div>
+                
                 <div class="wizard-pane" id="exampleGetting" role="tabpanel">
                   <div class="text-center margin-vertical-20">
                     <h4>Total Penjualan : </h4>
