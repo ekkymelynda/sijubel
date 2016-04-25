@@ -49,10 +49,21 @@ class laporan extends CI_Controller {
          $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi pembelian barang per bulan')->view('pemilik/footer');
     }
 
+   public function keuntungan_perhari()
+    {
+         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan total keuntungan penjualan barang per hari')->view('pemilik/footer');
+    }
+
+    public function keuntungan_perbulan()
+    {
+         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan total keuntungan penjualan barang per bulan')->view('pemilik/footer');
+    }
+
     public function ketersediaan_barang()
     {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan ketersediaan barang')->view('pemilik/footer');
+         $data['h'] = $this->laporan_model->lihat_ketersediaanbarang();
+         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan ketersediaan barang',$data)->view('pemilik/footer');
     }
-  
+
 }
 ?>

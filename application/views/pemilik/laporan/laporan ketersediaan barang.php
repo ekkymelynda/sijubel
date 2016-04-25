@@ -21,14 +21,16 @@
               <tr>
                 <th>Nama</th>
                 <th>Jenis</th>
-                <th>Jumlah Barang</th>
+                <th>Jumlah</th>
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($h as $row){?>
               <tr>
-                <td>Pensil</td>
-                <td>ATK</td>
-                <td>50</td>
+                 <td><?php echo $row->NAMA_BRG;?></td>
+                 <td><?php echo $row->JENIS_BRG;?></td>
+                 <td><?php echo $row->JUMLAH_BRG;?></td>
+                <?php }?>
               </tr>
             </tbody>
           </table>
