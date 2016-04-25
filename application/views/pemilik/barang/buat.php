@@ -43,6 +43,16 @@
                       placeholder="2000" autocomplete="off" />
                     </div>
                     <div class="form-group">
+                      <label class="control-label" for="inputBasicEmail">Keuntungan Barang</label>
+                      <input type="money" class="form-control" id="inputBasicEmail" name="keuntungan_brg"
+                      placeholder="1000" autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="inputBasicEmail">Jumlah Barang</label>
+                      <input type="number" class="form-control" id="inputBasicEmail" name="jumlah_brg"
+                      placeholder="60" autocomplete="off" />
+                    </div>
+                    <div class="form-group">
                       <label class="control-label" for="inputBasicPassword">Status</label>
                       <input type="text" class="form-control" id="inputBasicPassword" name="status_brg"
                       placeholder="Tersedia" autocomplete="off" />

@@ -40,9 +40,11 @@ class barang extends CI_Controller {
             $jenis_brg= $this->input->post('jenis_brg');
             $harga_beli= $this->input->post('harga_beli');
             $harga_jual= $this->input->post('harga_jual');
+            $keuntungan_brg= $this->input->post('keuntungan_brg');
+            $jumlah_brg= $this->input->post('jumlah_brg');
             $status_brg= $this->input->post('status_brg');
             //masuk ke file model
-            $this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);       
+            $this->barang_model->inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$keuntungan_brg,$jumlah_brg,$status_brg);       
                     
         //}
             //setelah insert masuk ke halaman ini:
@@ -73,10 +75,12 @@ class barang extends CI_Controller {
         $jenis_brg= $this->input->post('jenis_brg');
         $harga_beli= $this->input->post('harga_beli');
         $harga_jual= $this->input->post('harga_jual');
+        $keuntungan_brg= $this->input->post('keuntungan_brg');
+        $jumlah_brg= $this->input->post('jumlah_brg');
         $status_brg= $this->input->post('status_brg');
 
         //masuk ke model
-        $this->barang_model->update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$status_brg);
+        $this->barang_model->update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$keuntungan_brg,$jumlah_brg,$status_brg);
 
         redirect(base_url()."barang/barang_lihat");
     }

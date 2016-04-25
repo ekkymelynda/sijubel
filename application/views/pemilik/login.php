@@ -64,7 +64,7 @@
         <img class="brand-img" src="<?php echo base_url(); ?>assets/images/logo.png" alt="...">
         <h2 class="brand-text">Sijubel</h2>
       </div>
-      <p>Sign into your pages account</p>
+      <p>Masuk ke halaman akun Anda</p>
       <form method="post" action="<?php echo base_url(); ?>login/pemilik_login">
         <div class="form-group">
           <label class="sr-only" for="inputName">ID</label>
@@ -78,11 +78,11 @@
         <div class="form-group clearfix">
           <div class="checkbox-custom checkbox-inline pull-left">
             <input type="checkbox" id="inputCheckbox" name="checkbox">
-            <label for="inputCheckbox">Remember me</label>
+            <label for="inputCheckbox">Ingat saya</label>
           </div>
           
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+        <button type="submit" class="btn btn-primary btn-block">Masuk</button>
       </form>
       
 

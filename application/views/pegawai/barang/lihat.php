@@ -24,6 +24,8 @@
                 <th>Jenis</th>
                 <th>Harga Jual</th>
                 <th>Harga Beli</th>
+                <th>Keuntungan</th>
+                <th>Jumlah</th>
                 <th>Status</th>
               </tr>
             </thead>
@@ -35,6 +37,8 @@
                  <td><?php echo $row->JENIS_BRG;?></td>
                  <td><?php echo $row->HARGA_JUAL;?></td>
                  <td><?php echo $row->HARGA_BELI;?></td>
+                 <td><?php echo $row->KEUNTUNGAN_BRG;?></td>
+                 <td><?php echo $row->JUMLAH_BRG;?></td>
                  <td><?php echo $row->STATUS_BRG;?></td>
             </tr>
         <?php }?>
