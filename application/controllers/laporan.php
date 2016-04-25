@@ -24,13 +24,14 @@ class laporan extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('laporan_model');
-        $this->load->model('');
+        $this->load->model('penjualan_model');
         $this->load->library('session');
     }
 
     public function laporan_penjualan_perhari()
     {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi penjualan barang per hari')->view('pemilik/footer');
+        $data['h'] = $this->penjualan_model->lihat_penjualan();
+        $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi penjualan barang per hari',$data)->view('pemilik/footer');
     }
 
     public function laporan_pembelian_perhari()

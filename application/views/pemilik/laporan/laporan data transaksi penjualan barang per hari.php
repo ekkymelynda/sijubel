@@ -52,15 +52,17 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($h->result() as $row){?>
               <tr>
-                <td>A0000</td>
-                <td>B0000</td>
-                <td>C0000</td>
-                <td>27 Maret 2016</td>
-                <td>250000</td>
-                <td>300000</td>
-                <td>50000</td>
-              </tr>
+                 <td><?php echo $row->ID_TPU;?></td>
+                 <td><?php echo $row->ID_PGW;?></td>
+                 <td><?php echo $row->ID_PMB;?></td>
+                 <td><?php echo $row->TGL_TPU;?></td>
+                 <td><?php echo $row->TOTAL_TPU;?></td>
+                 <td><?php echo $row->BAYAR_TPU;?></td>
+                 <td><?php echo $row->KEMBALIAN_TPU;?></td>
+            </tr>
+        <?php }?>
             </tbody>
           </table>
         </div>
