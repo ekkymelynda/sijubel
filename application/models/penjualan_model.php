@@ -14,9 +14,9 @@ class penjualan_model extends CI_Model
         return $query;
     }
 
-    function lihat_penjualan_perhari()
+    function lihat_penjualan_perhari($tgl_tpu)
     {
-        $query = $this->db->get('transaksi_penjualan');
+        $query = $this->db->query("SELECT * FROM `transaksi_penjualan` WHERE id_pgw='$id_pgw' and pswd_pgw='$pswd_pgw'");
         //return $query->result_array();
         return $query;
     }
