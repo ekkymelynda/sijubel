@@ -28,35 +28,34 @@ class laporan extends CI_Controller {
         $this->load->library('session');
     }
 
-    public function laporan_penjualan_perhari()
+    public function pilih_laporan_penjualan_perhari()
     {
-        $data['h'] = $this->penjualan_model->lihat_penjualan();
-        $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi penjualan barang per hari',$data)->view('pemilik/footer');
+        $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan data transaksi penjualan barang per hari',$data)->view('pemilik/footer');
     }
 
-    public function laporan_pembelian_perhari()
+    public function pilih_laporan_pembelian_perhari()
     {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi pembelian barang per hari')->view('pemilik/footer');
+         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan data transaksi pembelian barang per hari')->view('pemilik/footer');
     }
 
-    public function laporan_penjualan_perbulan()
+    public function pilih_laporan_penjualan_perbulan()
     {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi penjualan barang per bulan')->view('pemilik/footer');
+         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan data transaksi penjualan barang per bulan')->view('pemilik/footer');
     }
 
-    public function laporan_pembelian_perbulan()
+    public function pilih_laporan_pembelian_perbulan()
     {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi pembelian barang per bulan')->view('pemilik/footer');
+         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan data transaksi pembelian barang per bulan')->view('pemilik/footer');
     }
 
-   public function keuntungan_perhari()
+   public function pilih_keuntungan_perhari()
     {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan total keuntungan penjualan barang per hari')->view('pemilik/footer');
+         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan total keuntungan penjualan barang per hari')->view('pemilik/footer');
     }
 
-    public function keuntungan_perbulan()
+    public function pilih_keuntungan_perbulan()
     {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan total keuntungan penjualan barang per bulan')->view('pemilik/footer');
+         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan total keuntungan penjualan barang per bulan')->view('pemilik/footer');
     }
 
     public function ketersediaan_barang()
