@@ -18,7 +18,6 @@ class laporan extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
-     
 
     function __construct()
     {
@@ -28,9 +27,43 @@ class laporan extends CI_Controller {
         $this->load->library('session');
     }
 
+    public function laporan_penjualan_perbulan()
+    {
+        $tahun=$this->input->post('tahun');
+        $bulan= $this->input->post('bulan');
+        $this->laporan_model->penjualan_perbulan($tahun,$bulan);
+        $data['h'] = $this->laporan_model->penjualan_perbulan($tahun,$bulan);
+        $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi penjualan barang per bulan',$data)->view('pemilik/footer');
+    }
+
+    public function laporan_penjualan_perhari()
+    {
+        $tgl_tpu=$this->input->post('tgl_tpu');
+        $this->laporan_model->penjualan_perhari($tgl_tpu);
+        $data['h'] = $this->laporan_model->penjualan_perhari($tgl_tpu);
+        $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi penjualan barang per hari',$data)->view('pemilik/footer');
+    }
+
+    public function laporan_pembelian_perbulan()
+    {
+        $tahun=$this->input->post('tahun');
+        $bulan= $this->input->post('bulan');
+        $this->laporan_model->pembelian_perbulan($tahun,$bulan);
+        $data['h'] = $this->laporan_model->pembelian_perbulan($tahun,$bulan);
+        $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi pembelian barang per bulan',$data)->view('pemilik/footer');
+    }
+
+    public function laporan_pembelian_perhari()
+    {
+        $tgl_tpe=$this->input->post('tgl_tpe');
+        $this->laporan_model->pembelian_perhari($tgl_tpe);
+        $data['h'] = $this->laporan_model->pembelian_perhari($tgl_tpe);
+        $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi pembelian barang per hari',$data)->view('pemilik/footer');
+    }
+    
     public function pilih_laporan_penjualan_perhari()
     {
-        $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan data transaksi penjualan barang per hari',$data)->view('pemilik/footer');
+         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan data transaksi penjualan barang per hari')->view('pemilik/footer');
     }
 
     public function pilih_laporan_pembelian_perhari()

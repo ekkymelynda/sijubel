@@ -9,28 +9,6 @@
     </div>
 
     <div class="page-content">
-      <!-- Panel Basic -->
-      <div class="panel">
-        <header class="panel-heading">
-          <div class="panel-actions"></div>
-          <h3 class="panel-title">Pilih Tanggal</h3>
-        </header>
-        <div class="panel-body">
-          <form autocomplete="off">
-              <div class="form-group row">
-                <div class="col-sm-10">
-                    <input type="date" class="form-control" id="inputBasicFirstName" name="inputFirstName" placeholder="" autocomplete="off" />
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <button type="button" class="btn btn-primary">Pilih</button>
-                  </div>
-                </div>
-              </div>           
-          </form>
-        </div>
-      </div>
-      <!-- End Panel Basic -->
 
       <!-- Panel Basic -->
       <div class="panel">
@@ -52,14 +30,16 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($h as $row){?>
               <tr>
-                <td>A0000</td>
-                <td>B0000</td>
-                <td>C0000</td>
-                <td>27 Maret 2016</td>
-                <td>250000</td>
-                <td>300000</td>
-                <td>50000</td>
+                 <td><?php echo $row->ID_TPE;?></td>
+                 <td><?php echo $row->ID_PML;?></td>
+                 <td><?php echo $row->ID_SPL;?></td>
+                 <td><?php echo $row->TGL_TPE;?></td>
+                 <td><?php echo $row->TOTAL_TPE;?></td>
+                 <td><?php echo $row->BAYAR_TPE;?></td>
+                 <td><?php echo $row->KEMBALIAN_TPE;?></td>
+        <?php }?>
               </tr>
             </tbody>
           </table>

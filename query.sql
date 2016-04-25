@@ -6,6 +6,8 @@ SELECT CURDATE();
 
 SELECT * FROM transaksi_penjualan WHERE DAY(tgl_tpu) = '24' AND MONTH(tgl_tpu) = '4' AND YEAR(tgl_tpu) = '2016';
 
+SELECT tgl_tpu FROM transaksi_penjualan WHERE tgl_tpu = '2016-04-24 19:11:04';
+
 SELECT DAY(tgl_tpu) FROM transaksi_penjualan WHERE DAY(tgl_tpu) = '11';
 
 SELECT MONTH(tgl_tpu) FROM transaksi_penjualan WHERE MONTH(tgl_tpu) = '4';

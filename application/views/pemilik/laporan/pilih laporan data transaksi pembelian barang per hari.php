@@ -16,10 +16,10 @@
           <h3 class="panel-title">Pilih Tanggal</h3>
         </header>
         <div class="panel-body">
-          <form autocomplete="off">
+          <form class="form-horizontal" id="exampleStandardForm" autocomplete="on" method="POST" action="<?php echo base_url();?>laporan/laporan_pembelian_perhari">
               <div class="form-group row">
                 <div class="col-sm-10">
-                    <input type="date" class="form-control" id="inputBasicFirstName" name="inputFirstName" placeholder="" autocomplete="off" />
+                    <input type="date" class="form-control" id="inputBasicFirstName" name="tgl_tpe" placeholder="" autocomplete="off" />
                 </div>
                 <div class="col-sm-2">
                   <div class="form-group">

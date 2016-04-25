@@ -16,11 +16,11 @@
           <h3 class="panel-title">Pilih Tahun dan Bulan</h3>
         </header>
         <div class="panel-body">
-          <form class="form-horizontal" id="exampleStandardForm" autocomplete="on" method="POST" action="read-kamar.php">
+          <form class="form-horizontal" id="exampleStandardForm" autocomplete="on" method="POST" action="<?php echo base_url();?>laporan/laporan_penjualan_perbulan">
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Tahun</label>
                   <div class="col-sm-9">
-                      <select class="form-control" name="requiredSelect" required="on">
+                      <select class="form-control" name="tahun" required="on">
                           <option value="">Pilih salah satu</option>
                           <option value="2015">2015</option>
                           <option value="2016">2016</option>
@@ -34,20 +34,20 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Bulan</label>
                   <div class="col-sm-9">
-                      <select class="form-control" name="jenis" required="on">
+                      <select class="form-control" name="bulan" required="on">
                           <option value="">Pilih salah satu</option>
-                          <option value="Januari">Januari</option>
-                          <option value="Februari">Februari</option>
-                          <option value="Maret">Maret</option>
-                          <option value="April">April</option>
-                          <option value="Mei">Mei</option>
-                          <option value="Juni">Juni</option>
-                          <option value="Juli">Juli</option>
-                          <option value="Agustus">Agustus</option>
-                          <option value="September">September</option>
-                          <option value="Oktober">Oktober</option>
-                          <option value="Nopember">Nopember</option>
-                          <option value="Desember">Desember</option>
+                          <option value="1">Januari</option>
+                          <option value="2">Februari</option>
+                          <option value="3">Maret</option>
+                          <option value="4">April</option>
+                          <option value="5">Mei</option>
+                          <option value="6">Juni</option>
+                          <option value="7">Juli</option>
+                          <option value="8">Agustus</option>
+                          <option value="9">September</option>
+                          <option value="10">Oktober</option>
+                          <option value="11">Nopember</option>
+                          <option value="12">Desember</option>
                         </select>
                   </div>
                 </div>
