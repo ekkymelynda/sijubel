@@ -4,7 +4,7 @@ SELECT COUNT(id_pgw) FROM pegawai WHERE id_pgw='A0001' AND pswd_pgw='12345nurul'
 
 SELECT CURDATE();
 
-SELECT * FROM transaksi_penjualan WHERE DAY(tgl_tpu) = '18' AND MONTH(tgl_tpu) = '4' AND YEAR(tgl_tpu) = '2016';
+SELECT * FROM transaksi_penjualan WHERE DAY(tgl_tpu) = '24' AND MONTH(tgl_tpu) = '4' AND YEAR(tgl_tpu) = '2016';
 
 SELECT DAY(tgl_tpu) FROM transaksi_penjualan WHERE DAY(tgl_tpu) = '11';
 

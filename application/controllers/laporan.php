@@ -23,7 +23,7 @@ class laporan extends CI_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model('');
+        $this->load->model('laporan_model');
         $this->load->model('');
         $this->load->library('session');
     }

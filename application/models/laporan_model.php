@@ -7,14 +7,9 @@ class laporan_model extends CI_Model
         $this->load->database('default','true');
     }
     
-    public function loginpegawai($id_pgw, $pswd_pgw)
+    public function penjualan_perhari($tgl_tpu)
     {
-        /*$query=$this->db->query("SELECT COUNT(id_pgw) FROM pegawai WHERE id_pgw='$id_pgw' AND pswd_pgw='$pswd_pgw'; ");
-        
-        return $query->result();*/
-
-        $query=$this->db->query("SELECT * FROM `pegawai` WHERE id_pgw='$id_pgw' and pswd_pgw='$pswd_pgw'");
-        //$query=$this->db->query("CALL sp_login('$username','$pass')");
+        $query=$this->db->query("SELECT * FROM transaksi_penjualan WHERE DAY(tgl_tpu) = '$tgl_tpu' AND MONTH(tgl_tpu) = '$tgl_tpu' AND YEAR(tgl_tpu) = '$tgl_tpu';");
         return $query->result();
     }
 }
