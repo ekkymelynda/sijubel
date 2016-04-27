@@ -19,13 +19,17 @@ class login extends CI_Controller {
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
      
-
     function __construct()
     {
         parent::__construct();
         $this->load->model('login_model');
         $this->load->model('barang_model');
         $this->load->library('session');
+    }
+
+    public function halaman_utama()
+    {
+        $this->load->view('halaman_utama');
     }
       
 
