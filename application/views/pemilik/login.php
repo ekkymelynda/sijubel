@@ -80,7 +80,7 @@
             <input type="checkbox" id="inputCheckbox" name="checkbox">
             <label for="inputCheckbox">Ingat saya</label>
           </div>
-          
+          <a class="pull-right" href="<?php echo base_url(); ?>login/halaman_utama">Halaman Utama</a>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Masuk</button>
       </form>
@@ -89,7 +89,6 @@
       <footer class="page-copyright">
         <p>WEBSITE oleh Kelompok C08</p>
         <p>© 2016. Sistem Informasi Jual Beli Toko Djondol Pelangi.</p>
-        
       </footer>
     </div>
   </div>
