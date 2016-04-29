@@ -52,6 +52,7 @@ class laporan extends CI_Controller {
         $bulan = $this->input->post('bulan');
         $this->laporan_model->pembelian_perbulan($tahun,$bulan);
         $data['h'] = $this->laporan_model->pembelian_perbulan($tahun,$bulan);
+        $data['data'] = $this->laporan_model->total_pembelian_perbulan($tahun,$bulan);
         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi pembelian barang per bulan',$data)->view('pemilik/footer');
     }
 
@@ -60,6 +61,7 @@ class laporan extends CI_Controller {
         $tgl_tpe = $this->input->post('tgl_tpe');
         $this->laporan_model->pembelian_perhari($tgl_tpe);
         $data['h'] = $this->laporan_model->pembelian_perhari($tgl_tpe);
+        $data['data'] = $this->laporan_model->total_pembelian_perhari($tgl_tpe);
         $this->load->view('pemilik/header')->view('pemilik/laporan/laporan data transaksi pembelian barang per hari',$data)->view('pemilik/footer');
     }
     

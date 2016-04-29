@@ -71,7 +71,17 @@ class laporan_model extends CI_Model
         return $query->result();
     }
 
-    
+    public function total_pembelian_perhari($tgl_tpe)
+    {
+        $query=$this->db->query("SELECT SUM(total_tpe) as TOTAL_TRANSAKSI FROM transaksi_pembelian WHERE tgl_tpe = '$tgl_tpe';");
+        return $query->result();
+    }
+
+    public function total_pembelian_perbulan($tahun,$bulan)
+    {
+        $query=$this->db->query("SELECT SUM(total_tpe) as TOTAL_TRANSAKSI FROM transaksi_pembelian WHERE MONTH(tgl_tpe) = '$bulan' AND YEAR(tgl_tpe) = '$tahun';");
+        return $query->result();
+    }
 
 }
 ?>    

@@ -46,11 +46,20 @@
       </div>
       <!-- End Panel Basic -->
 
-      <!-- Panel Basic -->
+       <!-- Panel Basic -->
       <div class="panel">
         <header class="panel-heading">
           <div class="panel-actions"></div>
-          <h3 class="panel-title">Total : Rp 250000, 00</h3>
+          <h3 class="panel-title">
+            <tr>
+              <th>Total : </th>
+            </tr>
+            <?php foreach ($data as $row){?>
+              <tr>
+                <td><?php echo $row->TOTAL_TRANSAKSI;?></td>
+                <?php }?>
+              </tr>
+          </h3>
         </header>
         <div class="panel-body">
         </div>
