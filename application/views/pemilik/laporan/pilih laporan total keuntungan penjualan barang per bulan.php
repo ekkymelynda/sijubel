@@ -16,7 +16,7 @@
           <h3 class="panel-title">Pilih Tahun dan Bulan</h3>
         </header>
         <div class="panel-body">
-          <form class="form-horizontal" id="exampleStandardForm" autocomplete="on" method="POST" action="read-kamar.php">
+          <form class="form-horizontal" id="exampleStandardForm" autocomplete="on" method="POST" action="<?php echo base_url();?>laporan/laporan_keuntungan_perbulan">
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Tahun</label>
                   <div class="col-sm-9">

@@ -1,25 +1,21 @@
   <!-- Page -->
   <div class="page animsition">
     <div class="page-header">
-      <h1 class="page-title">Laporan Total Keuntungan Penjualan Barang Per Hari</h1>
+      <h1 class="page-title">Laporan Data Transaksi Pembelian Barang Per Hari</h1>
       <ol class="breadcrumb">
         <li>Laporan</li>
-        <li>Total Keuntungan Penjualan Per Hari</li>
+        <li>Data Transaksi Pembelian Barang Per Hari</li>
       </ol>
     </div>
 
     <div class="page-content">
-
-      <!-- Panel Basic --><?php foreach ($h as $row){?>
+      <!-- Panel Basic -->
       <div class="panel">
         <header class="panel-heading">
           <div class="panel-actions"></div>
-          <h3 class="panel-title">Laporan Total Keuntungan Penjualan Barang Tanggal <?php echo $row->TGL_TPU;?></h3>
+          <h3 class="panel-title">Total : Rp 250000, 00</h3>
         </header>
         <div class="panel-body">
-          <div class="panel-actions"></div>
-          <h3 class="panel-title">Total : Rp <?php echo $row->total;?></h3>
-          <?php }?>
         </div>
       </div>
       <!-- End Panel Basic -->

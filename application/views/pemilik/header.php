@@ -269,9 +269,21 @@
                   </a>
                 </li>
                 <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>laporan/pilih_laporan_total_pembelian_perbulan" data-slug="uikit-buttons">
+                    <i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">Total Pembelian Perbulan</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
                   <a class="animsition-link" href="<?php echo base_url(); ?>laporan/pilih_laporan_pembelian_perhari" data-slug="uikit-colors">
                     <i class="site-menu-icon" aria-hidden="true"></i>
                     <span class="site-menu-title">Pembelian Perhari</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>laporan/pilih_laporan_total_pembelian_perhari" data-slug="uikit-colors">
+                    <i class="site-menu-icon" aria-hidden="true"></i>
+                    <span class="site-menu-title">Total Pembelian Perhari</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
@@ -281,9 +293,21 @@
                   </a>
                 </li>
                 <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>laporan/pilih_laporan_total_penjualan_perbulan" data-slug="uikit-dropdowns">
+                    <i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">Total Penjualan Perbulan</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
                   <a class="animsition-link" href="<?php echo base_url(); ?>laporan/pilih_laporan_penjualan_perhari" data-slug="uikit-list">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Penjualan Perhari</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>laporan/pilih_laporan_total_penjualan_perhari" data-slug="uikit-list">
+                    <i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">Total Penjualan Perhari</span>
                   </a>
                 </li>
                 <li class="site-menu-item">

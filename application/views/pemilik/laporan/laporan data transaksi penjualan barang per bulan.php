@@ -13,8 +13,8 @@
       <div class="panel">
         <header class="panel-heading">
           <div class="panel-actions"></div>
-          <h3 class="panel-title">Laporan Data Transaksi Penjualan Barang Tahun 2016 Bulan Maret</h3>
-        </header>
+          <h3 class="panel-title">Laporan Data Transaksi Penjualan Barang Tahun Bulan ke- </h3>
+        </header><?php }?>
         <div class="panel-body">
           <table class="table table-hover dataTable table-striped width-full" data-plugin="dataTable">
             <thead>
@@ -29,8 +29,8 @@
               </tr>
             </thead>
             <tbody>
-            <?php foreach ($h as $row){?>
               <tr>
+                <?php foreach ($h as $row){?>
                  <td><?php echo $row->ID_TPU;?></td>
                  <td><?php echo $row->ID_PGW;?></td>
                  <td><?php echo $row->ID_PMB;?></td>
@@ -38,8 +38,8 @@
                  <td><?php echo $row->TOTAL_TPU;?></td>
                  <td><?php echo $row->BAYAR_TPU;?></td>
                  <td><?php echo $row->KEMBALIAN_TPU;?></td>
-                <?php }?>
               </tr>
+              <?php }?>
             </tbody>
           </table>
         </div>
@@ -49,9 +49,9 @@
       <!-- Panel Basic -->
       <div class="panel">
         <header class="panel-heading">
-          <div class="panel-actions"></div>
-          <h3 class="panel-title">Total : Rp 250000, 00</h3>
-        </header>
+          <div class="panel-actions"></div><?php foreach ($i as $row){?>
+          <h3 class="panel-title">Total : Rp <?php echo $row->total;?></h3>
+        </header><?php }?>
         <div class="panel-body">
         </div>
       </div>
