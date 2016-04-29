@@ -15,7 +15,7 @@ class login_model extends CI_Model
         return $query->result();*/
 
         $query=$this->db->query("SELECT * FROM `pegawai` WHERE id_pgw='$id_pgw' and pswd_pgw='$pswd_pgw'");
-        //$query=$this->db->query("CALL sp_login('$username','$pass')");
+        
         return $query->result();
     }
 
@@ -25,8 +25,8 @@ class login_model extends CI_Model
         
         return $query->result();*/
 
-         $query=$this->db->query("SELECT * FROM `pemilik` WHERE id_pml='$id_pml' and pswd_pml='$pswd_pml'");
-        //$query=$this->db->query("CALL sp_login('$username','$pass')");
+        $query=$this->db->query("SELECT * FROM `pemilik` WHERE id_pml='$id_pml' and pswd_pml='$pswd_pml'");
+        
         return $query->result();
     }
 }
