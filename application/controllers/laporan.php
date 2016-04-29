@@ -81,26 +81,6 @@ class laporan extends CI_Controller {
          $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan data transaksi pembelian barang per bulan')->view('pemilik/footer');
     }
 
-        public function pilih_laporan_total_penjualan_perhari()
-    {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan total data transaksi penjualan barang per hari')->view('pemilik/footer');
-    }
-
-    public function pilih_laporan_total_pembelian_perhari()
-    {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan total data transaksi pembelian barang per hari')->view('pemilik/footer');
-    }
-
-    public function pilih_laporan_total_penjualan_perbulan()
-    {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan total data transaksi penjualan barang per bulan')->view('pemilik/footer');
-    }
-
-    public function pilih_laporan_total_pembelian_perbulan()
-    {
-         $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan total data transaksi pembelian barang per bulan')->view('pemilik/footer');
-    }
-
    public function pilih_keuntungan_perhari()
     {
          $this->load->view('pemilik/header')->view('pemilik/laporan/pilih laporan total keuntungan penjualan barang per hari')->view('pemilik/footer');
