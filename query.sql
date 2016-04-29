@@ -52,4 +52,14 @@ SELECT * FROM `transaksi_penjualan` j, `membeli` m, barang b WHERE MONTH(j.`TGL_
 
 SELECT SUM(b.`KEUNTUNGAN_BRG` * m.`BANYAK_BELI`) AS total, MONTH(j.`TGL_TPU`) AS bulan, YEAR(j.`TGL_TPU`) AS tahun FROM `transaksi_penjualan` j, `membeli` m, barang b WHERE MONTH(j.`TGL_TPU`) = '4'  AND YEAR(j.`TGL_TPU`) = '2016' AND j.`ID_TPU` = m.`ID_TPU` AND m.`ID_BRG` = b.`ID_BRG`;
 
-SELECT j.`ID_TPU`, j.`ID_PGW`, j.`ID_PMB`, j.`TGL_TPU`, j.`TOTAL_TPU`, j.`BAYAR_TPU`, j.`KEMBALIAN_TPU`, SUM(j.`TOTAL_TPU`) AS total, MONTH(j.`TGL_TPU`) AS bulan, YEAR(j.`TGL_TPU`) AS tahun FROM `transaksi_penjualan` j WHERE MONTH(j.`TGL_TPU`) = '4' AND YEAR(j.`TGL_TPU`) = '2016';
+SELECT SUM(j.`TOTAL_TPU`) AS total, MONTH(j.`TGL_TPU`) AS bulan, YEAR(j.`TGL_TPU`) AS tahun FROM `transaksi_penjualan` j WHERE MONTH(j.`TGL_TPU`) = '4' AND YEAR(j.`TGL_TPU`) = '2016';
+
+SELECT j.`ID_TPU`, j.`ID_PGW`, j.`ID_PMB`, j.`TGL_TPU`, j.`TOTAL_TPU`, j.`BAYAR_TPU`, j.`KEMBALIAN_TPU`, MONTH(j.`TGL_TPU`) AS bulan, YEAR(j.`TGL_TPU`) AS tahun FROM `transaksi_penjualan` j WHERE MONTH(j.`TGL_TPU`) = '4' AND YEAR(j.`TGL_TPU`) = '2016';
+
+SELECT DISTINCT MONTH(j.`TGL_TPU`) AS bulan, YEAR(j.`TGL_TPU`) AS tahun FROM `transaksi_penjualan` j WHERE MONTH(j.`TGL_TPU`) = '4' AND YEAR(j.`TGL_TPU`) = '2016';
+
+SELECT DISTINCT MONTH(b.`TGL_TPE`) AS bulan, YEAR(b.`TGL_TPE`) AS tahun FROM `transaksi_pembelian` b WHERE MONTH(b.`TGL_TPE`) = '4' AND YEAR(b.`TGL_TPE`) = '2016';
+
+SELECT DISTINCT b.`TGL_TPE` AS tgl FROM `transaksi_pembelian` b WHERE b.`TGL_TPE` = '2016-04-24';
+
+SELECT DISTINCT j.`TGL_TPU` AS tgl FROM `transaksi_penjualan` j WHERE j.`TGL_TPU` = '2016-04-24';

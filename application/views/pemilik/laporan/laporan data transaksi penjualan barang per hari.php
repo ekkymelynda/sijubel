@@ -12,9 +12,9 @@
       <!-- Panel Basic -->
       <div class="panel">
         <header class="panel-heading">
-          <div class="panel-actions"></div>
-          <h3 class="panel-title">Laporan Data Transaksi Penjualan Barang Tanggal </h3>
-        </header>
+          <div class="panel-actions"></div><?php foreach ($diti as $row){?>
+          <h3 class="panel-title">Laporan Data Transaksi Penjualan Barang Tanggal <?php echo $row->tgl;?></h3>
+        </header><?php }?>
         <div class="panel-body">
           <table class="table table-hover dataTable table-striped width-full" data-plugin="dataTable">
             <thead>

@@ -83,5 +83,36 @@ class laporan_model extends CI_Model
         return $query->result();
     }
 
+    public function tb_pembelian_perbulan($tahun,$bulan)
+    {
+        $query=$this->db->query("SELECT DISTINCT MONTH(b.`TGL_TPE`) AS bulan, YEAR(b.`TGL_TPE`) AS tahun
+            FROM `transaksi_pembelian` b
+            WHERE MONTH(b.`TGL_TPE`) = '$bulan' AND YEAR(b.`TGL_TPE`) = '$tahun';");
+        return $query->result();
+    }
+
+    public function tgl_pembelian_perhari($tgl_tpe)
+    {
+        $query=$this->db->query("SELECT DISTINCT b.`TGL_TPE` AS tgl
+            FROM `transaksi_pembelian` b
+            WHERE b.`TGL_TPE` = '$tgl_tpe';");
+        return $query->result();
+    }
+
+    public function tb_penjualan_perbulan($tahun, $bulan)
+    {
+        $query=$this->db->query("SELECT DISTINCT MONTH(j.`TGL_TPU`) AS bulan, YEAR(j.`TGL_TPU`) AS tahun
+            FROM `transaksi_penjualan` j
+            WHERE MONTH(j.`TGL_TPU`) = '$bulan' AND YEAR(j.`TGL_TPU`) = '$tahun';");
+        return $query->result();
+    }
+
+    public function tgl_penjualan_perhari($tgl_tpu)
+    {
+        $query=$this->db->query("SELECT DISTINCT j.`TGL_TPU` AS tgl
+            FROM `transaksi_penjualan` j 
+            WHERE j.`TGL_TPU` = '$tgl_tpu';");
+        return $query->result();
+    }
 }
 ?>    
