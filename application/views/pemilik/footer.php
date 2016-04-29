@@ -46,7 +46,7 @@
   <script src="<?php  echo base_url(); ?>assets/js/components/switchery.js"></script>
   <script src="<?php  echo base_url(); ?>assets/js/components/jquery-placeholder.js"></script>
 
-  <script src="../../assets/js/components/matchheight.js"></script>
+  <script src="<?php  echo base_url(); ?>assets/js/components/matchheight.js"></script>
 
   <script>
     (function(document, window, $) {
