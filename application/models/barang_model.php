@@ -31,6 +31,35 @@ class barang_model extends CI_Model
         return $query;
     }
 
+    function dropdown_barang()
+    {
+        $query = $this->db->query('select nama_brg from barang');
+        return $query->result();
+        // foreach ($query -> result() as $row) {
+        //           echo $row->nama_brg;
+        //          }
+        // $dropdowns=$query->result();
+        // foreach ($dropdowns as $dropdown) {
+        //     $dropdownlist[$dropdown->nama_brg] = $dropdown->nama_brg;
+        // }
+        // $finaldropdown=$dropdownlist;
+        // //return $query->result_array();
+        // return $finaldropdown;
+
+        // $this->db->from('barang');
+        // $this->db->distinct('nama_brg');
+        // $result=$this->db->get();
+        // $return=array();
+        // if($result->num_rows()>0)
+        //     {
+        //         foreach ($result -> result_array() as $row) {
+        //             $return[$row['id']]=$row['name'];
+        //         }
+        //     }
+
+
+    }
+
     function form_update_barang($id_brg)
     {
         $this->db->where("id_brg",$id_brg);
