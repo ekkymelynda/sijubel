@@ -254,7 +254,7 @@
               <!-- Wizard Content -->
               <div class="wizard-content">
                 <div class="wizard-pane active" id="exampleAccount" role="tabpanel">
-                  <form id="exampleAccountForm">
+                  <form id="exampleAccountForm" action="<?php echo base_url();?>transaksi_penjualan/insert_transaksi_penjualan" method="post">
                     <div class="form-group">
                       <label class="control-label" for="inputPassword">Waktu Transaksi Penjualan</label>
                       <input type="datetime" class="form-control" id="inputPassword" name="password"
@@ -280,14 +280,16 @@
                 <div class="wizard-pane" id="exampleBilling" role="tabpanel">
                   <input class="btn btn-primary" type="button" value="tambah barang" onClick="addRow('dataTable')" /> 
                   <input class="btn btn-primary" type="button" value="hapus barang" onClick="deleteRow('dataTable')"  /> 
-                  <br><label class="control-label" for="inputCardNumber">Id Barang</label>
+                  <br><label class="control-label" for="inputCardNumber">IdBarang</label>
                   <table id="dataTable" >
                   <tbody>
+                    <?php foreach($IdBarang as $a => $b){ ?>
                     <tr>
-            <td><input type="checkbox" class="icheckbox-primary" id="inputChecked" required="required" name="chk[]" checked="checked" data-plugin="iCheck" data-checkbox-class="icheckbox_flat-blue"/>
+                      <td><?php echo $a+1; ?></td>
+            <td><input type="checkbox" class="icheckbox-primary" id="inputChecked" required="required" name="IdBarang[]" checked="checked" data-plugin="iCheck" data-checkbox-class="icheckbox_flat-blue" />
             </td>
             <td class="form-group">
-              <input type="text" class="form-control" id="inputCardNumber" name="IdBarang" placeholder="Card number">
+              <input type="text" class="form-control" id="inputCardNumber" name="IdBarang[]" placeholder="Id Barang" value="<?php echo $IdBarang[$a];}?>">
              </td>
            </tr>
          </tbody>

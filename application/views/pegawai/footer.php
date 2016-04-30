@@ -373,7 +373,7 @@
             return true;
           },
           onFinish: function() {
-            // $('#exampleFormContainer').submit();
+             $('#exampleFormContainer').submit();
           },
           buttonsAppendTo: '.panel-body'
         });
