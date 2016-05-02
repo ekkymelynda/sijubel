@@ -21,12 +21,52 @@ class penjualan_model extends CI_Model
         return $query;
     }
 
-    function form_update_penjualan($id_tpu)
+    function liat_TPU($id_tpu)
     {
         $this->db->where("id_tpu",$id_tpu);
         $query = $this->db->get('transaksi_penjualan');
-        return $query;
+        return $query->result();
     }
+
+    function form_update_liat_barang($id_tpu)
+    {
+        $this->db->where("id_tpu",$id_tpu);
+        $query = $this->db->get('membeli');
+        return $query->result();
+    }
+
+    function update_TPU($TGL_TPU,$ID_TPU,$ID_PMB,$ID_PGW,$nama_brg,$jumlah)
+    {   //nyari record TPU
+        $this->db->where("id_tpu",$id_tpu);
+        $query = $this->db->get('membeli');
+        return $query;
+
+        //update tabel TPU
+        $data = array(
+            'TGL_TPU' => $TGL_TPU,
+            // 'ID_TPU' => $ID_TPU,
+            'ID_PMB' => $ID_PMB,
+            'ID_PGW' => $ID_PGW
+            );
+        $this->db->where("id_tpu",$id_tpu);
+        $this->db->update('transaksi_penjualan', $data);
+
+        //hitung berapa item barang yang diedit
+        $banyak=count($nama_brg);
+        
+        //update tabel membeli
+        for ($c=1; $c<=$banyak; $c++)
+        {
+            $data1 = array(
+            'ID_BRG' => $nama_brg[$c],
+            'BANYAK_BELI' => $jumlah[$c]
+            );
+        $this->db->where("id_tpu",$id_tpu);
+        $this->db->update('membeli', $data1);
+        }
+    }
+
+    // function lihat_total_harga()
 
     function delete_penjualan($id_tpu)
     {
@@ -70,6 +110,8 @@ class penjualan_model extends CI_Model
             );
         $this->db->insert('transaksi_penjualan', $data);
 
+        $total=0;
+
         for ($i=0; $i <= 10; $i++)
         {   
             if(!empty($nama_brg[$i]))
@@ -81,7 +123,7 @@ class penjualan_model extends CI_Model
 
         //menghitung sisa barang
             $sisa_brg=$row->JUMLAH_BRG - $jumlah[$i];
-
+            $total=$total + $row->HARGA_JUAL;
         //insert ke membeli
             $data1 =array(
                 'ID_TPU' => $ID_TPU,
@@ -101,30 +143,32 @@ class penjualan_model extends CI_Model
             }
         }
 
+        //insert total belanja
+            $data = array(
+            'TOTAL_TPU' => $total
+            );
+            $this->db->where("ID_TPU", $ID_TPU);
+            $this->db->update('transaksi_penjualan', $data);       
+            $this->db->where("ID_TPU", $ID_TPU);
+            $query2 = $this->db->get('transaksi_penjualan');
+            return $query2->result();
+    }
 
-        // $this->db->where("NAMA_BRG",$nama_brg[]);
-        // $query = $this->db->get('barang');
-        // $row=$query->row();
+    function insert_total($ID_TPU,$BAYAR_TPU)
+    {
+        $this->db->where("id_tpu",$ID_TPU);
+        $query = $this->db->get('transaksi_penjualan');
+        $row=$query->row();
 
-        // //mencari sisa barang
-        // $sisa_brg=$row->JUMLAH_BRG - $Jumlah1;
+        $KEMBALIAN_TPU=$BAYAR_TPU-$row->TOTAL_TPU;
 
-        // $data1 =array(
-        //     'ID_TPU' => $ID_TPU,
-        //     'ID_BRG' => $row->ID_BRG,
-        //     'BANYAK_BELI' => $Jumlah1,
-        //     );
-        // $this->db->insert('membeli', $data1);
-
-        // $data2 = array(
-        //     'JUMLAH_BRG' => $sisa_brg
-        //     );
-
-        // $this->db->where("id_brg",$row->ID_BRG);
-        // $this->db->update('barang', $data2);
-
-        // $this->db->where("id_brg",$row->ID_BRG);
-        // $this->db->set('JUMLAH_BRG', $sisa_brg);
+        $data = array(
+            'BAYAR_TPU' => $BAYAR_TPU,
+            'KEMBALIAN_TPU' =>$KEMBALIAN_TPU
+            );
+        $this->db->where("ID_TPU",$ID_TPU);
+        $this->db->update('transaksi_penjualan',$data);
+        return $KEMBALIAN_TPU;
     }
     
 }
