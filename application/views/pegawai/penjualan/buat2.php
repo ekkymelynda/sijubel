@@ -28,26 +28,23 @@
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputPassword">Id Pembeli</label>
-                      <input type="text" class="form-control" id="inputPassword" name="ID_PMB"
-                      required="required">
-                      <!-- <select class="form-control" name="ID_PMB" >
-                                <!-- <option></option> -->
-                                <!--<?php 
+                       <select class="form-control" name="ID_PMB" >
+                                <option></option> 
+                                <?php 
                                 foreach ($pem as $row1) {?>
                                 <option><?php echo $row1->ID_PMB;?></option>
                                 <?php } ?>
-                      </select>  -->
+                      </select>  
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="inputPassword">Id Pegawai</label>
-                        <input type="text" class="form-control" id="inputPassword" name="ID_PGW" required="required">
-                        <!-- <select class="form-control" name="ID_PGW" >
-                                <!-- <option></option> -->
-                               <!--  <?php 
+                        <select class="form-control" name="ID_PGW" >
+                                <option></option> 
+                                <?php 
                                 foreach ($peg as $row2) {?>
                                 <option><?php echo $row2->ID_PGW;?></option>
                                 <?php } ?> 
-                      </select>  -->
+                        </select>  
                     </div>
                     
                     <div class="form-group">
