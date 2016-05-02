@@ -55,13 +55,25 @@
                                 <?php } }?>
                       </select>
                     </div>
+                    <div class="form-group">
+                      <label class="control-label" for="inputUserName">Total Belanja</label>
+                      <input type="text" class="form-control" id="inputUserName" name="TOTAL_TPU" required="required" placeholder="<?php echo $row1->TOTAL_TPU;?>">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="inputUserName">Pembayaran</label>
+                      <input type="text" class="form-control" id="inputUserName" name="BAYAR_TPU" required="required" placeholder="<?php echo $row1->BAYAR_TPU;?>">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="inputUserName">Kembalian</label>
+                      <input type="text" class="form-control" id="inputUserName" name="KEMBALIAN_TPU" required="required" placeholder="<?php echo $row1->KEMBALIAN_TPU;?>">
+                    </div>
                       <!-- list barang belanja -->
-                    <?php 
+                    <!--<?php 
                       $banyak=0;
                       foreach ($j as $row3) { 
                         $banyak++; 
                         ?>
-                      <div class="form-group">
+                       div class="form-group">
                             <div class="row row-lg">
                             <div class="col-sm-6">
                               <label class="control-label" for="inputPassword">Barang</label>
@@ -81,8 +93,8 @@
                               <input type="text" class="form-control" id="inputPassword" name=<?php echo '"Jumlah'.$banyak.'"';?> placeholder=<?php echo '"'.$row3->BANYAK_BELI.'"';?>>  
                             </div>
                             </div>
-                      </div>
-                      <?php } ?>
+                      </div> 
+                      <?php } ?>-->
                    
                       <button type="submit" class="btn btn-primary">Ubah</button>
                     
