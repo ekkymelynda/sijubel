@@ -35,35 +35,38 @@ class penjualan_model extends CI_Model
         return $query->result();
     }
 
-    function update_TPU($TGL_TPU,$ID_TPU,$ID_PMB,$ID_PGW,$nama_brg,$jumlah)
-    {   //nyari record TPU
-        $this->db->where("id_tpu",$id_tpu);
-        $query = $this->db->get('membeli');
-        return $query;
+    function update_TPU($TGL_TPU,$ID_TPU,$ID_PMB,$ID_PGW,$TOTAL_TPU,$BAYAR_TPU,$KEMBALIAN_TPU)
+    {
+        // $this->db->where("id_tpu",$id_tpu);
+        // $query = $this->db->get('membeli');
+        // $row=$query->row();
 
         //update tabel TPU
         $data = array(
             'TGL_TPU' => $TGL_TPU,
             // 'ID_TPU' => $ID_TPU,
             'ID_PMB' => $ID_PMB,
-            'ID_PGW' => $ID_PGW
+            'ID_PGW' => $ID_PGW,
+            'TOTAL_TPU' => $TOTAL_TPU,
+            'BAYAR_TPU' => $BAYAR_TPU,
+            'KEMBALIAN_TPU' => $KEMBALIAN_TPU
             );
-        $this->db->where("id_tpu",$id_tpu);
+        $this->db->where("ID_TPU",$ID_TPU);
         $this->db->update('transaksi_penjualan', $data);
 
         //hitung berapa item barang yang diedit
-        $banyak=count($nama_brg);
+        // $banyak=count($nama_brg);
         
-        //update tabel membeli
-        for ($c=1; $c<=$banyak; $c++)
-        {
-            $data1 = array(
-            'ID_BRG' => $nama_brg[$c],
-            'BANYAK_BELI' => $jumlah[$c]
-            );
-        $this->db->where("id_tpu",$id_tpu);
-        $this->db->update('membeli', $data1);
-        }
+        // //update tabel membeli
+        // for ($c=1; $c<=$banyak; $c++)
+        // {
+        //     $data1 = array(
+        //     'ID_BRG' => $nama_brg[$c],
+        //     'BANYAK_BELI' => $jumlah[$c]
+        //     );
+        // $this->db->where("id_tpu",$id_tpu);
+        // $this->db->update('membeli', $data1);
+        // }
     }
 
     // function lihat_total_harga()
