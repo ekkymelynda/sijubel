@@ -45,8 +45,6 @@ class transaksi_penjualan extends CI_Controller {
     
     public function insert_transaksi_penjualan()
         {
-            //if(!empty($_POST['id_pmb']))
-              //  {
                     $TGL_TPU=$this->input->post('TGL_TPU');
                     $ID_TPU= $this->input->post('ID_TPU');
                     $ID_PMB= $this->input->post('ID_PMB');
@@ -55,41 +53,33 @@ class transaksi_penjualan extends CI_Controller {
                     $nama_brg= array(
                         $this->input->post('nama_brg1'),
                         $this->input->post('nama_brg2'),
-                        $this->input->post('nama_brg3')
-                        // $this->input->post('nama_brg4'),
-                        // $this->input->post('nama_brg5'),
-                        // $this->input->post('nama_brg6'),
-                        // $this->input->post('nama_brg7'),
-                        // $this->input->post('nama_brg8'),
-                        // $this->input->post('nama_brg9'),
-                        // $this->input->post('nama_brg10')
+                        $this->input->post('nama_brg3'),
+                        $this->input->post('nama_brg4'),
+                        $this->input->post('nama_brg5'),
+                        $this->input->post('nama_brg6'),
+                        $this->input->post('nama_brg7'),
+                        $this->input->post('nama_brg8'),
+                        $this->input->post('nama_brg9'),
+                        $this->input->post('nama_brg10')
                         );
                     $jumlah= array(
                         $this->input->post('Jumlah1'),
                         $this->input->post('Jumlah2'),
-                        $this->input->post('Jumlah3')
-                        // $this->input->post('Jumlah4'),
-                        // $this->input->post('Jumlah5'),
-                        // $this->input->post('Jumlah6'),
-                        // $this->input->post('Jumlah7'),
-                        // $this->input->post('Jumlah8'),
-                        // $this->input->post('Jumlah9'),
-                        // $this->input->post('Jumlah10')
+                        $this->input->post('Jumlah3'),
+                        $this->input->post('Jumlah4'),
+                        $this->input->post('Jumlah5'),
+                        $this->input->post('Jumlah6'),
+                        $this->input->post('Jumlah7'),
+                        $this->input->post('Jumlah8'),
+                        $this->input->post('Jumlah9'),
+                        $this->input->post('Jumlah10')
                         );
-                    // $nama_brg= $this->input->post('nama_brg2');
-                    // $Jumlah1 = $this->input->post('Jumlah1');
-
-                    // return print_r($nama_brg[0]);
-
-
+                    
                     //masuk ke file model
                     $total['t']=$this->penjualan_model->intransaksi_penjualan($TGL_TPU,$ID_TPU,$ID_PMB,$ID_PGW,$nama_brg,$jumlah);
+                    //setelah insert masuk ke halaman ini:
                     $this->load->view('pegawai/header')->view('pegawai/penjualan/total',$total)->view('pegawai/footer');
                      
-
-                //}
-            //setelah insert masuk ke halaman ini:
-           // redirect(base_url()."transaksi_penjualan/transaksi_penjualan_total"); 
         }
 
         public function insert_total_TPU($ID_TPU)
@@ -126,96 +116,59 @@ class transaksi_penjualan extends CI_Controller {
         }
 
     public function update_transaksi_penjualan($ID_TPU)
-        {           $data2['i'] = $this->penjualan_model->form_update_liat_barang($ID_TPU);
-                    // $banyak=0;
-                    // foreach ($i as $row)
-                    // {
-                    //     $banyak++;
-                    // }
-                    $banyak=count($i);
+        {           
+            $TGL_TPU=$this->input->post('TGL_TPU');
+            $ID_TPU= $this->input->post('ID_TPU');
+            $ID_PMB= $this->input->post('ID_PMB');
+            $ID_PGW= $this->input->post('ID_PGW');
+            // $TOTAL_TPU=$this->input->post('TOTAL_TPU');
+            // $BAYAR_TPU=$this->input->post('BAYAR_TPU');
+            // $KEMBALIAN_TPU=$this->input->post('KEMBALIAN_TPU');
+            
+            $nama_brg= array(
+                $this->input->post('nama_brg1'),
+                $this->input->post('nama_brg2'),
+                $this->input->post('nama_brg3'),
+                $this->input->post('nama_brg4'),
+                $this->input->post('nama_brg5'),
+                $this->input->post('nama_brg6'),
+                $this->input->post('nama_brg7'),
+                $this->input->post('nama_brg8'),
+                $this->input->post('nama_brg9'),
+                $this->input->post('nama_brg10')
+                );
+            $jumlah= array(
+                $this->input->post('Jumlah1'),
+                $this->input->post('Jumlah2'),
+                $this->input->post('Jumlah3'),
+                $this->input->post('Jumlah4'),
+                $this->input->post('Jumlah5'),
+                $this->input->post('Jumlah6'),
+                $this->input->post('Jumlah7'),
+                $this->input->post('Jumlah8'),
+                $this->input->post('Jumlah9'),
+                $this->input->post('Jumlah10')
+                );
 
-                    $TGL_TPU=$this->input->post('TGL_TPU');
-                    $ID_TPU= $this->input->post('ID_TPU');
-                    $ID_PMB= $this->input->post('ID_PMB');
-                    $ID_PGW= $this->input->post('ID_PGW');
-                    
-                    // $banyak=count($data2);
-
-                    $data['nama_brg'];
-                    for ($a=1; $a<=$banyak; $a++)
-                    {
-                        $data['nama_brg']=$this->input->post('nama_brg'.$a);
-                    }
-
-                    $data1['jumlah'];
-                    for ($a=1; $a<=$banyak; $a++)
-                    {
-                        $data1['jumlah']=$this->input->post('jumlah'.$a);
-                    }
-                    // $nama_brg= array(
-                    //     // for ($a=1; $a<=$banyak; $a++)
-                    //     //     $this->input->post('nama_brg'.$a),
-                        
-                    //     if(!empty($_POST['nama_brg1']))
-                    //         $this->input->post('nama_brg1'),
-                    //     if(!empty($_POST['nama_brg2']))
-                    //         $this->input->post('nama_brg2'),
-                    //     if(!empty($_POST['nama_brg3']))
-                    //         $this->input->post('nama_brg3')
-                    //     // $this->input->post('nama_brg4'),
-                    //     // $this->input->post('nama_brg5'),
-                    //     // $this->input->post('nama_brg6'),
-                    //     // $this->input->post('nama_brg7'),
-                    //     // $this->input->post('nama_brg8'),
-                    //     // $this->input->post('nama_brg9'),
-                    //     // $this->input->post('nama_brg10')
-                    //     );
-                    // $jumlah= array(
-                    //     // for ($b=1 ; $b <= $banyak; $b++)
-                    //     //     $this->input->post('Jumlah'.$a),
-                        
-                    //     if(!empty($_POST['Jumlah1']))
-                    //         $this->input->post('Jumlah1'),
-                    //     if(!empty($_POST['Jumlah2']))
-                    //         $this->input->post('Jumlah2'),
-                    //     if(!empty($_POST['Jumlah3']))
-                    //         $this->input->post('Jumlah3')
-                    //     // $this->input->post('Jumlah4'),
-                        // $this->input->post('Jumlah5'),
-                        // $this->input->post('Jumlah6'),
-                        // $this->input->post('Jumlah7'),
-                        // $this->input->post('Jumlah8'),
-                        // $this->input->post('Jumlah9'),
-                        // $this->input->post('Jumlah10')
-                        // );
-
-                    //ke database
-                    $this->penjualan_model->update_TPU($TGL_TPU,$ID_TPU,$ID_PMB,$ID_PGW,$data,$data1);
+            //ke database
+            $this->penjualan_model->update_TPU($TGL_TPU,$ID_TPU,$ID_PMB,$ID_PGW);
+            $this->penjualan_model->untuk_update_1($ID_TPU);
+            $total['t']=$this->penjualan_model->untuk_update_2($ID_TPU,$nama_brg,$jumlah);
+            $this->load->view('pegawai/header')->view('pegawai/penjualan/total',$total)->view('pegawai/footer');
+            
         }
 
-    // public function update_transaksi_penjualan($id_pmb)
-    //     {
-    //         $nama_pmb= $this->input->post('nama_pmb');
-    //         $alamat_pmb= $this->input->post('alamat_pmb');
-    //         $notlp_pmb= $this->input->post('notlp_pmb');
-
-    //         //masuk ke model
-    //         $this->transaksi_penjualan_model->update_transaksi_penjualan($id_pmb,$nama_pmb,$alamat_pmb,$notlp_pmb);
-
-    //         redirect(base_url()."transaksi_penjualan/transaksi_penjualan_lihat");
-    //     }
-
-    public function halaman_delete_transaksi_TPU($id_TPU)
+    public function halaman_delete_TPU($ID_TPU)
         {
-            $data['h'] = $this->penjualan_model->form_update_transaksi_penjualan($id_pmb);
+            $data['h'] = $this->penjualan_model->halaman_delete_TPU($ID_TPU);
             $this->load->view('pegawai/header')->view('pegawai/penjualan/hapus',$data)->view('pegawai/footer');
         }
 
-    // public function delete_transaksi_penjualan($id_pmb)
-    //     {
-    //         $this->transaksi_penjualan_model->delete_transaksi_penjualan($id_pmb);
-    //         redirect(base_url()."transaksi_penjualan/transaksi_penjualan_lihat");
-    //     }
+    public function delete_tpu($ID_TPU)
+        {
+            $this->penjualan_model->delete_TPU($ID_TPU);
+            redirect(base_url()."transaksi_penjualan/transaksi_penjualan_lihat");
+        }
 
 
     

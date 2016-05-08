@@ -24,8 +24,6 @@
                 <th>ID Pemilik</th>
                 <th>Tanggal Transaksi Pembelian</th>
                 <th>Total Transaksi Pembelian</th>
-                <th>Bayar Transaksi Pembelian</th>
-                <th>Kembalian Transaksi Pembelian</th>
                 <th>Aksi</th>
               </tr>
             </thead>
@@ -37,11 +35,9 @@
                  <td><?php echo $row->ID_SPL;?></td>
                  <td><?php echo $row->TGL_TPE;?></td>
                  <td><?php echo $row->TOTAL_TPE;?></td>
-                 <td><?php echo $row->BAYAR_TPE;?></td>
-                 <td><?php echo $row->KEMBALIAN_TPE;?></td>
                  <td class="text-nowrap">
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Ubah">
-                    <a href=""><i class="icon wb-wrench" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url(); ?>pembelian/form_update_TPE/<?php echo $row->ID_TPE;?>"><i class="icon wb-wrench" aria-hidden="true"></i></a>
                   </button>
                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip" data-original-title="Hapus">
                     <a href="<?php echo base_url(); ?>pembelian/halaman_delete_pembelian/<?php echo $row->ID_TPE;?>"><i class="icon wb-close" aria-hidden="true"></i></a>

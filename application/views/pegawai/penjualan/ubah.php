@@ -16,7 +16,7 @@
               <?php 
                 foreach ($i as $row1) {?>
               <div class="example-wrap">
-                <h4 class="example-title">Buat Transaksi Penjualan</h4>
+                <h4 class="example-title">Ubah Transaksi Penjualan</h4>
                 <div class="example">
                   <form class="form-group" action="<?php echo base_url();?>transaksi_penjualan/update_transaksi_penjualan/<?php echo $row1->ID_TPU;?>" method="post">
                     <div class="form-group">
@@ -55,7 +55,7 @@
                                 <?php } }?>
                       </select>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label class="control-label" for="inputUserName">Total Belanja</label>
                       <input type="text" class="form-control" id="inputUserName" name="TOTAL_TPU" required="required" placeholder="<?php echo $row1->TOTAL_TPU;?>">
                     </div>
@@ -66,14 +66,14 @@
                     <div class="form-group">
                       <label class="control-label" for="inputUserName">Kembalian</label>
                       <input type="text" class="form-control" id="inputUserName" name="KEMBALIAN_TPU" required="required" placeholder="<?php echo $row1->KEMBALIAN_TPU;?>">
-                    </div>
+                    </div> -->
                       <!-- list barang belanja -->
-                    <!--<?php 
+                    <?php 
                       $banyak=0;
                       foreach ($j as $row3) { 
                         $banyak++; 
                         ?>
-                       div class="form-group">
+                       <div class="form-group">
                             <div class="row row-lg">
                             <div class="col-sm-6">
                               <label class="control-label" for="inputPassword">Barang</label>
@@ -81,7 +81,7 @@
                                 <option></option>
                                 <?php 
                                 foreach ($h as $row) {
-                                  if($row->NAMA_BRG==$row3->NAMA_BRG) {?>
+                                  if($row->ID_BRG==$row3->ID_BRG) {?>
                                     <option selected><?php echo $row->NAMA_BRG;?></option>
                                   <?php } else ?>
                                   <option><?php echo $row->NAMA_BRG;?></option>
@@ -94,7 +94,27 @@
                             </div>
                             </div>
                       </div> 
-                      <?php } ?>-->
+                      <?php } ?>
+                      <?php for($k=$banyak+1; $k<11; $k++) { ?>
+                      <div class="form-group">
+                            <div class="row row-lg">
+                            <div class="col-sm-6">
+                              <label class="control-label" for="inputPassword">Barang</label>
+                              <select class="form-control" name="<?php echo 'nama_brg'.$k;?>" >
+                                <option></option>
+                                <?php 
+                                foreach ($h as $row) {?>
+                                <option><?php echo $row->NAMA_BRG;?></option>
+                                <?php } ?>
+                              </select> 
+                            </div>
+                            <div class="col-sm-6">
+                              <label class="control-label" for="inputPassword">Jumlah</label>
+                              <input type="text" class="form-control" id="inputPassword" name="<?php echo 'Jumlah'.$k;?>" >  
+                            </div>
+                            </div>
+                    </div>
+                      <?php } ?>
                    
                       <button type="submit" class="btn btn-primary">Ubah</button>
                     

@@ -7,109 +7,125 @@
         <li>Ubah</li>
       </ol>
     </div>
-    <div class="page-content container-fluid">
-      <div class="row">
-        <div>
-          <!-- Panel Wizard Form -->
-          <div class="panel" id="exampleWizardForm">
-            <div class="panel-heading">
-              <h3 class="panel-title">Transaksi Pembelian</h3>
-            </div>
-            <div class="panel-body">
-              <!-- Steps -->
-              <div class="steps steps-sm row" data-plugin="matchHeight" data-by-row="true" role="tablist">
-                <div class="step col-md-4 current" data-target="#exampleAccount" role="tab">
-                  <span class="step-number">1</span>
-                  <div class="step-desc">
-                    <span class="step-title">Kode</span>
-                    <p>Masukkan Tanggal dan Kode</p>
-                  </div>
-                </div>
-
-                <div class="step col-md-4" data-target="#exampleBilling" role="tab">
-                  <span class="step-number">2</span>
-                  <div class="step-desc">
-                    <span class="step-title">List Barang</span>
-                    <p>Masukkan List Barang yang Dibeli</p>
-                  </div>
-                </div>
-
-                <div class="step col-md-4" data-target="#exampleGetting" role="tab">
-                  <span class="step-number">3</span>
-                  <div class="step-desc">
-                    <span class="step-title">Total</span>
-                    <p>Total Pembelian</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Steps -->
-
-              <!-- Wizard Content -->
-              <div class="wizard-content">
-                <div class="wizard-pane active" id="exampleAccount" role="tabpanel">
-                  <form id="exampleAccountForm">
+    <div class="page-content">
+      <div class="panel">
+        <div class="panel-body container-fluid">
+          <div class="row row-lg">
+            <div class="col-sm-6">
+              <!-- Example Basic Form -->
+              <?php 
+                foreach ($i as $row1) {?>
+              <div class="example-wrap">
+                <h4 class="example-title">Ubah Transaksi Penjualan</h4>
+                <div class="example">
+                  <form class="form-group" action="<?php echo base_url();?>pembelian/update_transaksi_pembelian/<?php echo $row1->ID_TPE;?>" method="post">
                     <div class="form-group">
                       <label class="control-label" for="inputPassword">Waktu Transaksi Pembelian</label>
-                      <input type="date_time" class="form-control" id="inputPassword" name="password"
-                      required="required">
+                      <input type="date" class="form-control" id="inputPassword" name="TGL_TPE"
+                      required="required" placeholder="<?php echo $row1->TGL_TPE;?>">
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputUserName">Id Transaksi Pembelian</label>
-                      <input type="text" class="form-control" id="inputUserName" name="IdTransaksiPembelian" required="required">
+                      <input type="text" class="form-control" id="inputUserName" name="ID_TPE" required="required" placeholder="<?php echo $row1->ID_TPE;?>">
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">
                       <label class="control-label" for="inputPassword">Id Supplier</label>
-                      <input type="text" class="form-control" id="inputPassword" name="IdSupplier"
-                      required="required">
+                      <select class="form-control" name="ID_SPL" >
+                                <option></option>
+                                <?php 
+                                foreach ($sup as $row4) {
+                                if ($row4->ID_SPL==$row1->ID_SPL)
+                                  {?>
+                                <option selected><?php echo $row4->ID_SPL;?></option>
+                                <?php } else ?>
+                                <option><?php echo $row4->ID_SPL;?></option>
+                                <?php } ?>
+                      </select>  
                     </div>
+                    <div class="form-group">
+                        <label class="control-label" for="inputPassword">Id Pemilik</label>
+                        <select class="form-control" name="ID_PML" >
+                                <option></option> 
+                                <?php 
+                                foreach ($pml as $row2) {
+                                  if ($row2->ID_PML==$row1->ID_PML) {?>
+                                <option selected><?php echo $row2->ID_PML;?></option>
+                                <?php } else ?> 
+                                <option><?php echo $row2->ID_PML;?></option>
+                                <?php } }?>
+                      </select>
+                    </div>
+                    <!-- <div class="form-group">
+                      <label class="control-label" for="inputUserName">Total Belanja</label>
+                      <input type="text" class="form-control" id="inputUserName" name="TOTAL_TPU" required="required" placeholder="<?php echo $row1->TOTAL_TPU;?>">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="inputUserName">Pembayaran</label>
+                      <input type="text" class="form-control" id="inputUserName" name="BAYAR_TPU" required="required" placeholder="<?php echo $row1->BAYAR_TPU;?>">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="inputUserName">Kembalian</label>
+                      <input type="text" class="form-control" id="inputUserName" name="KEMBALIAN_TPU" required="required" placeholder="<?php echo $row1->KEMBALIAN_TPU;?>">
+                    </div> -->
+                      <!-- list barang restock-->
+                    <?php 
+                      $banyak=0;
+                      foreach ($j as $row3) { 
+                        $banyak++; 
+                        ?>
+                       <div class="form-group">
+                            <div class="row row-lg">
+                            <div class="col-sm-6">
+                              <label class="control-label" for="inputPassword">Barang</label>
+                              <select class="form-control" name=<?php echo '"nama_brg'.$banyak.'"';?>>
+                                <option></option>
+                                <?php 
+                                foreach ($h as $row) {
+                                  if($row->ID_BRG==$row3->ID_BRG) {?>
+                                    <option selected><?php echo $row->NAMA_BRG;?></option>
+                                  <?php } else ?>
+                                  <option><?php echo $row->NAMA_BRG;?></option>
+                                  <?php } ?>
+                              </select> 
+                            </div>
+                            <div class="col-sm-6">
+                              <label class="control-label" for="inputPassword">Jumlah</label>
+                              <input type="text" class="form-control" id="inputPassword" name=<?php echo '"Jumlah'.$banyak.'"';?> placeholder=<?php echo '"'.$row3->BANYAK_MASOK.'"';?>>  
+                            </div>
+                            </div>
+                      </div> 
+                      <?php } ?>
+                      <?php for($k=$banyak+1; $k<11; $k++) { ?>
                       <div class="form-group">
-                      <label class="control-label" for="inputPassword">Id Admin</label>
-                      <input type="text" class="form-control" id="inputPassword" name="IdAdmin"
-                      required="required">
+                            <div class="row row-lg">
+                            <div class="col-sm-6">
+                              <label class="control-label" for="inputPassword">Barang</label>
+                              <select class="form-control" name="<?php echo 'nama_brg'.$k;?>" >
+                                <option></option>
+                                <?php 
+                                foreach ($h as $row) {?>
+                                <option><?php echo $row->NAMA_BRG;?></option>
+                                <?php } ?>
+                              </select> 
+                            </div>
+                            <div class="col-sm-6">
+                              <label class="control-label" for="inputPassword">Jumlah</label>
+                              <input type="text" class="form-control" id="inputPassword" name="<?php echo 'Jumlah'.$k;?>" >  
+                            </div>
+                            </div>
                     </div>
+                      <?php } ?>
+                   
+                      <button type="submit" class="btn btn-primary">Ubah</button>
+                    
                   </form>
-                </div>
-                <div class="wizard-pane" id="exampleBilling" role="tabpanel">
-                  <form id="exampleBillingForm">
-                    <div class="form-group">
-                      <label class="control-label" for="inputCardNumber">Id Barang</label>
-                      <input type="text" class="form-control" id="inputCardNumber" name="IdBarang" placeholder="Id Barang" required="required">
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label" for="inputCVV">Nama Barang</label>
-                      <input type="text" class="form-control" id="inputCVV" name="NamaBarang" placeholder="Nama Barang" required="required">
-                    </div>
-                      <div class="form-group">
-                      <label class="control-label" for="inputCVV">Harga Beli Barang</label>
-                      <input type="text" class="form-control" id="inputCVV" name="HargaBeliBarang" placeholder="Harga Beli Barang" required="required">
-                    </div>
-                  </form>
-                </div>
-                <div class="wizard-pane" id="exampleGetting" role="tabpanel">
-                  <div class="text-center margin-vertical-20">
-                    <h4>Total Pembelian : </h4> <!--  -->
-                  </div>
-                    <form id="exampleBillingForm">
-                    <div class="form-group">
-                      <label class="control-label" for="inputCardNumber">Bayar Transaksi</label>
-                      <input type="text" class="form-control" id="inputCardNumber" name="number" placeholder="Card number">
-                    </div>
-                    </form>
-                    <div class="text-center margin-vertical-20">
-                    <h4>Total Kembalian : </h4> <!-- -->
-                  </div>
                 </div>
               </div>
-              <!-- End Wizard Content -->
-
+              <!-- End Example Basic Form -->
             </div>
           </div>
-          <!-- End Panel Wizard One Form -->
         </div>
-
-        
       </div>
-
     </div>
   </div>
   <!-- End Page -->

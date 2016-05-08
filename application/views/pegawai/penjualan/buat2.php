@@ -46,12 +46,12 @@
                                 <?php } ?> 
                         </select>  
                     </div>
-                    
+                    <?php for($i=1;$i<11;$i++) {?>
                     <div class="form-group">
                             <div class="row row-lg">
                             <div class="col-sm-6">
                               <label class="control-label" for="inputPassword">Barang</label>
-                              <select class="form-control" name="nama_brg1" >
+                              <select class="form-control" name="<?php echo 'nama_brg'.$i;?>" >
                                 <option></option>
                                 <?php 
                                 foreach ($h as $row) {?>
@@ -61,48 +61,11 @@
                             </div>
                             <div class="col-sm-6">
                               <label class="control-label" for="inputPassword">Jumlah</label>
-                              <input type="text" class="form-control" id="inputPassword" name="Jumlah1" required="required">  
+                              <input type="text" class="form-control" id="inputPassword" name="<?php echo 'Jumlah'.$i;?>" >  
                             </div>
                             </div>
                     </div>
-
-                    <div class="form-group">
-                            <div class="row row-lg">
-                            <div class="col-sm-6">
-                              <label class="control-label" for="inputPassword">Barang</label>
-                              <select class="form-control" name="nama_brg2" >
-                                <option></option>
-                                <?php 
-                                foreach ($h as $row) {?>
-                                <option><?php echo $row->NAMA_BRG;?></option>
-                                <?php } ?>
-                              </select> 
-                            </div>
-                            <div class="col-sm-6">
-                              <label class="control-label" for="inputPassword">Jumlah</label>
-                              <input type="text" class="form-control" id="inputPassword" name="Jumlah2" required="required">  
-                            </div>
-                            </div>
-                    </div>
-
-                    <div class="form-group">
-                            <div class="row row-lg">
-                            <div class="col-sm-6">
-                              <label class="control-label" for="inputPassword">Barang</label>
-                              <select class="form-control" name="nama_brg3" >
-                                <option></option>
-                                <?php 
-                                foreach ($h as $row) {?>
-                                <option><?php echo $row->NAMA_BRG;?></option>
-                                <?php } ?>
-                              </select> 
-                            </div>
-                            <div class="col-sm-6">
-                              <label class="control-label" for="inputPassword">Jumlah</label>
-                              <input type="text" class="form-control" id="inputPassword" name="Jumlah3" required="required">  
-                            </div>
-                            </div>
-                    </div>
+                    <?php } ?>
                    
                       <button type="submit" class="btn btn-primary">Buat</button>
                     

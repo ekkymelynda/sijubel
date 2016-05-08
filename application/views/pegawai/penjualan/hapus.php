@@ -55,10 +55,10 @@
                     <div class="form-group">
                       <label>Apakah Anda yakin ingin menghapus data tersebut?</label>
                       <br>
-                      <form method="post" class="form-group" action="<?php echo base_url(); ?>penjualan/delete_penjualan/<?php echo $row->ID_TPU; }?>">
+                      <form method="post" class="form-group" action="<?php echo base_url(); ?>transaksi_penjualan/delete_tpu/<?php echo $row->ID_TPU; }?>">
                         <button type="submit" class="btn btn-danger">Ya</button>
                       </form>
-                      <form method="get" action="<?php echo base_url(); ?>penjualan/penjualan_lihat">
+                      <form method="get" action="<?php echo base_url(); ?>transaksi_penjualan/penjualan_lihat">
                         <button type="submit" class="btn btn-success">Tidak</button>
                       </form>
                     </div>

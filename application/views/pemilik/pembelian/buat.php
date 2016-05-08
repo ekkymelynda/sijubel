@@ -7,109 +7,77 @@
         <li>Buat</li>
       </ol>
     </div>
-    <div class="page-content container-fluid">
-      <div class="row">
-        <div>
-          <!-- Panel Wizard Form -->
-          <div class="panel" id="exampleWizardForm">
-            <div class="panel-heading">
-              <h3 class="panel-title">Transaksi Pembelian</h3>
-            </div>
-            <div class="panel-body">
-              <!-- Steps -->
-              <div class="steps steps-sm row" data-plugin="matchHeight" data-by-row="true" role="tablist">
-                <div class="step col-md-4 current" data-target="#exampleAccount" role="tab">
-                  <span class="step-number">1</span>
-                  <div class="step-desc">
-                    <span class="step-title">Kode</span>
-                    <p>Masukkan Tanggal dan Kode</p>
-                  </div>
-                </div>
-
-                <div class="step col-md-4" data-target="#exampleBilling" role="tab">
-                  <span class="step-number">2</span>
-                  <div class="step-desc">
-                    <span class="step-title">List Barang</span>
-                    <p>Masukkan List Barang yang Dibeli</p>
-                  </div>
-                </div>
-
-                <div class="step col-md-4" data-target="#exampleGetting" role="tab">
-                  <span class="step-number">3</span>
-                  <div class="step-desc">
-                    <span class="step-title">Total</span>
-                    <p>Total Pembelian</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Steps -->
-
-              <!-- Wizard Content -->
-              <div class="wizard-content">
-                <div class="wizard-pane active" id="exampleAccount" role="tabpanel">
-                  <form id="exampleAccountForm">
+   <div class="page-content">
+      <div class="panel">
+        <div class="panel-body container-fluid">
+          <div class="row row-lg">
+            <div class="col-sm-6">
+              <!-- Example Basic Form -->
+              <div class="example-wrap">
+                <h4 class="example-title">Buat Transaksi Pembelian</h4>
+                <div class="example">
+                  <form class="form-group" action="<?php echo base_url();?>pembelian/insert_transaksi_pembelian" method="post">
                     <div class="form-group">
                       <label class="control-label" for="inputPassword">Waktu Transaksi Pembelian</label>
-                      <input type="date_time" class="form-control" id="inputPassword" name="password"
+                      <input type="date" class="form-control" id="inputPassword" name="TGL_TPE"
                       required="required">
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputUserName">Id Transaksi Pembelian</label>
-                      <input type="text" class="form-control" id="inputUserName" name="IdTransaksiPembelian" required="required">
+                      <input type="text" class="form-control" id="inputUserName" name="ID_TPE" required="required">
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">
                       <label class="control-label" for="inputPassword">Id Supplier</label>
-                      <input type="text" class="form-control" id="inputPassword" name="IdSupplier"
-                      required="required">
+                       <select class="form-control" name="ID_SPL" >
+                                <option></option> 
+                                <?php 
+                                foreach ($sup as $row1) {?>
+                                <option><?php echo $row1->ID_SPL;?></option>
+                                <?php } ?>
+                      </select>  
                     </div>
-                      <div class="form-group">
-                      <label class="control-label" for="inputPassword">Id Admin</label>
-                      <input type="text" class="form-control" id="inputPassword" name="IdAdmin"
-                      required="required">
+                    <div class="form-group">
+                        <label class="control-label" for="inputPassword">Id Pemilik</label>
+                        <select class="form-control" name="ID_PML" >
+                                <option></option> 
+                                <?php 
+                                foreach ($pemilik as $row2) {?>
+                                <option><?php echo $row2->ID_PML;?></option>
+                                <?php } ?> 
+                        </select>  
                     </div>
+                    
+                    <?php for($i=1;$i<11;$i++) {?>
+                    <div class="form-group">
+                            <div class="row row-lg">
+                            <div class="col-sm-6">
+                              <label class="control-label" for="inputPassword">Restock Barang</label>
+                              <select class="form-control" name="<?php echo 'nama_brg'.$i;?>" >
+                                <option></option>
+                                <?php 
+                                foreach ($h as $row) {?>
+                                <option><?php echo $row->NAMA_BRG;?></option>
+                                <?php } ?>
+                              </select> 
+                            </div>
+                            <div class="col-sm-6">
+                              <label class="control-label" for="inputPassword">Jumlah</label>
+                              <input type="text" class="form-control" id="inputPassword" name="<?php echo 'Jumlah'.$i;?>" >  
+                            </div>
+                            </div>
+                    </div>
+                    <?php } ?>
+                
+                      <button type="submit" class="btn btn-primary">Buat</button>
+                    
                   </form>
-                </div>
-                <div class="wizard-pane" id="exampleBilling" role="tabpanel">
-                  <form id="exampleBillingForm">
-                    <div class="form-group">
-                      <label class="control-label" for="inputCardNumber">Id Barang</label>
-                      <input type="text" class="form-control" id="inputCardNumber" name="IdBarang" placeholder="Id Barang" required="required">
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label" for="inputCVV">Nama Barang</label>
-                      <input type="text" class="form-control" id="inputCVV" name="NamaBarang" placeholder="Nama Barang" required="required">
-                    </div>
-                      <div class="form-group">
-                      <label class="control-label" for="inputCVV">Harga Beli Barang</label>
-                      <input type="text" class="form-control" id="inputCVV" name="HargaBeliBarang" placeholder="Harga Beli Barang" required="required">
-                    </div>
-                  </form>
-                </div>
-                <div class="wizard-pane" id="exampleGetting" role="tabpanel">
-                  <div class="text-center margin-vertical-20">
-                    <h4>Total Pembelian : </h4> <!-- diisi hasil jumlah total pembelian -->
-                  </div>
-                    <form id="exampleBillingForm">
-                    <div class="form-group">
-                      <label class="control-label" for="inputCardNumber">Bayar Transaksi</label>
-                      <input type="text" class="form-control" id="inputCardNumber" name="number" placeholder="Card number">
-                    </div>
-                    </form>
-                    <div class="text-center margin-vertical-20">
-                    <h4>Total Kembalian : </h4> <!-- diisi hasil Bayar Transaksi - total pembelian -->
-                  </div>
                 </div>
               </div>
-              <!-- End Wizard Content -->
-
+              <!-- End Example Basic Form -->
             </div>
           </div>
-          <!-- End Panel Wizard One Form -->
         </div>
-
-        
       </div>
-
     </div>
   </div>
   <!-- End Page -->

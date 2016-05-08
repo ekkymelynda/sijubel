@@ -33,8 +33,8 @@ class penjualan extends CI_Controller {
 
 	 public function penjualan_buat()
     {
-         //$this->load->view('pegawai/header')->view('pegawai/penjualan/buat')->view('pegawai/footer');
-        $this->load->view('pegawai/penjualan/buat1');
+         $this->load->view('pegawai/header')->view('pegawai/penjualan/buat2')->view('pegawai/footer');
+        // $this->load->view('pegawai/penjualan/buat1');
     }
 
     public function form_update_penjualan($id_tpu)

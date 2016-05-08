@@ -43,16 +43,6 @@
                       <label><?php echo $row->TOTAL_TPE;?></label>
                     </div>
                     <div class="form-group">
-                      <label class="control-label" for="inputBasicPassword">Bayar Transaksi Pembelian</label>
-                      <br>
-                      <label><?php echo $row->BAYAR_TPE;?></label>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label" for="inputBasicPassword">Kembalian Transaksi Pembelian</label>
-                      <br>
-                      <label><?php echo $row->KEMBALIAN_TPE;?></label>
-                    </div>
-                    <div class="form-group">
                       <label>Apakah Anda yakin ingin menghapus data tersebut?</label>
                       <br>
                       <form method="post" class="form-group" action="<?php echo base_url(); ?>pembelian/delete_pembelian/<?php echo $row->ID_TPE; }?>">
