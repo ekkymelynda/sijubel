@@ -21,7 +21,7 @@
                   <form class="form-group" action="<?php echo base_url();?>transaksi_penjualan/insert_total_TPU/<?php echo $row->ID_TPU;?>" method="post">
                     <div class="form-group">
                       <label class="control-label" for="inputUserName">ID Transaksi</label>
-                      <input type="text" class="form-control" id="inputUserName" name="ID_TPU" required="required" placeholder= "<?php echo $row->ID_TPU;?>">
+                      <input type="text" class="form-control" id="inputUserName" name="ID_TPU" required="required" value= "<?php echo $row->ID_TPU;?>">
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputPassword">Total Belanja</label>

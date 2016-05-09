@@ -9,11 +9,10 @@
     </div>
 
     <div class="page-content">
-
       <!-- Panel Basic -->
       <div class="panel">
         <header class="panel-heading">
-          <div class="panel-actions"></div></div><?php foreach ($diti as $row){?>
+          <div class="panel-actions"></div><?php foreach ($diti as $row){?>
           <h3 class="panel-title">Laporan Data Transaksi Pembelian Barang Tanggal <?php echo $row->tgl;?></h3>
         </header><?php }?>
         <div class="panel-body">

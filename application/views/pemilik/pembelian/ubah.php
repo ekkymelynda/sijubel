@@ -22,11 +22,11 @@
                     <div class="form-group">
                       <label class="control-label" for="inputPassword">Waktu Transaksi Pembelian</label>
                       <input type="date" class="form-control" id="inputPassword" name="TGL_TPE"
-                      required="required" placeholder="<?php echo $row1->TGL_TPE;?>">
+                      required="required" value="<?php echo $row1->TGL_TPE;?>">
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputUserName">Id Transaksi Pembelian</label>
-                      <input type="text" class="form-control" id="inputUserName" name="ID_TPE" required="required" placeholder="<?php echo $row1->ID_TPE;?>">
+                      <input type="text" class="form-control" id="inputUserName" name="ID_TPE" required="required" value="<?php echo $row1->ID_TPE;?>">
                     </div>
                     <div class="form-group">
                       <label class="control-label" for="inputPassword">Id Supplier</label>
@@ -90,7 +90,7 @@
                             </div>
                             <div class="col-sm-6">
                               <label class="control-label" for="inputPassword">Jumlah</label>
-                              <input type="text" class="form-control" id="inputPassword" name=<?php echo '"Jumlah'.$banyak.'"';?> placeholder=<?php echo '"'.$row3->BANYAK_MASOK.'"';?>>  
+                              <input type="text" class="form-control" id="inputPassword" name=<?php echo '"Jumlah'.$banyak.'"';?> value=<?php echo '"'.$row3->BANYAK_MASOK.'"';?>>  
                             </div>
                             </div>
                       </div> 
