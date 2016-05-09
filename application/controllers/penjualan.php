@@ -32,7 +32,9 @@ class penjualan extends CI_Controller {
 	}
 
 	 public function penjualan_buat()
-    {
+    {   $data['h'] = $this->penjualan_model->lihat_barang();
+        $data['peg']= $this->penjualan_model->lihat_pegawai();
+        $data['pem']= $this->penjualan_model->lihat_pembeli();
          $this->load->view('pegawai/header')->view('pegawai/penjualan/buat2')->view('pegawai/footer');
         // $this->load->view('pegawai/penjualan/buat1');
     }
