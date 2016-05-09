@@ -67,7 +67,7 @@ class barang_model extends CI_Model
         return $query;
     }
 
-    function update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$keuntungan_brg,$jumlah_brg,$status_brg)
+    function update_barang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$keuntungan_brg,$status_brg)
     {
         $data = array(
             'nama_brg' => $nama_brg,
@@ -75,7 +75,6 @@ class barang_model extends CI_Model
             'harga_beli' => $harga_beli,
             'harga_jual' => $harga_jual,
             'keuntungan_brg' => $keuntungan_brg,
-            'jumlah_brg' => $jumlah_brg,
             'status_brg'=> $status_brg
             );
 

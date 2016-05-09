@@ -62,11 +62,7 @@
                       <input type="money" class="form-control" id="inputBasicEmail" name="keuntungan_brg"
                       placeholder="1000" autocomplete="off" />
                     </div>
-                    <div class="form-group">
-                      <label class="control-label" for="inputBasicEmail">Jumlah Barang</label>
-                      <input type="number" class="form-control" id="inputBasicEmail" name="jumlah_brg"
-                      placeholder="60" autocomplete="off" />
-                    </div>
+                    
                     <div class="form-group">
                       <label>Status Barang</label>
                       <div>
