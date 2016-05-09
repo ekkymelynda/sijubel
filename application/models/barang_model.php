@@ -8,7 +8,7 @@ class barang_model extends CI_Model
         $this->load->database('default','true');
     }
     
-    function inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$keuntungan_brg,$jumlah_brg,$status_brg)
+    function inbarang($id_brg,$nama_brg,$jenis_brg,$harga_beli,$harga_jual,$keuntungan_brg,$status_brg)
     {
         $data = array(
             'id_brg' => $id_brg,
@@ -17,7 +17,7 @@ class barang_model extends CI_Model
             'harga_beli' => $harga_beli,
             'harga_jual' => $harga_jual,
             'keuntungan_brg' => $keuntungan_brg,
-            'jumlah_brg' => $jumlah_brg,
+            // 'jumlah_brg' => $jumlah_brg,
             'status_brg'=> $status_brg
             );
         $this->db->insert('barang', $data);
