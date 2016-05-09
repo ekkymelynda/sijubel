@@ -181,12 +181,12 @@
             <li class="site-menu-item has-sub">
               <a href="javascript:void(0)" data-slug="advanced">
                 <i class="site-menu-icon wb-hammer" aria-hidden="true"></i>
-                <span class="site-menu-title">Transaksi Pejualan</span>
+                <span class="site-menu-title">Transaksi Penjualan</span>
                 <span class="site-menu-arrow"></span>
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url(); ?>penjualan/penjualan_buat" data-slug="advanced-animation">
+                  <a class="animsition-link" href="<?php echo base_url(); ?>transaksi_penjualan/transaksi_penjualan_buat" data-slug="advanced-animation">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">Buat</span>
                   </a>
