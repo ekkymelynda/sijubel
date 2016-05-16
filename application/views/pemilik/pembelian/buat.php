@@ -38,16 +38,13 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="inputPassword">Id Pemilik</label>
-                        <input type="text" class="form-control" id="inputPassword" name="ID_PML"
-                      required="required" value="<?php echo $_SESSION['adminid']; ?>" disabled>
-                        <!--<select class="form-control" name="ID_PML" >
+                        <select class="form-control" name="ID_PML" >
                                 <option></option> 
                                 <?php 
-                                //foreach ($pemilik as $row2) {?>
-                                <option><?php //echo $row2->ID_PML;?></option>
+                                foreach ($pemilik as $row2) {?>
+                                <option><?php echo $row2->ID_PML;?></option>
                                 <?php } ?> 
-                        </select>-->
-                        <?php } ?>  
+                        </select>  
                     </div>
                     
                     <?php for($i=1;$i<11;$i++) {?>

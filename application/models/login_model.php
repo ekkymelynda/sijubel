@@ -8,29 +8,29 @@ class login_model extends CI_Model
         $this->load->database('default','true');
     }
     
-    /*public function loginpegawai($id_pgw, $pswd_pgw)
+    public function loginpegawai($id_pgw, $pswd_pgw)
     {
         /*$query=$this->db->query("SELECT COUNT(id_pgw) FROM pegawai WHERE id_pgw='$id_pgw' AND pswd_pgw='$pswd_pgw'; ");
         
         return $query->result();*/
 
-        /*$query=$this->db->query("SELECT * FROM `pegawai` WHERE id_pgw='$id_pgw' and pswd_pgw='$pswd_pgw'");
+        $query=$this->db->query("SELECT * FROM `pegawai` WHERE id_pgw='$id_pgw' and pswd_pgw='$pswd_pgw'");
         
         return $query->result();
-    }*/
+    }
 
-    /*public function loginpemilik($id_pml, $pswd_pml)
+    public function loginpemilik($id_pml, $pswd_pml)
     {
         /*$query=$this->db->query("SELECT COUNT(id_pml) FROM pegawai WHERE id_pml='$id_pml' AND pswd_pml='$pswd_pml'; ");
         
         return $query->result();*/
 
-        /*$query=$this->db->query("SELECT * FROM `pemilik` WHERE id_pml='$id_pml' and pswd_pml='$pswd_pml'");
+        $query=$this->db->query("SELECT * FROM `pemilik` WHERE id_pml='$id_pml' and pswd_pml='$pswd_pml'");
         
         return $query->result();
-    }*/
+    }
 
-    public function loginpegawai($id_pgw, $pswd_pgw)
+    /*public function loginpegawai($id_pgw, $pswd_pgw)
     {
         date_default_timezone_set("Asia/Jakarta");
         $this->db->select('ID_PGW, PSWD_PGW, NAMA_PGW, ALAMAT_PGW, NOTLP_PGW');
@@ -100,6 +100,6 @@ class login_model extends CI_Model
             return false;
 
         }
-    }
+    }*/
 }
 ?>

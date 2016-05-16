@@ -68,7 +68,7 @@ class login extends CI_Controller {
              $this->load->view('pegawai/login');
         }*/
 
-        /*$id_pgw=$_POST['id_pgw'];
+        $id_pgw=$_POST['id_pgw'];
         $pswd_pgw=$_POST['pswd_pgw'];
         
         $cek = $this->login_model->loginpegawai($id_pgw,$pswd_pgw);
@@ -86,9 +86,9 @@ class login extends CI_Controller {
         else
         {
             $this->load->view('pegawai/login');
-        }*/
+        }
 
-        $this->load->helper('security');
+        /*$this->load->helper('security');
         $this->form_validation->set_rules('id_pgw','ID Pegawai');
         $this->form_validation->set_rules('pswd_pgw','Password','callback_verify_pegawai');
         if($this->form_validation->run() == false)
@@ -100,8 +100,9 @@ class login extends CI_Controller {
             #$this->login();
         }
         else{
+            $this->load->library('session');
             redirect('barang/barang_lihat_pegawai');
-        }
+        }*/
 
     }
 
@@ -137,7 +138,7 @@ class login extends CI_Controller {
              $this->load->view('pemilik/login');
         }*/
 
-        /*$id_pml=$_POST['id_pml'];
+        $id_pml=$_POST['id_pml'];
         $pswd_pml=$_POST['pswd_pml'];
         
         $cek = $this->login_model->loginpemilik($id_pml,$pswd_pml);
@@ -155,9 +156,9 @@ class login extends CI_Controller {
         else
         {
             $this->load->view('pemilik/login');
-        }*/
+        }
 
-        $this->load->helper('security');
+        /*$this->load->helper('security');
         $this->form_validation->set_rules('id_pml','ID Pemilik');
         $this->form_validation->set_rules('pswd_pml','Password','callback_verify_pemilik');
         if($this->form_validation->run() == false)
@@ -170,7 +171,7 @@ class login extends CI_Controller {
         }
         else{
             redirect('barang/barang_lihat');
-        }
+        }*/
         
     }
 
