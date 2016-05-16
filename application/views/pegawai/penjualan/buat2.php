@@ -38,14 +38,18 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="inputPassword">Id Pegawai</label>
-                        <select class="form-control" name="ID_PGW" >
+                        <input type="text" class="form-control" id="inputPassword" name="ID_PGW"
+                      required="required" value="<?php echo $_SESSION['pegawaiid']; }?>" disabled>
+                        <!--<select class="form-control" name="ID_PGW" >
                                 <option></option> 
                                 <?php 
-                                foreach ($peg as $row2) {?>
-                                <option><?php echo $row2->ID_PGW;?></option>
+                                //foreach ($peg as $row2) {?>
+                                <option><?php //echo $row2->ID_PGW;?></option>
                                 <?php } ?> 
-                        </select>  
+                        </select>-->
+                        <?php } ?> 
                     </div>
+
                     <?php for($i=1;$i<11;$i++) {?>
                     <div class="form-group">
                             <div class="row row-lg">

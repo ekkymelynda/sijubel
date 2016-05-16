@@ -1,3 +1,16 @@
+<?php
+    error_reporting(E_ALL & ~E_NOTICE);
+    if($_SESSION['adminid']){
+        /*echo $_SESSION['username'];
+        echo $_SESSION['userid'];
+        echo $_SESSION['name'];
+        $foto = $_SESSION['foto'];*/
+    }
+    else{
+        //header("Location:../dashboard/index");
+        header("Location:login");
+    }
+?>
 <!-- Header -->
 
 <!DOCTYPE html>
@@ -125,7 +138,7 @@
         <!-- Navbar Toolbar Right -->
         <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
           <li role="presentation">
-            <a href="<?php echo base_url(); ?>login/login_pemilik" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Keluar</a>
+            <a href="<?php echo base_url(); ?>login/logout_pemilik" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Keluar</a>
           </li>    
         </ul>
         <!-- End Navbar Toolbar Right -->

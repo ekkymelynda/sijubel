@@ -20,8 +20,8 @@
             <thead>
               <tr>
                 <th>ID Transaksi Pembelian</th>
-                <th>ID Supplier</th>
                 <th>ID Pemilik</th>
+                <th>ID Supplier</th>
                 <th>Tanggal Transaksi Pembelian</th>
                 <th>Total Transaksi Pembelian</th>
                 <th>Aksi</th>

@@ -38,10 +38,19 @@ class login extends CI_Controller {
         $this->load->view('pegawai/login');
     }
 
-
     public function login_pemilik()
     {
         $this->load->view('pemilik/login');
+    }
+
+    public function logout_pegawai()
+    {
+        $this->load->view('pegawai/logout');
+    }
+
+    public function logout_pemilik()
+    {
+        $this->load->view('pemilik/logout');
     }
 
     public function pegawai_login()
@@ -59,7 +68,7 @@ class login extends CI_Controller {
              $this->load->view('pegawai/login');
         }*/
 
-        $id_pgw=$_POST['id_pgw'];
+        /*$id_pgw=$_POST['id_pgw'];
         $pswd_pgw=$_POST['pswd_pgw'];
         
         $cek = $this->login_model->loginpegawai($id_pgw,$pswd_pgw);
@@ -77,8 +86,40 @@ class login extends CI_Controller {
         else
         {
             $this->load->view('pegawai/login');
+        }*/
+
+        $this->load->helper('security');
+        $this->form_validation->set_rules('id_pgw','ID Pegawai');
+        $this->form_validation->set_rules('pswd_pgw','Password','callback_verify_pegawai');
+        if($this->form_validation->run() == false)
+        {
+            $this->load->library('session');
+            $this->session->set_userdata('error', 'gagal');
+            //redirect('dashboard');
+            $this->load->view('pegawai/login');
+            #$this->login();
+        }
+        else{
+            redirect('barang/barang_lihat_pegawai');
         }
 
+    }
+
+    public function verify_pegawai()
+    {
+        $id_pgw = $this->input->post('id_pgw');
+        $pswd_pgw = $this->input->post('pswd_pgw');
+        
+        $this->load->model('login_model');
+        $this->load->library('session');
+        if($this->login_model->loginpegawai($id_pgw, $pswd_pgw)){
+            return true;
+            //echo var_dump(query);
+        }
+        else{
+            $this->form_validation->set_message('verify_pegawai','Incorrect Username or Password. Please try again.');
+            return false;
+        }
     }
 
     public function pemilik_login()
@@ -96,7 +137,7 @@ class login extends CI_Controller {
              $this->load->view('pemilik/login');
         }*/
 
-        $id_pml=$_POST['id_pml'];
+        /*$id_pml=$_POST['id_pml'];
         $pswd_pml=$_POST['pswd_pml'];
         
         $cek = $this->login_model->loginpemilik($id_pml,$pswd_pml);
@@ -114,11 +155,41 @@ class login extends CI_Controller {
         else
         {
             $this->load->view('pemilik/login');
-        }   
+        }*/
+
+        $this->load->helper('security');
+        $this->form_validation->set_rules('id_pml','ID Pemilik');
+        $this->form_validation->set_rules('pswd_pml','Password','callback_verify_pemilik');
+        if($this->form_validation->run() == false)
+        {
+            $this->load->library('session');
+            $this->session->set_userdata('error', 'gagal');
+            //redirect('dashboard');
+            $this->load->view('pemilik/login');
+            #$this->login();
+        }
+        else{
+            redirect('barang/barang_lihat');
+        }
         
     }
 
-
+    public function verify_pemilik()
+    {
+        $id_pml = $this->input->post('id_pml');
+        $pswd_pml = $this->input->post('pswd_pml');
+        
+        $this->load->model('login_model');
+        $this->load->library('session');
+        if($this->login_model->loginpemilik($id_pml, $pswd_pml)){
+            return true;
+            //echo var_dump(query);
+        }
+        else{
+            $this->form_validation->set_message('verify_pemilik','Incorrect Username or Password. Please try again.');
+            return false;
+        }
+    }
     
 }
 ?>
