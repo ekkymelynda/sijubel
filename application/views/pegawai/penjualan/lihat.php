@@ -34,8 +34,8 @@
                 <?php foreach ($h->result() as $row){?>
               <tr>
                  <td><?php echo $row->ID_TPU;?></td>
-                 <td><?php echo $row->ID_PGW;?></td>
                  <td><?php echo $row->ID_PMB;?></td>
+                 <td><?php echo $row->ID_PGW;?></td>
                  <td><?php echo $row->TGL_TPU;?></td>
                  <td><?php echo $row->TOTAL_TPU;?></td>
                  <td><?php echo $row->BAYAR_TPU;?></td>
